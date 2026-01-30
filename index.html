@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cyrus Pahlavi</title>
-  <meta name="description" content="Cyrus Pahlavi - Founding Chair of MIGA DAO, dedicated to uniting the Persian diaspora and preserving cultural heritage.">
+  <title>Cyrus Pahlavi — Artist, Activist, Actor</title>
+  <meta name="description" content="Cyrus Pahlavi is an artist, human rights activist, and actor dedicated to Persian cultural preservation and freedom of expression.">
   <meta property="og:title" content="Cyrus Pahlavi">
-  <meta property="og:description" content="Founding Chair of MIGA DAO, dedicated to uniting the Persian diaspora and preserving cultural heritage.">
+  <meta property="og:description" content="Artist, human rights activist, and actor dedicated to Persian cultural preservation.">
   <meta property="og:image" content="/images/cyrus-pahlavi.jpg">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/png" href="/images/favicon.png">
@@ -39,7 +39,7 @@
     }
 
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 0 24px;
     }
@@ -52,7 +52,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 60px 24px;
+      padding: 80px 24px;
     }
 
     .portrait {
@@ -75,19 +75,37 @@
       background-clip: text;
     }
 
-    .title {
+    .tagline {
       font-size: 1.25rem;
       color: var(--text-muted);
-      margin-bottom: 24px;
+      margin-bottom: 32px;
       font-weight: 400;
     }
 
     .bio {
       font-size: 1.125rem;
       color: var(--text-muted);
-      max-width: 500px;
+      max-width: 600px;
       margin-bottom: 40px;
       line-height: 1.8;
+    }
+
+    /* Roles */
+    .roles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .role {
+      padding: 10px 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 0.875rem;
+      color: var(--text);
     }
 
     /* Social Links */
@@ -123,13 +141,77 @@
       height: 24px;
     }
 
+    /* Sections */
+    section {
+      padding: 80px 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .section-title {
+      font-size: 0.875rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .section-heading {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .section-desc {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto 48px;
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    /* About Grid */
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .about-card {
+      padding: 32px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+    }
+
+    .about-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .about-card h3 span {
+      font-size: 1.5rem;
+    }
+
+    .about-card p {
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
     /* Projects */
     .projects {
       display: flex;
       flex-direction: column;
       gap: 16px;
-      width: 100%;
-      max-width: 400px;
+      max-width: 500px;
+      margin: 0 auto;
     }
 
     .project-link {
@@ -181,6 +263,29 @@
       color: var(--text-muted);
     }
 
+    /* Quote */
+    .quote-section {
+      background: linear-gradient(135deg, rgba(201, 162, 39, 0.05) 0%, transparent 100%);
+    }
+
+    .quote {
+      font-size: 1.75rem;
+      font-weight: 300;
+      font-style: italic;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 1.6;
+      color: var(--text);
+    }
+
+    .quote-attr {
+      margin-top: 24px;
+      color: var(--gold);
+      font-size: 1rem;
+      text-align: center;
+    }
+
     /* Footer */
     footer {
       padding: 48px 24px;
@@ -207,18 +312,34 @@
       .bio {
         font-size: 1rem;
       }
+
+      .section-heading {
+        font-size: 2rem;
+      }
+
+      .quote {
+        font-size: 1.25rem;
+      }
     }
   </style>
 </head>
 <body>
-  <main class="hero">
+  <!-- Hero -->
+  <header class="hero">
     <img src="/images/cyrus-pahlavi.jpg" alt="Cyrus Pahlavi" class="portrait">
 
     <h1 class="name">Cyrus Pahlavi</h1>
-    <p class="title">Founding Chair, MIGA DAO</p>
+    <p class="tagline">Artist · Human Rights Activist · Actor</p>
+
+    <div class="roles">
+      <span class="role">Visual Artist</span>
+      <span class="role">Cultural Preservationist</span>
+      <span class="role">MIGA DAO Founder</span>
+    </div>
 
     <p class="bio">
-      Dedicated to uniting the Persian diaspora and preserving our cultural heritage for future generations.
+      Cyrus Pahlavi is a multidisciplinary artist and advocate dedicated to preserving Persian cultural heritage
+      and championing freedom of expression for the Iranian people worldwide.
     </p>
 
     <div class="social-links">
@@ -228,38 +349,135 @@
         </svg>
       </a>
     </div>
+  </header>
 
-    <div class="projects">
-      <a href="https://migaprotocol.xyz" target="_blank" rel="noopener noreferrer" class="project-link">
-        <div class="project-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-            <path d="M2 12h20"/>
-          </svg>
-        </div>
-        <div class="project-info">
-          <div class="project-name">MIGA Protocol</div>
-          <div class="project-desc">Freedom of Information DAO</div>
-        </div>
-        <span class="arrow">→</span>
-      </a>
+  <!-- About -->
+  <section>
+    <div class="container">
+      <span class="section-title">About</span>
+      <h2 class="section-heading">Art, Activism & Heritage</h2>
+      <p class="section-desc">
+        With a deep commitment to cultural preservation and human rights, Cyrus bridges the worlds of art and advocacy
+        to amplify Persian voices and support freedom of expression.
+      </p>
 
-      <a href="https://miga.us.org" target="_blank" rel="noopener noreferrer" class="project-link">
-        <div class="project-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-            <polyline points="9 22 9 12 15 12 15 22"/>
-          </svg>
+      <div class="about-grid">
+        <div class="about-card">
+          <h3><span>🎨</span> Visual Art</h3>
+          <p>
+            A practicing visual artist whose work explores themes of identity, exile, and cultural memory.
+            His art serves as a bridge between Persian heritage and contemporary expression.
+          </p>
         </div>
-        <div class="project-info">
-          <div class="project-name">MIGA Foundation</div>
-          <div class="project-desc">Mission & Governance</div>
+
+        <div class="about-card">
+          <h3><span>🎭</span> Acting & Film</h3>
+          <p>
+            Trained actor bringing Persian stories to life on stage and screen, committed to authentic
+            representation of Iranian narratives in global media.
+          </p>
         </div>
-        <span class="arrow">→</span>
-      </a>
+
+        <div class="about-card">
+          <h3><span>✊</span> Human Rights</h3>
+          <p>
+            Advocate for freedom of information and expression, supporting journalists, artists, and activists
+            facing censorship and persecution.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <h3><span>📚</span> Cultural Research</h3>
+          <p>
+            Dedicated to documenting and preserving Persian cultural heritage, from ancient traditions
+            to contemporary diaspora experiences.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <h3><span>🌍</span> Diaspora Unity</h3>
+          <p>
+            Working to connect the 8+ million Iranians living abroad, fostering community and collective
+            action for positive change.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <h3><span>🔗</span> Web3 & Technology</h3>
+          <p>
+            Founding Chair of MIGA DAO, leveraging blockchain technology to create transparent,
+            censorship-resistant funding for freedom initiatives.
+          </p>
+        </div>
+      </div>
     </div>
-  </main>
+  </section>
+
+  <!-- Quote -->
+  <section class="quote-section">
+    <div class="container">
+      <blockquote class="quote">
+        "Art and activism are inseparable. Every brushstroke, every performance, every word
+        is an act of resistance against silence."
+      </blockquote>
+      <p class="quote-attr">— Cyrus Pahlavi</p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section>
+    <div class="container">
+      <span class="section-title">Initiatives</span>
+      <h2 class="section-heading">Current Work</h2>
+      <p class="section-desc">
+        Leading projects that combine art, technology, and activism to support the Iranian people.
+      </p>
+
+      <div class="projects">
+        <a href="https://migaprotocol.xyz" target="_blank" rel="noopener noreferrer" class="project-link">
+          <div class="project-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              <path d="M2 12h20"/>
+            </svg>
+          </div>
+          <div class="project-info">
+            <div class="project-name">MIGA Protocol</div>
+            <div class="project-desc">Freedom of Information DAO</div>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+
+        <a href="https://miga.us.org" target="_blank" rel="noopener noreferrer" class="project-link">
+          <div class="project-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <div class="project-info">
+            <div class="project-name">MIGA Foundation</div>
+            <div class="project-desc">Mission, Governance & Transparency</div>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+
+        <a href="https://pars.network" target="_blank" rel="noopener noreferrer" class="project-link">
+          <div class="project-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div class="project-info">
+            <div class="project-name">Pars Network</div>
+            <div class="project-desc">Privacy-first blockchain for Iranians</div>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 Cyrus Pahlavi. All rights reserved.</p>
