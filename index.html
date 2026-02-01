@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cyrus Pahlavi — Artist, Activist, Actor</title>
-  <meta name="description" content="Cyrus Pahlavi is an artist, human rights activist, and actor dedicated to Persian cultural preservation and freedom of expression.">
+  <title>Cyrus Pahlavi — Artist, Actor</title>
+  <meta name="description" content="Cyrus Pahlavi is an artist and actor. Born in Iran, educated at Le Rosey and Parsons School of Design.">
   <meta property="og:title" content="Cyrus Pahlavi">
-  <meta property="og:description" content="Artist, human rights activist, and actor dedicated to Persian cultural preservation.">
+  <meta property="og:description" content="Artist and actor. Le Rosey, Parsons School of Design.">
   <meta property="og:image" content="/images/cyrus-pahlavi.jpg">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/png" href="/images/favicon.png">
@@ -44,7 +44,6 @@
       padding: 0 24px;
     }
 
-    /* Hero */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -60,6 +59,7 @@
       height: 200px;
       border-radius: 50%;
       object-fit: cover;
+      object-position: center top;
       border: 4px solid var(--gold);
       margin-bottom: 32px;
       box-shadow: 0 0 60px rgba(201, 162, 39, 0.2);
@@ -79,7 +79,6 @@
       font-size: 1.25rem;
       color: var(--text-muted);
       margin-bottom: 32px;
-      font-weight: 400;
     }
 
     .bio {
@@ -90,7 +89,6 @@
       line-height: 1.8;
     }
 
-    /* Roles */
     .roles {
       display: flex;
       flex-wrap: wrap;
@@ -108,7 +106,6 @@
       color: var(--text);
     }
 
-    /* Social Links */
     .social-links {
       display: flex;
       gap: 16px;
@@ -141,7 +138,6 @@
       height: 24px;
     }
 
-    /* Sections */
     section {
       padding: 80px 24px;
       border-top: 1px solid var(--border);
@@ -172,7 +168,52 @@
       line-height: 1.8;
     }
 
-    /* About Grid */
+    .timeline {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 24px;
+      padding-bottom: 32px;
+      position: relative;
+    }
+
+    .timeline-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 11px;
+      top: 32px;
+      bottom: 0;
+      width: 2px;
+      background: var(--border);
+    }
+
+    .timeline-dot {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .timeline-content h4 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .timeline-content p {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+
+    .timeline-year {
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
     .about-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -205,7 +246,6 @@
       line-height: 1.7;
     }
 
-    /* Projects */
     .projects {
       display: flex;
       flex-direction: column;
@@ -245,25 +285,11 @@
       flex-shrink: 0;
     }
 
-    .project-info {
-      flex: 1;
-    }
+    .project-info { flex: 1; }
+    .project-name { font-weight: 600; margin-bottom: 2px; }
+    .project-desc { font-size: 0.875rem; color: var(--text-muted); }
+    .arrow { color: var(--text-muted); }
 
-    .project-name {
-      font-weight: 600;
-      margin-bottom: 2px;
-    }
-
-    .project-desc {
-      font-size: 0.875rem;
-      color: var(--text-muted);
-    }
-
-    .arrow {
-      color: var(--text-muted);
-    }
-
-    /* Quote */
     .quote-section {
       background: linear-gradient(135deg, rgba(201, 162, 39, 0.05) 0%, transparent 100%);
     }
@@ -276,7 +302,6 @@
       margin: 0 auto;
       text-align: center;
       line-height: 1.6;
-      color: var(--text);
     }
 
     .quote-attr {
@@ -286,7 +311,6 @@
       text-align: center;
     }
 
-    /* Footer */
     footer {
       padding: 48px 24px;
       text-align: center;
@@ -298,48 +322,29 @@
       font-size: 0.875rem;
     }
 
-    /* Responsive */
     @media (max-width: 640px) {
-      .name {
-        font-size: 2.25rem;
-      }
-
-      .portrait {
-        width: 160px;
-        height: 160px;
-      }
-
-      .bio {
-        font-size: 1rem;
-      }
-
-      .section-heading {
-        font-size: 2rem;
-      }
-
-      .quote {
-        font-size: 1.25rem;
-      }
+      .name { font-size: 2.25rem; }
+      .portrait { width: 160px; height: 160px; }
+      .bio { font-size: 1rem; }
+      .section-heading { font-size: 2rem; }
+      .quote { font-size: 1.25rem; }
     }
   </style>
 </head>
 <body>
-  <!-- Hero -->
   <header class="hero">
     <img src="/images/cyrus-pahlavi.jpg" alt="Cyrus Pahlavi" class="portrait">
-
     <h1 class="name">Cyrus Pahlavi</h1>
-    <p class="tagline">Artist · Human Rights Activist · Actor</p>
+    <p class="tagline">Artist · Actor</p>
 
     <div class="roles">
       <span class="role">Visual Artist</span>
-      <span class="role">Cultural Preservationist</span>
+      <span class="role">Actor</span>
       <span class="role">MIGA DAO Founder</span>
     </div>
 
     <p class="bio">
-      Cyrus Pahlavi is a multidisciplinary artist and advocate dedicated to preserving Persian cultural heritage
-      and championing freedom of expression for the Iranian people worldwide.
+      Born in Tehran in 1966, Cyrus Pahlavi is a visual artist and actor whose work explores themes of exile, identity, and the enduring beauty of nature.
     </p>
 
     <div class="social-links">
@@ -348,97 +353,133 @@
           <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
         </svg>
       </a>
+      <a href="https://www.imdb.com/name/nm1797299/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="IMDb">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M14.31 9.588v.005c-.077-.048-.227-.07-.42-.07v4.815c.27 0 .44-.065.477-.186.04-.105.063-.474.063-1.103v-2.317c0-.522-.015-.86-.063-.993-.063-.133-.166-.2-.32-.236l.263.085zm-1.68 4.75H11.24V9.58h1.39v4.758zm-6.05 0H5.19v-4.76h1.39v4.76zm3.87-3.64c.085-.132.19-.228.3-.29.127-.063.27-.096.42-.096.22 0 .39.058.52.174.127.116.2.273.22.466l.02.305v2.097c0 .334-.02.57-.05.707-.05.137-.14.248-.27.33-.127.08-.3.12-.52.12-.19 0-.35-.03-.48-.09-.13-.058-.24-.156-.31-.29-.08-.133-.12-.37-.12-.715V10.7c0-.37.04-.62.13-.76l-.06.007zm.04 2.893c0 .19.01.31.04.37.02.058.08.088.16.088.07 0 .13-.03.16-.088.04-.06.05-.18.05-.37v-1.87c0-.2-.01-.33-.05-.39-.04-.06-.09-.09-.16-.09-.08 0-.14.03-.16.09-.03.06-.04.19-.04.39v1.87zM24 18.857V5.143C24 3.96 23.04 3 21.857 3H2.143C.96 3 0 3.96 0 5.143v13.714C0 20.04.96 21 2.143 21h19.714C23.04 21 24 20.04 24 18.857zM6.77 7.12H4.03v9.63h2.74V7.12zm5.44 0H9.57v9.63h1.57l.06-6.56c.15.22.39.57.69 1.04l2.15 5.52h1.6V7.12h-1.6l.02 5.87c-.21-.39-.39-.7-.52-.93l-1.78-4.94h-.52zm6.12 2.86c0-.62-.09-1.066-.264-1.33-.178-.267-.47-.4-.88-.4-.254 0-.47.067-.648.2-.18.132-.316.31-.41.534v-.6h-1.617v8.37h1.617v-2.79c.074.164.182.296.32.394.14.097.31.146.52.146.34 0 .59-.1.77-.3.178-.2.297-.48.355-.837.058-.354.087-.87.087-1.548v-.88c0-.66-.016-1.13-.047-1.42-.03-.287-.09-.51-.18-.66l.377.12zm3.62 1.32c0-.635-.04-1.09-.125-1.37-.087-.28-.23-.495-.44-.65-.206-.156-.47-.234-.78-.234-.24 0-.456.055-.64.162-.186.11-.345.27-.48.488v-.55h-1.62v6.51h1.62v-4.22c0-.27.017-.464.048-.577.03-.112.087-.196.165-.246.077-.052.18-.078.3-.078.14 0 .24.04.3.117.058.077.094.203.108.378.013.174.02.5.02.983v3.643h1.62v-4.36h-.097z"/>
+        </svg>
+      </a>
+      <a href="https://www.artnet.com/artists/cyrus-pahlavi/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Artnet">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+      </a>
     </div>
   </header>
 
-  <!-- About -->
   <section>
     <div class="container">
-      <span class="section-title">About</span>
-      <h2 class="section-heading">Art, Activism & Heritage</h2>
-      <p class="section-desc">
-        With a deep commitment to cultural preservation and human rights, Cyrus bridges the worlds of art and advocacy
-        to amplify Persian voices and support freedom of expression.
-      </p>
+      <span class="section-title">Biography</span>
+      <h2 class="section-heading">A Life in Art</h2>
 
-      <div class="about-grid">
-        <div class="about-card">
-          <h3><span>🎨</span> Visual Art</h3>
-          <p>
-            A practicing visual artist whose work explores themes of identity, exile, and cultural memory.
-            His art serves as a bridge between Persian heritage and contemporary expression.
-          </p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">1966</span>
+            <h4>Born in Tehran, Iran</h4>
+            <p>Born into the Imperial family of Iran.</p>
+          </div>
         </div>
 
-        <div class="about-card">
-          <h3><span>🎭</span> Acting & Film</h3>
-          <p>
-            Trained actor bringing Persian stories to life on stage and screen, committed to authentic
-            representation of Iranian narratives in global media.
-          </p>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">1979</span>
+            <h4>Exile to the Seychelles</h4>
+            <p>Following the Iranian Revolution, the family was forced into exile. Surrounded by nature on a remote island, he began painting—capturing the beauty of his surroundings and finding solace in art.</p>
+          </div>
         </div>
 
-        <div class="about-card">
-          <h3><span>✊</span> Human Rights</h3>
-          <p>
-            Advocate for freedom of information and expression, supporting journalists, artists, and activists
-            facing censorship and persecution.
-          </p>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">1980s</span>
+            <h4>Institut Le Rosey, Switzerland</h4>
+            <p>Attended the prestigious Le Rosey boarding school in Switzerland, one of the world's oldest international schools.</p>
+          </div>
         </div>
 
-        <div class="about-card">
-          <h3><span>📚</span> Cultural Research</h3>
-          <p>
-            Dedicated to documenting and preserving Persian cultural heritage, from ancient traditions
-            to contemporary diaspora experiences.
-          </p>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">1990s</span>
+            <h4>Parsons School of Design, New York</h4>
+            <p>Studied art at Parsons, continuing to explore different forms of artistic expression.</p>
+          </div>
         </div>
 
-        <div class="about-card">
-          <h3><span>🌍</span> Diaspora Unity</h3>
-          <p>
-            Working to connect the 8+ million Iranians living abroad, fostering community and collective
-            action for positive change.
-          </p>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2005</span>
+            <h4>Film: Ellie Parker</h4>
+            <p>Appeared in "Ellie Parker" alongside Naomi Watts, marking his entry into acting.</p>
+          </div>
         </div>
 
-        <div class="about-card">
-          <h3><span>🔗</span> Web3 & Technology</h3>
-          <p>
-            Founding Chair of MIGA DAO, leveraging blockchain technology to create transparent,
-            censorship-resistant funding for freedom initiatives.
-          </p>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">Present</span>
+            <h4>Artist & Cultural Advocate</h4>
+            <p>Continues to create art, act, and advocate for cultural preservation for Iranians worldwide.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Quote -->
+  <section>
+    <div class="container">
+      <span class="section-title">Work</span>
+      <h2 class="section-heading">Art & Film</h2>
+      <p class="section-desc">
+        Nature remains an eternal source of inspiration—his most influential teacher from those early years in exile.
+      </p>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <h3><span>🎨</span> Visual Art</h3>
+          <p>Paintings exploring themes of exile, identity, and the natural world. Featured on Artnet with international exhibitions.</p>
+        </div>
+
+        <div class="about-card">
+          <h3><span>🎬</span> Film & Acting</h3>
+          <p>Actor and producer. Credits include "Ellie Parker" (2005) with Naomi Watts, "Beslan," and "Human Bid."</p>
+        </div>
+
+        <div class="about-card">
+          <h3><span>👜</span> Collaborations</h3>
+          <p>Collaborations with luxury brands including Olympia Le-Tan, bringing artistic vision to fashion and design.</p>
+        </div>
+
+        <div class="about-card">
+          <h3><span>🌍</span> MIGA DAO</h3>
+          <p>Founding Chair of MIGA DAO, working to preserve Persian cultural heritage and support freedom of expression.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="quote-section">
     <div class="container">
       <blockquote class="quote">
-        "Art and activism are inseparable. Every brushstroke, every performance, every word
-        is an act of resistance against silence."
+        "Nature became an eternal source of inspiration and my most influential teacher."
       </blockquote>
       <p class="quote-attr">— Cyrus Pahlavi</p>
     </div>
   </section>
 
-  <!-- Projects -->
   <section>
     <div class="container">
       <span class="section-title">Initiatives</span>
-      <h2 class="section-heading">Current Work</h2>
-      <p class="section-desc">
-        Leading projects that combine art, technology, and activism to support the Iranian people.
-      </p>
+      <h2 class="section-heading">Current Projects</h2>
 
       <div class="projects">
         <a href="https://migaprotocol.xyz" target="_blank" rel="noopener noreferrer" class="project-link">
           <div class="project-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="12" cy="12" r="10"/>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
               <path d="M2 12h20"/>
             </svg>
           </div>
@@ -453,25 +494,11 @@
           <div class="project-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-              <polyline points="9 22 9 12 15 12 15 22"/>
             </svg>
           </div>
           <div class="project-info">
             <div class="project-name">MIGA Foundation</div>
-            <div class="project-desc">Mission, Governance & Transparency</div>
-          </div>
-          <span class="arrow">→</span>
-        </a>
-
-        <a href="https://pars.network" target="_blank" rel="noopener noreferrer" class="project-link">
-          <div class="project-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
-          <div class="project-info">
-            <div class="project-name">Pars Network</div>
-            <div class="project-desc">Privacy-first blockchain for Iranians</div>
+            <div class="project-desc">Mission & Governance</div>
           </div>
           <span class="arrow">→</span>
         </a>
@@ -480,7 +507,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Cyrus Pahlavi. All rights reserved.</p>
+    <p>&copy; 2025 Cyrus Pahlavi</p>
   </footer>
 </body>
 </html>
