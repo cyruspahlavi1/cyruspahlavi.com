@@ -53,20 +53,9 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-hero-wash py-20 md:py-28">
         <div className="container grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
-            <div className="mb-6 flex items-center gap-4">
-              <div className="h-20 w-20 rounded-full border border-gold bg-white p-3 shadow-glow">
-                <Image
-                  src="/images/official-seal.png"
-                  alt="Official Seal"
-                  width={80}
-                  height={80}
-                  className="h-full w-full object-contain"
-                />
-              </div>
-              <div>
-                <p className="text-xs uppercase tracking-[0.35em] text-muted-foreground">Official Office</p>
-                <p className="font-serif text-xl text-gold">Cyrus Pahlavi</p>
-              </div>
+            <div className="mb-6">
+              <p className="text-xs uppercase tracking-[0.35em] text-muted-foreground">Official Office</p>
+              <p className="font-serif text-xl text-gold">Cyrus Pahlavi</p>
             </div>
             <h1 className="font-serif text-3xl leading-tight text-foreground md:text-5xl">
               A lawful, peaceful transition for Iran toward a secular constitutional order.
@@ -101,15 +90,6 @@ export default function HomePage() {
                 width={540}
                 height={720}
                 className="h-full w-full object-cover"
-              />
-            </div>
-            <div className="absolute -bottom-10 -right-6 h-24 w-24 rounded-full border border-gold bg-white p-4 shadow-glow">
-              <Image
-                src="/images/official-seal.png"
-                alt="Official Seal"
-                width={80}
-                height={80}
-                className="h-full w-full object-contain"
               />
             </div>
           </div>

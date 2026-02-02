@@ -20,7 +20,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
       <div className="container flex items-center justify-between gap-6 py-4">
         <Link href="/" className="flex items-center gap-3 text-foreground">
-          <div className="h-12 w-12 rounded-full border border-gold bg-white p-2 shadow-glow">
+          <div className="h-12 w-12 rounded-full border border-gold/60 p-2">
             <Image src="/images/official-seal.png" alt="Official Seal" width={48} height={48} className="h-full w-full object-contain" />
           </div>
           <div className="hidden sm:flex flex-col">
