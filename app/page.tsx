@@ -54,7 +54,6 @@ export default function HomePage() {
         <div className="container grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
             <div className="mb-6">
-              <p className="text-xs uppercase tracking-[0.35em] text-muted-foreground">Official Office</p>
               <p className="font-serif text-xl text-gold">Cyrus Pahlavi</p>
             </div>
             <h1 className="font-serif text-3xl leading-tight text-foreground md:text-5xl">
@@ -135,14 +134,14 @@ export default function HomePage() {
           <div className="rounded-3xl border border-white/10 bg-card p-8 shadow-soft">
             <h3 className="font-serif text-2xl text-gold">Official Communications</h3>
             <p className="mt-4 text-sm text-muted-foreground">
-              All official communications originate only from verified Office channels. Email authentication (SPF/DKIM/DMARC) is in place to prevent impersonation.
+              All official communications originate only from verified channels. Email authentication (SPF/DKIM/DMARC) is in place to prevent impersonation.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Button asChild size="sm">
                 <Link href="/statements">View Statements</Link>
               </Button>
               <Button asChild variant="outline" size="sm">
-                <Link href="/contact">Contact the Office</Link>
+                <Link href="/contact">Contact</Link>
               </Button>
             </div>
           </div>

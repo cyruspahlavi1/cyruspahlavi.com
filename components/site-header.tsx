@@ -21,14 +21,9 @@ export function SiteHeader() {
       <div className="container flex items-center justify-between gap-6 py-4">
         <Link href="/" className="flex items-center gap-3 text-foreground">
           <div className="h-12 w-12 rounded-full border border-gold/60 p-2">
-            <Image src="/images/official-seal.png" alt="Official Seal" width={48} height={48} className="h-full w-full object-contain" />
+            <Image src="/images/official-seal.png" alt="Seal" width={48} height={48} className="h-full w-full object-contain" />
           </div>
-          <div className="hidden sm:flex flex-col">
-            <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
-              Office of His Royal Highness
-            </span>
-            <span className="font-serif text-lg tracking-[0.2em] text-gold">Cyrus Pahlavi</span>
-          </div>
+          <span className="font-serif text-lg tracking-[0.2em] text-gold">Cyrus Pahlavi</span>
         </Link>
 
         <nav className="hidden xl:flex items-center gap-6 text-sm font-semibold text-muted-foreground">

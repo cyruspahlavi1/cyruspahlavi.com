@@ -6,7 +6,7 @@ export default function EnduringLegacyPage() {
           <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Enduring Legacy</p>
           <h1 className="mt-4 font-serif text-4xl text-gold">Iran’s Constitutional Heritage</h1>
           <p className="mt-4 max-w-3xl text-muted-foreground">
-            The Pahlavi name is inseparable from Iran&apos;s modern history—its achievements, its wounds, and its unfinished work. This legacy guides the Office&apos;s commitment to a state restrained by law and protected by citizenship.
+            The Pahlavi name is inseparable from Iran&apos;s modern history—its achievements, its wounds, and its unfinished work. This legacy guides a commitment to a state restrained by law and protected by citizenship.
           </p>
         </div>
       </section>

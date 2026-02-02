@@ -1,17 +1,13 @@
 export const site = {
-  title: 'Office of His Royal Highness Cyrus Pahlavi',
+  title: 'Cyrus Pahlavi',
   description:
-    'Advancing a peaceful, lawful, and nationally legitimate transition for Iran toward a secular constitutional order.',
+    'A lawful, peaceful transition for Iran toward a secular constitutional order.',
 };
 
 export const navItems = [
   { label: 'Biography', href: '/biography' },
-  { label: 'Strategic Priorities', href: '/strategic-priorities' },
-  { label: 'Enduring Legacy', href: '/enduring-legacy' },
-  { label: 'Initiatives & Partners', href: '/initiatives-and-partners' },
-  { label: 'Works', href: '/works' },
-  { label: 'Statements', href: '/statements' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Mission', href: '/mission' },
+  { label: 'Initiatives', href: '/initiatives-and-partners' },
 ];
 
 export const contactEmails = [

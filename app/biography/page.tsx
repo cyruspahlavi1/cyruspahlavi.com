@@ -66,7 +66,7 @@ export default function BiographyPage() {
           <div className="rounded-2xl border border-white/10 bg-card p-8">
             <h3 className="font-serif text-xl text-gold">Public Work and Focus</h3>
             <p className="mt-4 text-sm text-muted-foreground">
-              HRH Cyrus Pahlavi's public advocacy focuses on secular governance, equal citizenship, women's full equality, national unity, and a peaceful foreign policy anchored in non-aggression and law. The Office emphasizes documentation of abuses, protection of civilians, and lawful accountability—rejecting collective punishment and revenge.
+              HRH Cyrus Pahlavi's public advocacy focuses on secular governance, equal citizenship, women's full equality, national unity, and a peaceful foreign policy anchored in non-aggression and law. This work emphasizes documentation of abuses, protection of civilians, and lawful accountability—rejecting collective punishment and revenge.
             </p>
           </div>
 

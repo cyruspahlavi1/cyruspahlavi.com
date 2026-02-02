@@ -8,7 +8,7 @@ const statements = [
     date: 'February 1, 2026',
     pages: '8 pages',
     description:
-      "Comprehensive declaration outlining His Royal Highness Cyrus Pahlavi's commitments to Iran's peaceful transition toward constitutional democracy. The document establishes clear pledges on secular governance, equal citizenship, women's full equality, national unity, and peaceful relations with neighbors. Witnessed and attested by Prince Shahram Pahlavi-Nia.",
+      "Comprehensive declaration outlining Cyrus Pahlavi's commitments to Iran's peaceful transition toward constitutional democracy. The document establishes clear pledges on secular governance, equal citizenship, women's full equality, national unity, and peaceful relations with neighbors. Witnessed and attested by Prince Shahram Pahlavi-Nia.",
     pdf: '/official-statements/HRHCP-2026-02-01-01.pdf',
     html: '/official-statements/declaration-of-responsibility.html',
   },
@@ -18,7 +18,7 @@ const statements = [
     date: 'February 1, 2026',
     pages: '1 page',
     description:
-      'Official mission statement and operating principles of the Office of His Royal Highness Cyrus Pahlavi. Establishes the framework for advancing peaceful, lawful, and nationally legitimate transition for Iran toward a secular constitutional order.',
+      'Official mission statement and operating principles. Establishes the framework for advancing peaceful, lawful, and nationally legitimate transition for Iran toward a secular constitutional order.',
     html: '/official-statements/mission-statement.html',
   },
 ];
@@ -31,7 +31,7 @@ export default function StatementsPage() {
           <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Statements</p>
           <h1 className="mt-4 font-serif text-4xl text-gold">Official Statements and Declarations</h1>
           <p className="mt-4 max-w-3xl text-muted-foreground">
-            This page contains the authoritative archive of all official statements and declarations from the Office of His Royal Highness Cyrus Pahlavi. All documents are timestamped and reference-numbered for verification.
+            This page contains the authoritative archive of all official statements and declarations. All documents are timestamped and reference-numbered for verification.
           </p>
         </div>
       </section>

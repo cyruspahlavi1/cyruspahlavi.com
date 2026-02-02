@@ -33,7 +33,7 @@ export default function StrategicPrioritiesPage() {
           <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Strategic Priorities</p>
           <h1 className="mt-4 font-serif text-4xl text-gold">Priorities for a Lawful Transition</h1>
           <p className="mt-4 max-w-3xl text-muted-foreground">
-            The Office advances a peaceful, lawful, and nationally legitimate transition toward a secular constitutional order that protects equal citizenship, human dignity, and peaceful relations with neighbors.
+            This work advances a peaceful, lawful, and nationally legitimate transition toward a secular constitutional order that protects equal citizenship, human dignity, and peaceful relations with neighbors.
           </p>
         </div>
       </section>

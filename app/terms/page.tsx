@@ -19,7 +19,7 @@ export default function TermsPage() {
           </div>
           <div>
             <h2 className="font-serif text-xl text-gold">Official Nature</h2>
-            <p className="mt-3">This website is the official platform of the Office of His Royal Highness Cyrus Pahlavi. All content represents official positions and statements unless otherwise noted.</p>
+            <p className="mt-3">This website is the official platform of Cyrus Pahlavi. All content represents official positions and statements unless otherwise noted.</p>
           </div>
           <div>
             <h2 className="font-serif text-xl text-gold">Permitted Use</h2>
@@ -36,7 +36,7 @@ export default function TermsPage() {
             <ul className="mt-3 list-disc space-y-2 pl-5">
               <li>Modify, alter, or misrepresent official content</li>
               <li>Use our seal, logos, or branding without permission</li>
-              <li>Impersonate the Office or His Royal Highness Cyrus Pahlavi</li>
+              <li>Impersonate Cyrus Pahlavi or this website</li>
               <li>Use automated systems to access the website excessively</li>
             </ul>
           </div>
