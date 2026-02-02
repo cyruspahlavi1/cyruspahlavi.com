@@ -1,0 +1,155 @@
+OFFICE OF HIS ROYAL HIGHNESS CYRUS PAHLAVI
+
+OFFICIAL CORRESPONDENCE GUIDELINES
+Document No: HRHCP-2025-GUIDE-001
+Classification: Internal Use
+
+=======================================================
+
+I. LETTERHEAD COMPONENTS (Government-Grade Standards)
+
+Identity Elements:
+• Primary line: "OFFICE OF HIS ROYAL HIGHNESS CYRUS PAHLAVI"
+• Official seal/emblem (consistent across all documents)
+• Document reference number format: HRHCP-YYYY-MM-DD-##
+• Classification line: "Public Statement" | "For Official Use" | "Open Letter"
+
+Contact Information:
+• Official website: cyruspahlavi.com (domain controlled by office)
+• Official email: office@cyruspahlavi.com
+• Press contact: press@cyruspahlavi.com
+• Mailing address: [To be determined - P.O. Box recommended]
+• Telephone: [To be determined - can route through staff]
+
+Legal/Administrative:
+• Entity registration: [If applicable - legal name + registration ID + jurisdiction]
+• Footer disclaimer: "This statement is issued by the Office of HRH Cyrus Pahlavi."
+
+=======================================================
+
+II. SIGNATURE PROTOCOLS
+
+Primary Signature:
+• HRH Cyrus Pahlavi (full title)
+• Single signature block only
+
+Optional Countersignature (when needed):
+• Chief of Staff [Name, Title] OR
+• Legal Counsel [Name, Title]
+
+=======================================================
+
+III. DOCUMENT PACKAGE STRUCTURE
+
+For Government/Diplomatic Outreach:
+
+1. Cover Letter (1 page)
+   - Purpose statement
+   - Specific asks/requests
+   - Reference to annexes
+
+2. Declaration/Statement (Main document)
+   - Core message
+   - Policy positions
+   - Calls to action
+
+3. Annex A: Biography (1 page)
+   - Verifiable background only
+   - Education (with caveats if unverified)
+   - Professional experience
+   - Family lineage (documented sources only)
+
+4. Annex B: Policy Positions (1 page)
+   - Secular democratic state
+   - Rule of law
+   - Women's equality
+   - Non-aggression principles
+   - Unity and reconciliation
+
+5. Annex C: Supporting Facts (Optional)
+   - Cited statistics
+   - Legal references
+   - International precedents
+
+=======================================================
+
+IV. CREDENTIAL GUIDELINES
+
+VERIFIED CLAIMS ONLY:
+• Family lineage: Son of Princess Ashraf Pahlavi and Niloufar Afshar
+• Birth year: 1969 (per available sources)
+• Professional work: Artist, actor (verifiable credits)
+
+AVOID UNLESS DOCUMENTED:
+• Specific diplomatic titles
+• Unverified educational credentials
+• Government appointments without proof
+
+SAFE LANGUAGE ALTERNATIVES:
+• "Engaged with regional and international diplomatic representatives"
+• "Consulted with government officials and policy experts"
+• "Collaborated with international organizations on Iranian affairs"
+
+=======================================================
+
+V. DIPLOMATIC MESSAGING STANDARDS
+
+For Regime Condemnation:
+• Focus on documented human rights violations
+• Call for independent investigations
+• Demand release of prisoners of conscience
+• Support targeted sanctions on perpetrators
+• Reject collective punishment of Iranian people
+• Advocate for internet freedom and press protection
+
+Avoid:
+• Unverified casualty numbers
+• Inflammatory language
+• Personal attacks
+• Unsubstantiated claims
+
+=======================================================
+
+VI. WEBSITE REQUIREMENTS (Government Recognition Standards)
+
+Essential Pages:
+• Official Statements (chronological archive with PDFs)
+• Biography (short and detailed versions)
+• Policy Platform
+• Press Room (media kit, contact, photos)
+• Contact Information
+• Legal Disclaimers
+
+Technical Requirements:
+• Domain ownership verification
+• SSL/TLS encryption
+• Email authentication (DMARC/DKIM/SPF)
+• Professional PDF generation system
+• Consistent document numbering
+
+=======================================================
+
+VII. QUALITY CONTROL CHECKLIST
+
+Before Release:
+☐ Document reference number assigned
+☐ Classification appropriate
+☐ Contact information current
+☐ Claims factually verifiable
+☐ Signature block complete
+☐ Footer disclaimer included
+☐ PDF formatting consistent
+☐ Website archive updated
+
+For Diplomatic Distribution:
+☐ Cover letter explains purpose
+☐ Biography limited to defendable claims
+☐ Policy positions clearly stated
+☐ Supporting documentation attached
+☐ Professional presentation throughout
+
+=======================================================
+
+Document prepared: [Date]
+Next review: [Date + 6 months]
+Authority: Office of HRH Cyrus Pahlavi

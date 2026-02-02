@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Official Statements - Office of His Royal Highness Cyrus Pahlavi</title>
+  <meta name="description" content="Official statements and declarations from the Office of His Royal Highness Cyrus Pahlavi">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --gold: #C9A227;
+      --gold-light: #D4AF37;
+      --bg: #0A0A0F;
+      --bg-card: #12121A;
+      --text: #EDEDF2;
+      --text-muted: #8B8B9B;
+      --border: rgba(255, 255, 255, 0.06);
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .header {
+      padding: 40px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 60px;
+    }
+
+    .header-content {
+      text-align: center;
+    }
+
+    .seal {
+      width: 80px;
+      height: 80px;
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      color: var(--bg);
+      font-weight: bold;
+      font-size: 12px;
+    }
+
+    .office-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+
+    .page-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-top: 20px;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .navigation {
+      margin-bottom: 40px;
+    }
+
+    .nav-link {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    .statements-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .statement-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      transition: all 0.3s ease;
+    }
+
+    .statement-item:hover {
+      border-color: var(--gold);
+      box-shadow: 0 8px 32px rgba(201, 162, 39, 0.1);
+    }
+
+    .statement-header {
+      display: flex;
+      justify-content: between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+
+    .statement-ref {
+      font-family: 'Courier New', monospace;
+      font-size: 0.875rem;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .statement-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .statement-meta {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 16px;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .statement-description {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .statement-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      border: 2px solid;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--bg);
+      border-color: var(--gold);
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--gold);
+      border-color: var(--gold);
+    }
+
+    .btn-secondary:hover {
+      background: var(--gold);
+      color: var(--bg);
+    }
+
+    .archive-notice {
+      background: linear-gradient(135deg, rgba(201, 162, 39, 0.05) 0%, transparent 100%);
+      border: 1px solid rgba(201, 162, 39, 0.2);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .archive-notice h3 {
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .archive-notice p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .footer {
+      margin-top: 80px;
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+
+    @media (max-width: 640px) {
+      .page-title { font-size: 2rem; }
+      .statement-actions { flex-direction: column; }
+      .btn { text-align: center; }
+      .statement-meta { flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header-content">
+        <div class="seal">SEAL</div>
+        <h1 class="office-title">OFFICE OF HIS ROYAL HIGHNESS CYRUS PAHLAVI</h1>
+        <h2 class="page-title">Official Statements</h2>
+      </div>
+    </header>
+
+    <nav class="navigation">
+      <a href="/" class="nav-link">← Back to Main Site</a>
+    </nav>
+
+    <div class="archive-notice">
+      <h3>Official Archive</h3>
+      <p>This page contains the authoritative archive of all official statements and declarations from the Office of His Royal Highness Cyrus Pahlavi. All documents are timestamped and reference-numbered for verification. Email authentication (SPF/DKIM/DMARC) is in place to prevent impersonation.</p>
+    </div>
+
+    <div class="statements-list">
+      <article class="statement-item">
+        <div class="statement-ref">HRHCP-2026-02-01-01</div>
+        <h3 class="statement-title">Declaration of Responsibility and Intent</h3>
+        <div class="statement-meta">
+          <span>📅 February 1, 2026</span>
+          <span>📄 8 pages</span>
+          <span>🔒 Digitally Signed</span>
+          <span>🌍 Public Statement</span>
+        </div>
+        <div class="statement-description">
+          Comprehensive declaration outlining His Royal Highness Cyrus Pahlavi's commitments to Iran's peaceful transition toward constitutional democracy. The document establishes clear pledges on secular governance, equal citizenship, women's full equality, national unity, and peaceful relations with neighbors. Witnessed and attested by Prince Shahram Pahlavi-Nia.
+        </div>
+        <div class="statement-actions">
+          <a href="/official-statements/HRHCP-2026-02-01-01.pdf" target="_blank" class="btn btn-primary">Download PDF (Official)</a>
+          <a href="/official-statements/declaration-of-responsibility.html" target="_blank" class="btn btn-secondary">View HTML Version</a>
+        </div>
+      </article>
+
+      <article class="statement-item">
+        <div class="statement-ref">HRHCP-2026-02-01-02</div>
+        <h3 class="statement-title">Mission Statement and Operating Principles</h3>
+        <div class="statement-meta">
+          <span>📅 February 1, 2026</span>
+          <span>📄 1 page</span>
+          <span>🏛️ Official Document</span>
+          <span>🌍 Public Statement</span>
+        </div>
+        <div class="statement-description">
+          Official mission statement and operating principles of the Office of His Royal Highness Cyrus Pahlavi. Establishes the framework for advancing peaceful, lawful, and nationally legitimate transition for Iran toward a secular constitutional order.
+        </div>
+        <div class="statement-actions">
+          <a href="/official-statements/mission-statement.html" target="_blank" class="btn btn-primary">View Document</a>
+        </div>
+      </article>
+    </div>
+
+    <footer class="footer">
+      <p>&copy; 2025 Office of His Royal Highness Cyrus Pahlavi</p>
+      <p>cyruspahlavi.com • Official Archive • Email Authentication in Place</p>
+    </footer>
+  </div>
+</body>
+</html>

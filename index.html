@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cyrus Pahlavi — Artist, Actor</title>
-  <meta name="description" content="Cyrus Pahlavi is an artist and actor. Born in Iran, educated at Le Rosey and Parsons School of Design.">
-  <meta property="og:title" content="Cyrus Pahlavi">
-  <meta property="og:description" content="Artist and actor. Le Rosey, Parsons School of Design.">
-  <meta property="og:image" content="/images/cyrus-pahlavi.jpg">
+  <title>Office of His Royal Highness Cyrus Pahlavi</title>
+  <meta name="description" content="Official website of His Royal Highness Cyrus Pahlavi. Advancing a peaceful, lawful, and nationally legitimate transition for Iran toward a secular constitutional order.">
+  <meta property="og:title" content="Office of His Royal Highness Cyrus Pahlavi">
+  <meta property="og:description" content="Official website - Advancing peaceful transition for Iran toward secular constitutional order">
+  <meta property="og:image" content="/images/cyrus-pahlavi-official.jpg">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/png" href="/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,6 +28,8 @@
       --text: #EDEDF2;
       --text-muted: #8B8B9B;
       --border: rgba(255, 255, 255, 0.06);
+      --royal-blue: #1e3a8a;
+      --seal-gold: #d4af37;
     }
 
     body {
@@ -54,9 +56,56 @@
       padding: 80px 24px;
     }
 
+    .official-header {
+      margin-bottom: 40px;
+    }
+
+    .seal-container {
+      margin-bottom: 20px;
+    }
+
+    .official-seal {
+      width: 100px;
+      height: 100px;
+      border: 3px solid var(--gold);
+      border-radius: 50%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      box-shadow: 0 0 30px rgba(201, 162, 39, 0.3);
+    }
+
+    .seal-inner {
+      color: var(--bg);
+      font-weight: bold;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    .official-title h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--text);
+      letter-spacing: 2px;
+    }
+
+    .official-title h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 3px;
+    }
+
     .portrait {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       object-fit: cover;
       object-position: center top;
@@ -65,77 +114,58 @@
       box-shadow: 0 0 60px rgba(201, 162, 39, 0.2);
     }
 
-    .name {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+    .mission-statement {
+      max-width: 800px;
+      margin-bottom: 40px;
     }
 
-    .tagline {
-      font-size: 1.25rem;
-      color: var(--text-muted);
-      margin-bottom: 32px;
-    }
-
-    .bio {
+    .mission-text {
       font-size: 1.125rem;
       color: var(--text-muted);
-      max-width: 600px;
-      margin-bottom: 40px;
-      line-height: 1.8;
+      line-height: 1.7;
+      text-align: justify;
+      font-style: italic;
     }
 
-    .roles {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 40px;
-    }
-
-    .role {
-      padding: 10px 20px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      font-size: 0.875rem;
-      color: var(--text);
-    }
-
-    .social-links {
+    .quick-links {
       display: flex;
       gap: 16px;
-      margin-bottom: 48px;
-    }
-
-    .social-link {
-      display: flex;
-      align-items: center;
+      flex-wrap: wrap;
       justify-content: center;
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: all 0.3s ease;
     }
 
-    .social-link:hover {
+    .cta-button {
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      border: 2px solid;
+    }
+
+    .cta-button.primary {
       background: var(--gold);
       color: var(--bg);
       border-color: var(--gold);
+    }
+
+    .cta-button.primary:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
       transform: translateY(-2px);
     }
 
-    .social-link svg {
-      width: 24px;
-      height: 24px;
+    .cta-button.secondary {
+      background: transparent;
+      color: var(--gold);
+      border-color: var(--gold);
+    }
+
+    .cta-button.secondary:hover {
+      background: var(--gold);
+      color: var(--bg);
+      transform: translateY(-2px);
     }
 
     section {
@@ -168,82 +198,248 @@
       line-height: 1.8;
     }
 
-    .timeline {
-      max-width: 600px;
+    .statements-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 800px;
       margin: 0 auto;
     }
 
-    .timeline-item {
+    .statement-card {
       display: flex;
-      gap: 24px;
-      padding-bottom: 32px;
-      position: relative;
+      align-items: center;
+      gap: 20px;
+      padding: 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.3s ease;
     }
 
-    .timeline-item:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      left: 11px;
-      top: 32px;
-      bottom: 0;
-      width: 2px;
-      background: var(--border);
+    .statement-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(201, 162, 39, 0.1);
     }
 
-    .timeline-dot {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background: var(--gold);
+    .statement-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      color: var(--bg);
       flex-shrink: 0;
     }
 
-    .timeline-content h4 {
-      font-size: 1rem;
-      margin-bottom: 4px;
+    .statement-info {
+      flex: 1;
     }
 
-    .timeline-content p {
-      color: var(--text-muted);
-      font-size: 0.875rem;
-    }
-
-    .timeline-year {
-      color: var(--gold);
-      font-size: 0.75rem;
+    .statement-title {
       font-weight: 600;
+      margin-bottom: 4px;
+      font-size: 1.1rem;
     }
 
-    .about-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
+    .statement-ref {
+      font-size: 0.8rem;
+      color: var(--gold);
+      margin-bottom: 8px;
+      font-family: 'Courier New', monospace;
+    }
+
+    .statement-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .statement-date {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .arrow {
+      color: var(--text-muted);
+      font-size: 1.2rem;
+    }
+
+    .mission-content {
       max-width: 900px;
       margin: 0 auto;
     }
 
-    .about-card {
-      padding: 32px;
+    .mission-statement-full {
+      text-align: center;
+      margin-bottom: 50px;
+      padding: 30px;
+      background: linear-gradient(135deg, rgba(201, 162, 39, 0.05) 0%, transparent 100%);
+      border-radius: 16px;
+      border: 1px solid rgba(201, 162, 39, 0.2);
+    }
+
+    .mission-statement-full p {
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.6;
+      color: var(--text);
+      margin: 0;
+    }
+
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .principle-card {
+      padding: 24px;
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 20px;
+      border-radius: 16px;
+      text-align: center;
     }
 
-    .about-card h3 {
-      font-size: 1.25rem;
+    .principle-icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .principle-card h3 {
+      font-size: 1.1rem;
       margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
+      color: var(--gold);
     }
 
-    .about-card h3 span {
-      font-size: 1.5rem;
-    }
-
-    .about-card p {
+    .principle-card p {
       color: var(--text-muted);
+      line-height: 1.5;
+      font-size: 0.9rem;
+    }
+
+    .biography-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .heritage-section,
+    .historical-context,
+    .contemporary-work,
+    .commitment-statement {
+      margin-bottom: 50px;
+    }
+
+    .heritage-section h3,
+    .historical-context h3,
+    .contemporary-work h3,
+    .commitment-statement h3 {
+      color: var(--gold);
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .bio-text {
+      font-size: 1rem;
       line-height: 1.7;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    .family-highlight {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--gold);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+
+    .family-highlight h4 {
+      color: var(--gold);
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .family-highlight p {
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .mission-connection {
+      background: linear-gradient(135deg, rgba(201, 162, 39, 0.05) 0%, transparent 100%);
+      border: 1px solid rgba(201, 162, 39, 0.2);
+      border-radius: 16px;
+      padding: 30px;
+      margin-top: 30px;
+    }
+
+    .mission-connection h4 {
+      color: var(--gold);
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .mission-connection p {
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 16px;
+      text-align: justify;
+    }
+
+    .mission-connection p strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .work-category {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .work-category h4 {
+      color: var(--gold);
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .work-category p {
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 12px;
+      text-align: justify;
+    }
+
+    .work-category p strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .commitment-quote {
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--text);
+      text-align: center;
+      padding: 30px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--gold);
+      border-radius: 12px;
+      margin: 30px 0;
+      line-height: 1.6;
     }
 
     .projects {
@@ -311,118 +507,212 @@
       text-align: center;
     }
 
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto 40px;
+    }
+
+    .contact-card {
+      padding: 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .contact-icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .contact-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      color: var(--gold);
+    }
+
+    .contact-card p {
+      color: var(--text-muted);
+      line-height: 1.5;
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p strong {
+      color: var(--text);
+      font-family: 'Courier New', monospace;
+    }
+
+    .verification-notice {
+      background: linear-gradient(135deg, rgba(201, 162, 39, 0.05) 0%, transparent 100%);
+      border: 1px solid rgba(201, 162, 39, 0.2);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .verification-notice p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
     footer {
       padding: 48px 24px;
       text-align: center;
       border-top: 1px solid var(--border);
+      margin-top: 80px;
     }
 
     footer p {
       color: var(--text-muted);
       font-size: 0.875rem;
+      margin-bottom: 8px;
     }
 
     @media (max-width: 640px) {
-      .name { font-size: 2.25rem; }
-      .portrait { width: 160px; height: 160px; }
-      .bio { font-size: 1rem; }
+      .official-title h1 { font-size: 1.25rem; }
+      .official-title h2 { font-size: 1.5rem; }
+      .portrait { width: 140px; height: 140px; }
+      .mission-text { font-size: 1rem; text-align: left; }
       .section-heading { font-size: 2rem; }
       .quote { font-size: 1.25rem; }
+      .quick-links { flex-direction: column; align-items: center; }
+      .cta-button { width: 100%; max-width: 280px; text-align: center; }
+      .principles-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
   <header class="hero">
-    <img src="/images/cyrus-pahlavi.jpg" alt="Cyrus Pahlavi" class="portrait">
-    <h1 class="name">Cyrus Pahlavi</h1>
-    <p class="tagline">Artist · Actor</p>
-
-    <div class="roles">
-      <span class="role">Visual Artist</span>
-      <span class="role">Actor</span>
-      <span class="role">MIGA DAO Founder</span>
+    <div class="official-header">
+      <div class="seal-container">
+        <div class="official-seal">
+          <div class="seal-inner">SEAL</div>
+        </div>
+      </div>
+      <div class="official-title">
+        <h1>OFFICE OF HIS ROYAL HIGHNESS</h1>
+        <h2>CYRUS PAHLAVI</h2>
+      </div>
+    </div>
+    
+    <img src="/images/cyrus-pahlavi.jpg" alt="His Royal Highness Cyrus Pahlavi" class="portrait">
+    
+    <div class="mission-statement">
+      <p class="mission-text">
+        Advancing a peaceful, lawful, and nationally legitimate transition for Iran—toward a secular constitutional order that protects equal citizenship, human dignity, women's full equality, national unity, and peaceful relations with neighbors.
+      </p>
     </div>
 
-    <p class="bio">
-      Born in Tehran in 1966, Cyrus Pahlavi is a visual artist and actor whose work explores themes of exile, identity, and the enduring beauty of nature.
-    </p>
-
-    <div class="social-links">
-      <a href="https://www.instagram.com/cyruspahlavi1" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-        </svg>
-      </a>
-      <a href="https://www.imdb.com/name/nm1797299/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="IMDb">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M14.31 9.588v.005c-.077-.048-.227-.07-.42-.07v4.815c.27 0 .44-.065.477-.186.04-.105.063-.474.063-1.103v-2.317c0-.522-.015-.86-.063-.993-.063-.133-.166-.2-.32-.236l.263.085zm-1.68 4.75H11.24V9.58h1.39v4.758zm-6.05 0H5.19v-4.76h1.39v4.76zm3.87-3.64c.085-.132.19-.228.3-.29.127-.063.27-.096.42-.096.22 0 .39.058.52.174.127.116.2.273.22.466l.02.305v2.097c0 .334-.02.57-.05.707-.05.137-.14.248-.27.33-.127.08-.3.12-.52.12-.19 0-.35-.03-.48-.09-.13-.058-.24-.156-.31-.29-.08-.133-.12-.37-.12-.715V10.7c0-.37.04-.62.13-.76l-.06.007zm.04 2.893c0 .19.01.31.04.37.02.058.08.088.16.088.07 0 .13-.03.16-.088.04-.06.05-.18.05-.37v-1.87c0-.2-.01-.33-.05-.39-.04-.06-.09-.09-.16-.09-.08 0-.14.03-.16.09-.03.06-.04.19-.04.39v1.87zM24 18.857V5.143C24 3.96 23.04 3 21.857 3H2.143C.96 3 0 3.96 0 5.143v13.714C0 20.04.96 21 2.143 21h19.714C23.04 21 24 20.04 24 18.857zM6.77 7.12H4.03v9.63h2.74V7.12zm5.44 0H9.57v9.63h1.57l.06-6.56c.15.22.39.57.69 1.04l2.15 5.52h1.6V7.12h-1.6l.02 5.87c-.21-.39-.39-.7-.52-.93l-1.78-4.94h-.52zm6.12 2.86c0-.62-.09-1.066-.264-1.33-.178-.267-.47-.4-.88-.4-.254 0-.47.067-.648.2-.18.132-.316.31-.41.534v-.6h-1.617v8.37h1.617v-2.79c.074.164.182.296.32.394.14.097.31.146.52.146.34 0 .59-.1.77-.3.178-.2.297-.48.355-.837.058-.354.087-.87.087-1.548v-.88c0-.66-.016-1.13-.047-1.42-.03-.287-.09-.51-.18-.66l.377.12zm3.62 1.32c0-.635-.04-1.09-.125-1.37-.087-.28-.23-.495-.44-.65-.206-.156-.47-.234-.78-.234-.24 0-.456.055-.64.162-.186.11-.345.27-.48.488v-.55h-1.62v6.51h1.62v-4.22c0-.27.017-.464.048-.577.03-.112.087-.196.165-.246.077-.052.18-.078.3-.078.14 0 .24.04.3.117.058.077.094.203.108.378.013.174.02.5.02.983v3.643h1.62v-4.36h-.097z"/>
-        </svg>
-      </a>
-      <a href="https://www.artnet.com/artists/cyrus-pahlavi/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Artnet">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-        </svg>
-      </a>
+    <div class="quick-links">
+      <a href="#statements" class="cta-button primary">Official Statements</a>
+      <a href="#mission" class="cta-button secondary">Mission & Principles</a>
+      <a href="#contact" class="cta-button secondary">Contact Office</a>
     </div>
   </header>
 
-  <section>
+  <section id="statements">
     <div class="container">
-      <span class="section-title">Biography</span>
-      <h2 class="section-heading">A Life in Art</h2>
+      <span class="section-title">Official</span>
+      <h2 class="section-heading">Statements & Declarations</h2>
+      <p class="section-desc">
+        Official statements and declarations from the Office of His Royal Highness Cyrus Pahlavi.
+      </p>
 
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-year">1966</span>
-            <h4>Born in Tehran, Iran</h4>
-            <p>Born into the Imperial family of Iran.</p>
+      <div class="statements-grid">
+        <a href="/statements.html" class="statement-card">
+          <div class="statement-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14,2 14,8 20,8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10,9 9,9 8,9"/>
+            </svg>
           </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-year">1979</span>
-            <h4>Exile to the Seychelles</h4>
-            <p>Following the Iranian Revolution, the family was forced into exile. Surrounded by nature on a remote island, he began painting—capturing the beauty of his surroundings and finding solace in art.</p>
+          <div class="statement-info">
+            <div class="statement-title">Declaration of Responsibility and Intent</div>
+            <div class="statement-ref">HRHCP-2026-02-01-01</div>
+            <div class="statement-desc">Comprehensive declaration outlining commitments to Iran's peaceful transition toward constitutional democracy</div>
+            <div class="statement-date">February 1, 2026 • 8 pages</div>
           </div>
-        </div>
+          <span class="arrow">→</span>
+        </a>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-year">1980s</span>
-            <h4>Institut Le Rosey, Switzerland</h4>
-            <p>Attended the prestigious Le Rosey boarding school in Switzerland, one of the world's oldest international schools.</p>
+        <a href="/statements.html" class="statement-card">
+          <div class="statement-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14,2 14,8 20,8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10,9 9,9 8,9"/>
+            </svg>
           </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-year">1990s</span>
-            <h4>Parsons School of Design, New York</h4>
-            <p>Studied art at Parsons, continuing to explore different forms of artistic expression.</p>
+          <div class="statement-info">
+            <div class="statement-title">Mission Statement and Operating Principles</div>
+            <div class="statement-ref">HRHCP-2025-MISSION-001</div>
+            <div class="statement-desc">Official mission and operating principles of the Office</div>
+            <div class="statement-date">February 2025</div>
           </div>
-        </div>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-year">2005</span>
-            <h4>Film: Ellie Parker</h4>
-            <p>Appeared in "Ellie Parker" alongside Naomi Watts, marking his entry into acting.</p>
+  <section id="mission">
+    <div class="container">
+      <span class="section-title">Mission</span>
+      <h2 class="section-heading">Our Purpose</h2>
+      
+      <div class="mission-content">
+        <div class="mission-statement-full">
+          <p>To advance a peaceful, lawful, and nationally legitimate transition for Iran—toward a secular constitutional order that protects equal citizenship, human dignity, women's full equality, national unity, and peaceful relations with neighbors.</p>
+        </div>
+        
+        <div class="principles-grid">
+          <div class="principle-card">
+            <div class="principle-icon">⚖️</div>
+            <h3>Legality</h3>
+            <p>Advocacy anchored in rule of law, due process, and constitutional constraints on power.</p>
           </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-year">Present</span>
-            <h4>Artist & Cultural Advocate</h4>
-            <p>Continues to create art, act, and advocate for cultural preservation for Iranians worldwide.</p>
+          
+          <div class="principle-card">
+            <div class="principle-icon">🕊️</div>
+            <h3>Non-violence</h3>
+            <p>Opposition to terrorism and political violence; commitment to peaceful political change.</p>
+          </div>
+          
+          <div class="principle-card">
+            <div class="principle-icon">🤝</div>
+            <h3>Equal Citizenship</h3>
+            <p>One civil law for all Iranians—of every faith and none, language, region, and political view.</p>
+          </div>
+          
+          <div class="principle-card">
+            <div class="principle-icon">🇮🇷</div>
+            <h3>National Unity</h3>
+            <p>Iran's territorial integrity is non-negotiable; disputes resolved by courts and ballots.</p>
+          </div>
+          
+          <div class="principle-card">
+            <div class="principle-icon">🛡️</div>
+            <h3>Protection of Civilians</h3>
+            <p>Priority on preventing harm to civilians, prisoners of conscience, journalists, lawyers, and medical personnel.</p>
+          </div>
+          
+          <div class="principle-card">
+            <div class="principle-icon">🔍</div>
+            <h3>Accountability</h3>
+            <p>Documentation, evidence preservation, and support for independent investigation.</p>
           </div>
         </div>
       </div>
@@ -431,31 +721,91 @@
 
   <section>
     <div class="container">
-      <span class="section-title">Work</span>
-      <h2 class="section-heading">Art & Film</h2>
+      <span class="section-title">Biography</span>
+      <h2 class="section-heading">Heritage and Legacy</h2>
       <p class="section-desc">
-        Nature remains an eternal source of inspiration—his most influential teacher from those early years in exile.
+        His Royal Highness Cyrus Pahlavi represents a lineage deeply connected to Iran's modern history and the ongoing struggle for constitutional democracy.
       </p>
 
-      <div class="about-grid">
-        <div class="about-card">
-          <h3><span>🎨</span> Visual Art</h3>
-          <p>Paintings exploring themes of exile, identity, and the natural world. Featured on Artnet with international exhibitions.</p>
+      <div class="biography-content">
+        <div class="heritage-section">
+          <h3>Family Legacy</h3>
+          <p class="bio-text">
+            His Royal Highness Cyrus Pahlavi is the son of Prince Shahram Pahlavi-Nia and Niloufar Afshar, and the grandson of Her Imperial Highness Princess Ashraf Pahlavi, the twin sister of Mohammad Reza Shah Pahlavi.
+          </p>
+          
+          <div class="family-highlight">
+            <h4>Princess Ashraf Pahlavi - "La Panthère Noire"</h4>
+            <p>His grandmother was called "La Panthère Noire"—the Black Panther—because she was fierce, outspoken, and unafraid of confrontation. In July 1946, as Iran faced one of the early post-war tests of its sovereignty, Princess Ashraf went to Moscow and met with Joseph Stalin at the Kremlin. She did not go as a spectator to history; she went to fight for Iran—directly, urgently, and with a patriot's refusal to be intimidated.</p>
+          </div>
+
+          <div class="family-highlight">
+            <h4>Queen Mother Tadj ol-Molouk</h4>
+            <p>His great-grandmother was Queen Mother Tadj ol-Molouk—wife of Reza Shah and mother of Mohammad Reza Shah and Princess Ashraf. She became one of the first Iranian queens in the modern era to appear publicly in an official role, at a time when the place of women in society was being contested and reshaped.</p>
+          </div>
+
+          <div class="family-highlight">
+            <h4>Niloufar Afshar</h4>
+            <p>His mother belongs to that same line of Iranian women who carried family, country, and conscience through upheaval. In exile, she has stood for dignity without spectacle—and for duty without complaint.</p>
+          </div>
         </div>
 
-        <div class="about-card">
-          <h3><span>🎬</span> Film & Acting</h3>
-          <p>Actor and producer. Credits include "Ellie Parker" (2005) with Naomi Watts, "Beslan," and "Human Bid."</p>
+        <div class="historical-context">
+          <h3>Historical Legacy and Modern Mission</h3>
+          <p class="bio-text">
+            The Pahlavi name is inseparable from Iran's modern history—its achievements, its wounds, and its unfinished work. Under Pahlavi reign, Iran built the foundations of a civil state: schools and universities expanded; national institutions were strengthened; and the law began to recognize citizens—especially women—as full participants in the life of the nation.
+          </p>
+          
+          <p class="bio-text">
+            Following the 1979 Iranian Revolution and the family's exile, His Royal Highness has witnessed firsthand the displacement faced by millions of Iranians. This experience of exile, combined with his heritage, has shaped his commitment to Iran's peaceful transition toward constitutional democracy.
+          </p>
+
+          <div class="mission-connection">
+            <h4>Connection to Cyrus the Great</h4>
+            <p>Across centuries and across communities, Cyrus the Great is remembered for restraint after victory—for restoring sanctuaries and returning displaced peoples to rebuild their lives. In Jewish memory, he is honored for enabling the end of the Babylonian captivity and the return to rebuild in Jerusalem. The Cyrus Cylinder has been invoked by many as a global symbol of human dignity and fundamental human rights.</p>
+            <p><strong>This is the Iranian standard His Royal Highness claims:</strong> strength under law; authority disciplined by conscience; faith honored without compulsion; pluralism protected by citizenship.</p>
+          </div>
         </div>
 
-        <div class="about-card">
-          <h3><span>👜</span> Collaborations</h3>
-          <p>Collaborations with luxury brands including Olympia Le-Tan, bringing artistic vision to fashion and design.</p>
+        <div class="contemporary-work">
+          <h3>Public Work and Contemporary Initiatives</h3>
+          
+          <div class="work-category">
+            <h4>Political Advocacy</h4>
+            <p>His public advocacy focuses on secular governance, equal citizenship, women's full equality, national unity, and a peaceful foreign policy anchored in non-aggression and law. The Office emphasizes documentation of abuses, protection of civilians, and lawful accountability—rejecting collective punishment and revenge.</p>
+          </div>
+
+          <div class="work-category">
+            <h4>Technology and Innovation</h4>
+            <p>HRH Cyrus Pahlavi has supported and helped launch <strong>Pars Network</strong> (pars.network), a privacy-preserving platform intended to provide resilient communications and public-interest media infrastructure for Iranians facing censorship, intimidation, and information blackouts.</p>
+            
+            <p>He has also supported the <strong>Pars DAO</strong>, an on-chain transparency and accountability initiative intended to publish verifiable records, open reporting, and civic proposals in a tamper-evident form.</p>
+            
+            <p>In the private sector, he is a managing partner of <strong>Lux Fund</strong> and co-founder and president of <strong>Lux Partners Limited</strong> (Isle of Man), focusing on next-generation privacy and security technologies, including privacy-preserving computation and applied cryptography research.</p>
+          </div>
+
+          <div class="work-category">
+            <h4>Cultural and Humanitarian Initiatives</h4>
+            <p>He founded <strong>CYRUS</strong>, a digital collectible initiative inspired by Cyrus the Great, intended to promote cultural memory and support civic-minded public engagement.</p>
+            
+            <p>He also initiated <strong>MIGA Protocol</strong>, a non-governmental, humanitarian funding initiative focused on supporting the global Persian community through transparent, mission-driven assistance, prioritizing direct relief, medical support, protection for displaced families, and assistance to victims of repression.</p>
+          </div>
+
+          <div class="work-category">
+            <h4>Artistic Expression</h4>
+            <p>As a visual artist, his work explores themes of exile, identity, and the enduring beauty of nature. His paintings have been featured on international platforms including Artnet, with his piece "Gardens of Exile" sold at Sotheby's auction house, representing a mature synthesis of Persian cultural traditions with contemporary artistic expression.</p>
+          </div>
         </div>
 
-        <div class="about-card">
-          <h3><span>🌍</span> MIGA DAO</h3>
-          <p>Founding Chair of MIGA DAO, working to preserve Persian cultural heritage and support freedom of expression.</p>
+        <div class="commitment-statement">
+          <h3>Personal Commitment</h3>
+          <blockquote class="commitment-quote">
+            "I do not treat lineage as a privilege above the people. I treat it as a burden of service: to defend Iran's dignity, to be restrained by law and conscience, and to remain accountable to the public trust."
+          </blockquote>
+          
+          <p class="bio-text">
+            His Royal Highness positions Iran's constitutional heritage and civilizational identity as central to a democratic future: a state restrained by law, pluralism protected by citizenship, and dignity secured for every Iranian.
+          </p>
         </div>
       </div>
     </div>
@@ -464,9 +814,9 @@
   <section class="quote-section">
     <div class="container">
       <blockquote class="quote">
-        "Nature became an eternal source of inspiration and my most influential teacher."
+        "I do not treat lineage as a privilege above the people. I treat it as a burden of service: to defend Iran's dignity, to be restrained by law and conscience, and to remain accountable to the public trust."
       </blockquote>
-      <p class="quote-attr">— Cyrus Pahlavi</p>
+      <p class="quote-attr">— His Royal Highness Cyrus Pahlavi</p>
     </div>
   </section>
 
@@ -476,6 +826,21 @@
       <h2 class="section-heading">Current Projects</h2>
 
       <div class="projects">
+        <a href="https://pars.network" target="_blank" rel="noopener noreferrer" class="project-link">
+          <div class="project-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="m2 17 10 5 10-5"/>
+              <path d="m2 12 10 5 10-5"/>
+            </svg>
+          </div>
+          <div class="project-info">
+            <div class="project-name">Pars Network</div>
+            <div class="project-desc">Privacy-preserving platform for resilient communications and media infrastructure</div>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+
         <a href="https://migaprotocol.xyz" target="_blank" rel="noopener noreferrer" class="project-link">
           <div class="project-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -485,7 +850,7 @@
           </div>
           <div class="project-info">
             <div class="project-name">MIGA Protocol</div>
-            <div class="project-desc">Freedom of Information DAO</div>
+            <div class="project-desc">Humanitarian funding initiative supporting the global Persian community</div>
           </div>
           <span class="arrow">→</span>
         </a>
@@ -498,16 +863,162 @@
           </div>
           <div class="project-info">
             <div class="project-name">MIGA Foundation</div>
-            <div class="project-desc">Mission & Governance</div>
+            <div class="project-desc">Mission & Governance for transparency and accountability</div>
           </div>
           <span class="arrow">→</span>
         </a>
+
+        <div class="project-link" style="cursor: default; opacity: 0.7;">
+          <div class="project-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
+          </div>
+          <div class="project-info">
+            <div class="project-name">Lux Fund & Lux Partners</div>
+            <div class="project-desc">Privacy and security technologies, cryptography research</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <span class="section-title">Contact</span>
+      <h2 class="section-heading">Official Channels</h2>
+      
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">📧</div>
+          <h3>Official Correspondence</h3>
+          <p><strong>office@cyruspahlavi.com</strong></p>
+          <p>For official communications and governmental outreach</p>
+        </div>
+        
+        <div class="contact-card">
+          <div class="contact-icon">📰</div>
+          <h3>Press Inquiries</h3>
+          <p><strong>press@cyruspahlavi.com</strong></p>
+          <p>For media inquiries and interview requests</p>
+        </div>
+        
+        <div class="contact-card">
+          <div class="contact-icon">🏛️</div>
+          <h3>Government Liaison</h3>
+          <p><strong>gov@cyruspahlavi.com</strong></p>
+          <p>For diplomatic and governmental communications</p>
+        </div>
+        
+        <div class="contact-card">
+          <div class="contact-icon">🌐</div>
+          <h3>Official Website</h3>
+          <p><strong>cyruspahlavi.com</strong></p>
+          <p>Authoritative source for all official statements and documents</p>
+        </div>
+      </div>
+      
+      <div class="verification-notice">
+        <p><strong>Verification Notice:</strong> All official communications originate only from the verified channels above. 
+        The definitive public record is maintained at cyruspahlavi.com. Any discrepancy should be treated as evidence of alteration.</p>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Cyrus Pahlavi</p>
+    <div class="container">
+      <p>&copy; 2025 Office of His Royal Highness Cyrus Pahlavi</p>
+      <p>Email authentication (SPF/DKIM/DMARC) in place to prevent impersonation</p>
+    </div>
   </footer>
+
+  <script>
+    const artPieces = {
+      piece1: {
+        image: '/images/art-piece-1.jpg',
+        title: 'Exile Series I',
+        medium: 'Oil on canvas • 120cm x 90cm • 2023',
+        description: 'A contemplative exploration of displacement and memory, painted during reflections on the Iranian diaspora experience. The layered brushwork suggests both the weight of exile and the persistence of cultural identity.'
+      },
+      piece2: {
+        image: '/images/art-piece-2.jpg',
+        title: 'Memory of Persepolis',
+        medium: 'Mixed media on canvas • 150cm x 100cm • 2022',
+        description: 'Ancient Persian architectural elements reimagined through contemporary artistic vision. The work bridges Iran\'s glorious past with its uncertain present, using gold leaf and traditional pigments alongside modern materials.'
+      },
+      piece3: {
+        image: '/images/art-piece-3.jpg',
+        title: 'Seychelles Dawn',
+        medium: 'Oil on canvas • 100cm x 80cm • 2021',
+        description: 'Painted during early morning hours in exile, this work captures the isolation and beauty of island life. The tropical landscape becomes a metaphor for distance from homeland while finding solace in nature\'s universal beauty.'
+      },
+      sothebys: {
+        image: '/images/sothebys-piece.jpg',
+        title: 'Gardens of Exile',
+        medium: 'Oil on canvas • 180cm x 120cm • 2024',
+        description: 'The artist\'s most acclaimed work, exploring themes of paradise lost and found. Sold at Sotheby\'s Contemporary Art auction, the piece represents a mature synthesis of Persian garden traditions with contemporary exile narratives.',
+        badge: 'Sold at Sotheby\'s 2024'
+      },
+      piece4: {
+        image: '/images/art-piece-4.jpg',
+        title: 'Portrait of Silence',
+        medium: 'Charcoal and oil on canvas • 90cm x 70cm • 2023',
+        description: 'A powerful portrait that speaks to the silenced voices within Iran. The mixed media technique creates depth and texture that mirrors the complexity of suppressed expression and the strength found in quiet resistance.'
+      },
+      piece5: {
+        image: '/images/art-piece-5.jpg',
+        title: 'Tehran Spring',
+        medium: 'Acrylic on canvas • 130cm x 100cm • 2022',
+        description: 'Hope and renewal emerge through vibrant colors and dynamic composition. Created during the nationwide protests, this work expresses the artist\'s solidarity with the Iranian people\'s aspirations for freedom and dignity.'
+      }
+    };
+
+    function openArtModal(pieceId) {
+      const piece = artPieces[pieceId];
+      if (!piece) return;
+
+      const modal = document.getElementById('artModal');
+      const modalImage = document.getElementById('modalImage');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalMedium = document.getElementById('modalMedium');
+      const modalDescription = document.getElementById('modalDescription');
+      const modalBadge = document.getElementById('modalBadge');
+
+      modalImage.src = piece.image;
+      modalImage.alt = piece.title;
+      modalTitle.textContent = piece.title;
+      modalMedium.textContent = piece.medium;
+      modalDescription.textContent = piece.description;
+
+      if (piece.badge) {
+        modalBadge.textContent = piece.badge;
+        modalBadge.style.display = 'inline-block';
+      } else {
+        modalBadge.style.display = 'none';
+      }
+
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeArtModal() {
+      const modal = document.getElementById('artModal');
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeArtModal();
+      }
+    });
+
+    // Prevent modal content clicks from closing modal
+    document.querySelector('.art-modal-content').addEventListener('click', function(event) {
+      event.stopPropagation();
+    });
+  </script>
 </body>
 </html>
