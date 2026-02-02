@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+:root {
+  --background: 225 23% 5%;
+  --foreground: 240 13% 96%;
+  --card: 230 24% 12%;
+  --card-foreground: 240 13% 96%;
+  --muted: 230 18% 20%;
+  --muted-foreground: 228 14% 70%;
+  --border: 230 18% 20%;
+  --input: 230 18% 20%;
+  --ring: 45 64% 50%;
+  --gold: 45 64% 50%;
+  --gold-light: 45 74% 60%;
+  --gold-dark: 45 54% 40%;
+  --radius: 14px;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  min-height: 100vh;
+  color: hsl(var(--foreground));
+  background: hsl(var(--background));
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 20% 10%, rgba(201, 162, 39, 0.12), transparent 45%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05), transparent 40%);
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: -1;
+}
+
+::selection {
+  background: rgba(201, 162, 39, 0.3);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

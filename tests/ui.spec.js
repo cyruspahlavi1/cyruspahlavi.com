@@ -1,10 +1,16 @@
-const path = require('path');
-const { pathToFileURL } = require('url');
 const { test, expect } = require('@playwright/test');
 
 const pages = [
-  { name: 'home', file: 'index.html', locator: 'h1.hero-title' },
-  { name: 'statements', file: 'statements.html', locator: '.page-title' },
+  { name: 'home', path: '/', locator: 'h1' },
+  { name: 'statements', path: '/statements', locator: 'h1' },
+  { name: 'biography', path: '/biography', locator: 'h1' },
+  { name: 'strategic-priorities', path: '/strategic-priorities', locator: 'h1' },
+  { name: 'enduring-legacy', path: '/enduring-legacy', locator: 'h1' },
+  { name: 'initiatives-and-partners', path: '/initiatives-and-partners', locator: 'h1' },
+  { name: 'works', path: '/works', locator: 'h1' },
+  { name: 'contact', path: '/contact', locator: 'h1' },
+  { name: 'privacy', path: '/privacy', locator: 'h1' },
+  { name: 'terms', path: '/terms', locator: 'h1' },
 ];
 
 const viewports = [
@@ -19,11 +25,12 @@ for (const viewport of viewports) {
     test.use({ viewport });
 
     for (const pageMeta of pages) {
-      test(`renders ${pageMeta.name} without horizontal overflow`, async ({ page }) => {
-        const filePath = path.resolve(__dirname, '..', pageMeta.file);
-        const fileUrl = pathToFileURL(filePath).href;
-        await page.goto(fileUrl, { waitUntil: 'domcontentloaded' });
+      test(`renders ${pageMeta.name} without horizontal overflow`, async ({ page }, testInfo) => {
+        await page.goto(pageMeta.path, { waitUntil: 'domcontentloaded' });
         await expect(page.locator(pageMeta.locator)).toBeVisible();
+
+        const screenshotName = `${pageMeta.name}-${viewport.name}.png`;
+        await page.screenshot({ path: testInfo.outputPath(screenshotName), fullPage: true });
 
         const noOverflow = await page.evaluate(() => {
           const doc = document.documentElement;
@@ -34,10 +41,8 @@ for (const viewport of viewports) {
     }
 
     test('portrait is visible on home', async ({ page }) => {
-      const filePath = path.resolve(__dirname, '..', 'index.html');
-      const fileUrl = pathToFileURL(filePath).href;
-      await page.goto(fileUrl, { waitUntil: 'domcontentloaded' });
-      await expect(page.locator('.portrait-frame')).toBeVisible();
+      await page.goto('/', { waitUntil: 'domcontentloaded' });
+      await expect(page.locator('img[alt*=\"Portrait\"]')).toBeVisible();
     });
   });
 }
