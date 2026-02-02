@@ -69,10 +69,10 @@ export default function HomePage() {
               </div>
             </div>
             <h1 className="font-serif text-3xl leading-tight text-foreground md:text-5xl">
-              Advancing a lawful, peaceful transition for Iran toward a secular constitutional order.
+              A lawful, peaceful transition for Iran toward a secular constitutional order.
             </h1>
             <p className="mt-6 max-w-2xl text-base text-muted-foreground md:text-lg">
-              Protecting equal citizenship, human dignity, women&apos;s full equality, national unity, and peaceful relations with neighbors through principled, non-violent leadership.
+              Protecting equal citizenship, human dignity, women&apos;s full equality, national unity, and peaceful relations with neighbors through non-violent, lawful action.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button asChild size="lg">
@@ -169,7 +169,7 @@ export default function HomePage() {
           <div className="rounded-3xl border border-gold/40 bg-gradient-to-br from-black/80 to-black/30 p-8 shadow-soft">
             <h3 className="font-serif text-2xl text-gold">Works & Cultural Legacy</h3>
             <p className="mt-4 text-sm text-muted-foreground">
-              Visual art, sculpture, and screen work exploring themes of exile, identity, and cultural memory.
+              Visual art, sculpture, and screen work addressing exile, identity, and cultural memory.
             </p>
             <Button asChild variant="outline" className="mt-6">
               <Link href="/works">Explore Works</Link>

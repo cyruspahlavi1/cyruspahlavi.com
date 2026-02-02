@@ -12,12 +12,12 @@ const works = [
   },
   {
     title: 'Sculpture & Objects',
-    description: 'Sculptural works and objects are part of the works archive. Selected pieces will be published as they are cataloged and cleared for release.',
+    description: 'Sculptural works and objects are part of the works archive and will be published as they are cataloged and cleared for release.',
     links: [],
   },
   {
     title: 'Screen & Acting',
-    description: 'Public film and acting credits can be referenced through the official IMDb listing.',
+    description: 'Public film and acting credits are referenced through the official IMDb listing.',
     links: [
       { label: 'IMDb', href: 'https://www.imdb.com/name/nm1797299/' },
     ],
@@ -32,7 +32,7 @@ export default function WorksPage() {
           <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Works</p>
           <h1 className="mt-4 font-serif text-4xl text-gold">Art, Sculpture, and Screen Work</h1>
           <p className="mt-4 max-w-3xl text-muted-foreground">
-            A curated record of artistic and cultural contributions across visual art, sculptural works, and film.
+            Record of artistic and cultural contributions across visual art, sculptural works, and film.
           </p>
         </div>
       </section>
