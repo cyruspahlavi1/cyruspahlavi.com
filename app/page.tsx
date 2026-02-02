@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { foundationLinks } from '@/lib/site-data';
 
 const principles = [
   {
@@ -153,6 +154,30 @@ export default function HomePage() {
             <Button asChild variant="outline" className="mt-6">
               <Link href="/works">Explore Works</Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/10 py-20">
+        <div className="container">
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Foundations & Initiatives</p>
+              <h2 className="mt-3 font-serif text-3xl text-gold">Linked Organizations</h2>
+            </div>
+          </div>
+          <div className="mt-10 grid gap-4 md:grid-cols-3">
+            {foundationLinks.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-2xl border border-white/10 bg-card p-6 text-sm font-semibold text-foreground transition hover:border-gold/60"
+              >
+                {item.label} →
+              </a>
+            ))}
           </div>
         </div>
       </section>

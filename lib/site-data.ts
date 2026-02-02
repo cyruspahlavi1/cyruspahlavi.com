@@ -15,3 +15,15 @@ export const contactEmails = [
   { label: 'Press Inquiries', value: 'press@cyruspahlavi.com' },
   { label: 'Government Liaison', value: 'gov@cyruspahlavi.com' },
 ];
+
+export const officialAddress = [
+  'Palacestrasse 28,',
+  'CH-3780 Gstaad,',
+  'Switzerland',
+];
+
+export const foundationLinks = [
+  { label: 'Parsis Foundation', href: 'https://parsis.foundation' },
+  { label: 'Cyrus.NGO', href: 'https://cyrus.ngo' },
+  { label: 'MIGA Protocol', href: 'https://migaprotocol.xyz' },
+];

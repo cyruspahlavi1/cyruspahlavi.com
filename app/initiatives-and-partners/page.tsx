@@ -2,6 +2,16 @@ import Link from 'next/link';
 
 const initiatives = [
   {
+    title: 'Parsis Foundation',
+    description: 'Foundation supporting civic, cultural, and humanitarian initiatives.',
+    href: 'https://parsis.foundation',
+  },
+  {
+    title: 'Cyrus.NGO',
+    description: 'Public-interest organization supporting civil society and humanitarian work.',
+    href: 'https://cyrus.ngo',
+  },
+  {
     title: 'Pars Network',
     description: 'Privacy-preserving platform providing resilient communications and public-interest media infrastructure for Iranians facing censorship and information blackouts.',
     href: 'https://pars.network',

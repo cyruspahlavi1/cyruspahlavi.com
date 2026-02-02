@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { contactEmails } from '@/lib/site-data';
+import { contactEmails, officialAddress } from '@/lib/site-data';
 
 export function SiteFooter() {
   return (
@@ -33,6 +33,13 @@ export function SiteFooter() {
                 {item.label}
               </p>
             ))}
+            <p>
+              <span className="text-foreground font-semibold">Address</span>
+              <br />
+              {officialAddress.map((line) => (
+                <span key={line} className="block">{line}</span>
+              ))}
+            </p>
           </div>
         </div>
       </div>
