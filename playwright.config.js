@@ -12,7 +12,7 @@ module.exports = defineConfig({
     baseURL: 'http://127.0.0.1:3001',
   },
   webServer: {
-    command: 'npm run dev -- --hostname 127.0.0.1 --port 3001',
+    command: 'NEXT_DISABLE_TURBOPACK=1 npm run dev -- --hostname 127.0.0.1 --port 3001',
     url: 'http://127.0.0.1:3001',
     reuseExistingServer: true,
     timeout: 120000,

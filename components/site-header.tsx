@@ -36,8 +36,9 @@ export function SiteHeader() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
-      <div className="container flex items-center justify-between gap-6 py-4">
+    <>
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
+        <div className="container flex items-center justify-between gap-6 py-4">
         <Link href="/" className="flex items-center gap-3 text-foreground">
           <div className="h-12 w-12 rounded-full border border-gold/60 p-2">
             <Image src="/images/official-seal.png" alt="Seal" width={48} height={48} className="h-full w-full object-contain" />
@@ -115,9 +116,10 @@ export function SiteHeader() {
             Search (⌘K)
           </button>
         </div>
-      </div>
-    </header>
+        </div>
+      </header>
 
-    <CommandPalette isOpen={paletteOpen} onClose={() => setPaletteOpen(false)} />
+      <CommandPalette isOpen={paletteOpen} onClose={() => setPaletteOpen(false)} />
+    </>
   );
 }
