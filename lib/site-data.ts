@@ -1,7 +1,7 @@
 export const site = {
   title: 'Cyrus Pahlavi',
   description:
-    'A peaceful future for Iran, built on unity, dignity, and the rule of law.',
+    'Artist, humanitarian, and technologist. Painting, civic initiatives, and privacy-preserving technology.',
 };
 
 export const navItems = [
@@ -24,8 +24,10 @@ export const officialAddress = [
 
 export const foundationLinks = [
   { label: 'Parsis Foundation', href: 'https://parsis.foundation', external: true },
-  { label: 'Cyrus.NGO', href: 'https://cyrus.ngo', external: true },
+  { label: 'Pars Network', href: 'https://pars.network', external: true },
+  { label: 'Pars DAO', href: 'https://pars.vote', external: true },
   { label: 'MIGA Protocol', href: 'https://migaprotocol.xyz', external: true },
+  { label: 'Lux Fund', href: 'https://lux.fund', external: true },
 ];
 
 export const commandGroups = [

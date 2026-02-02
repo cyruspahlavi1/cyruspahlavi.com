@@ -60,7 +60,6 @@ export function SiteFooter() {
 
         <div className="mt-12 border-t border-white/10 pt-6 text-center text-xs text-muted-foreground">
           <p>&copy; 2026 Cyrus Pahlavi</p>
-          <p className="mt-1">The public record is maintained at cyruspahlavi.com</p>
         </div>
       </div>
     </footer>

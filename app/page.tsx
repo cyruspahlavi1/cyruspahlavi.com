@@ -3,47 +3,47 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { foundationLinks } from '@/lib/site-data';
 
-const principles = [
+const values = [
   {
-    title: 'Legality',
-    description: 'Advocacy anchored in rule of law, due process, and constitutional constraints on power.',
+    title: 'Human Rights',
+    description: 'Advocacy for the protection of civilians, prisoners of conscience, journalists, and medical personnel.',
   },
   {
     title: 'Non-violence',
-    description: 'Opposition to terrorism and political violence; commitment to peaceful political change.',
+    description: 'Opposition to terrorism and violence; commitment to peaceful resolution and healing.',
   },
   {
-    title: 'Equal Citizenship',
-    description: 'One civil law for all Iranians of every faith and none, language, region, and political view.',
+    title: 'Dignity',
+    description: 'Upholding human dignity and equal rights for all people regardless of faith, ethnicity, or belief.',
   },
   {
-    title: 'National Unity',
-    description: "Iran's territorial integrity is non-negotiable; disputes resolved by courts and ballots.",
-  },
-  {
-    title: 'Protection of Civilians',
-    description: 'Priority on preventing harm to civilians, prisoners of conscience, journalists, lawyers, and medical personnel.',
-  },
-  {
-    title: 'Accountability',
+    title: 'Transparency',
     description: 'Documentation, evidence preservation, and support for independent investigation.',
+  },
+  {
+    title: 'Privacy',
+    description: 'Privacy-preserving technologies to protect communications and personal freedoms.',
+  },
+  {
+    title: 'Cultural Memory',
+    description: 'Preserving and honoring cultural heritage through art, technology, and civic initiatives.',
   },
 ];
 
 const focusAreas = [
   {
-    title: 'Strategic Priorities',
-    description: 'Operational focus on lawful transition, civic cohesion, and protection of democratic norms.',
-    href: '/strategic-priorities',
+    title: 'Artistic Practice',
+    description: 'Painting shaped by themes of nature, memory, and the experience of exile—a form of freedom.',
+    href: '/works',
   },
   {
-    title: 'Enduring Legacy',
-    description: 'Continuity with Iran’s constitutional heritage and the responsibilities of leadership.',
-    href: '/enduring-legacy',
+    title: 'Humanitarian Work',
+    description: 'Projects like "Rainbow of Beslan" supporting children and families affected by terrorism.',
+    href: '/biography',
   },
   {
-    title: 'Initiatives & Partners',
-    description: 'Technology, humanitarian, and cultural initiatives supporting the Iranian people.',
+    title: 'Civic Technology',
+    description: 'Privacy-preserving platforms and transparent humanitarian funding initiatives.',
     href: '/initiatives-and-partners',
   },
 ];
@@ -55,24 +55,24 @@ export default function HomePage() {
         <div className="container grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
             <div className="mb-6">
-              <p className="font-serif text-xl text-gold">In Service of Iran</p>
+              <p className="font-serif text-xl text-gold">For Iran. For All Iranians.</p>
             </div>
             <h1 className="font-serif text-3xl leading-tight text-foreground md:text-5xl">
-              A peaceful future for Iran, built on unity, dignity, and the rule of law.
+              Artist, humanitarian, and technologist working for human dignity and world peace.
             </h1>
             <p className="mt-6 max-w-2xl text-base text-muted-foreground md:text-lg">
-              Working toward a free Iran where all people—of every faith, ethnicity, and belief—can live with equal rights, human dignity, and peace.
+              HRH Cyrus Pahlavi combines creative practice with direct civic benefit—from art workshops with victims of terrorism to privacy-preserving technology for communities facing censorship.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button asChild size="lg">
-                <Link href="/statements">Official Statements</Link>
+                <Link href="/biography">Read the Biography</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link href="/biography">Read the Biography</Link>
+                <Link href="/works">View Artworks</Link>
               </Button>
             </div>
             <div className="mt-10 flex flex-wrap gap-3">
-              {['8-page declaration', '2026 statements', '6 core principles'].map((item) => (
+              {['Visual Artist', 'Human Rights Advocate', 'Privacy Technologist'].map((item) => (
                 <div
                   key={item}
                   className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-[10px] uppercase tracking-[0.15em] text-muted-foreground sm:px-4 sm:py-3 sm:text-xs sm:tracking-[0.2em]"
@@ -86,7 +86,7 @@ export default function HomePage() {
             <div className="mx-auto w-full max-w-sm overflow-hidden rounded-3xl border border-gold/40 bg-card shadow-soft">
               <Image
                 src="/images/cyrus-pahlavi.jpg"
-                alt="Portrait of His Royal Highness Cyrus Pahlavi"
+                alt="Portrait of HRH Cyrus Pahlavi"
                 width={540}
                 height={720}
                 className="h-full w-full object-cover"
@@ -99,14 +99,14 @@ export default function HomePage() {
       <section className="py-20">
         <div className="container">
           <div className="max-w-3xl">
-            <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Mission</p>
-            <h2 className="mt-4 font-serif text-3xl text-foreground">Purpose and Operating Principles</h2>
+            <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Values</p>
+            <h2 className="mt-4 font-serif text-3xl text-foreground">Guiding Principles</h2>
             <p className="mt-6 text-muted-foreground">
-              To advance a peaceful, lawful transition for Iran—one that honors all faiths, protects every citizen equally, upholds human dignity, ensures women&apos;s full equality, preserves national unity, and fosters peaceful relations with neighbors.
+              Committed to protecting human dignity, honoring victims of terrorism, and building technology that preserves privacy and freedom for communities around the world.
             </p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {principles.map((item) => (
+            {values.map((item) => (
               <div key={item.title} className="rounded-2xl border border-white/10 bg-card p-6 shadow-soft">
                 <h3 className="font-serif text-lg text-gold">{item.title}</h3>
                 <p className="mt-3 text-sm text-muted-foreground">{item.description}</p>
@@ -132,24 +132,19 @@ export default function HomePage() {
 
       <section className="py-20">
         <div className="container grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
-          <div className="rounded-3xl border border-white/10 bg-card p-8 shadow-soft">
-            <h3 className="font-serif text-2xl text-gold">Official Communications</h3>
+          <div className="rounded-3xl border border-gold/40 bg-card p-8 shadow-soft">
+            <h3 className="font-serif text-2xl text-gold">Rainbow of Beslan</h3>
             <p className="mt-4 text-sm text-muted-foreground">
-              All official communications originate only from verified channels. Email authentication (SPF/DKIM/DMARC) is in place to prevent impersonation.
+              Art workshops with children and families affected by the Beslan school attack—a tribute to those who were killed and those who survived. This project reflects a continuing focus on protecting children, supporting healing, and honoring victims of terrorism.
             </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Button asChild size="sm">
-                <Link href="/statements">View Statements</Link>
-              </Button>
-              <Button asChild variant="outline" size="sm">
-                <Link href="/contact">Contact</Link>
-              </Button>
-            </div>
+            <Button asChild variant="outline" className="mt-6">
+              <Link href="/biography">Learn More</Link>
+            </Button>
           </div>
-          <div className="rounded-3xl border border-gold/40 bg-gradient-to-br from-black/80 to-black/30 p-8 shadow-soft">
+          <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-black/80 to-black/30 p-8 shadow-soft">
             <h3 className="font-serif text-2xl text-gold">Works & Cultural Legacy</h3>
             <p className="mt-4 text-sm text-muted-foreground">
-              Visual art, sculpture, and screen work addressing exile, identity, and cultural memory.
+              Visual art shaped by themes of nature, memory, and the experience of exile. Exhibited internationally from Monaco to Dubai.
             </p>
             <Button asChild variant="outline" className="mt-6">
               <Link href="/works">Explore Works</Link>
@@ -166,7 +161,7 @@ export default function HomePage() {
               <h2 className="mt-3 font-serif text-3xl text-gold">Linked Organizations</h2>
             </div>
           </div>
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
+          <div className="mt-10 grid gap-4 md:grid-cols-3 lg:grid-cols-5">
             {foundationLinks.map((item) => (
               <a
                 key={item.href}
