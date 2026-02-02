@@ -3,17 +3,36 @@
 import * as React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { Menu, Search, X } from 'lucide-react';
 import { navItems } from '@/lib/site-data';
 import { cn } from '@/lib/utils';
+import { CommandPalette } from './command-palette';
+import { SiteMenuPanel } from './site-menu-panel';
 
 export function SiteHeader() {
   const [open, setOpen] = React.useState(false);
+  const [menuOpen, setMenuOpen] = React.useState(false);
+  const [paletteOpen, setPaletteOpen] = React.useState(false);
 
   React.useEffect(() => {
     const handler = () => setOpen(false);
     window.addEventListener('resize', handler);
     return () => window.removeEventListener('resize', handler);
+  }, []);
+
+  React.useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
+        event.preventDefault();
+        setPaletteOpen((prev) => !prev);
+      }
+      if (event.key === 'Escape') {
+        setPaletteOpen(false);
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
   return (
@@ -37,6 +56,28 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
+
+        <div className="hidden xl:flex items-center gap-3">
+          <button
+            type="button"
+            onClick={() => setPaletteOpen(true)}
+            className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs uppercase tracking-[0.2em] text-muted-foreground"
+          >
+            <Search size={14} />
+            Search
+            <span className="rounded border border-white/10 px-1.5 py-0.5 text-[10px] text-muted-foreground">⌘K</span>
+          </button>
+          <div className="relative">
+            <button
+              type="button"
+              onClick={() => setMenuOpen((prev) => !prev)}
+              className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs uppercase tracking-[0.2em] text-muted-foreground"
+            >
+              Menu
+            </button>
+            <SiteMenuPanel open={menuOpen} onClose={() => setMenuOpen(false)} />
+          </div>
+        </div>
 
         <button
           type="button"
@@ -65,8 +106,18 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
+          <button
+            type="button"
+            className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground"
+            onClick={() => setPaletteOpen(true)}
+          >
+            <Search size={14} />
+            Search (⌘K)
+          </button>
         </div>
       </div>
     </header>
+
+    <CommandPalette isOpen={paletteOpen} onClose={() => setPaletteOpen(false)} />
   );
 }

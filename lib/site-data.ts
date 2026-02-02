@@ -27,3 +27,30 @@ export const foundationLinks = [
   { label: 'Cyrus.NGO', href: 'https://cyrus.ngo' },
   { label: 'MIGA Protocol', href: 'https://migaprotocol.xyz' },
 ];
+
+export const commandGroups = [
+  {
+    label: 'Pages',
+    items: [
+      { label: 'Home', href: '/' },
+      { label: 'Biography', href: '/biography' },
+      { label: 'Mission', href: '/mission' },
+      { label: 'Initiatives', href: '/initiatives-and-partners' },
+      { label: 'Works', href: '/works' },
+      { label: 'Statements', href: '/statements' },
+      { label: 'Contact', href: '/contact' },
+    ],
+  },
+  {
+    label: 'Foundations',
+    items: foundationLinks,
+  },
+  {
+    label: 'Documents',
+    items: [
+      { label: 'Declaration PDF', href: '/official-statements/HRHCP-2026-02-01-01.pdf', external: true },
+      { label: 'Declaration HTML', href: '/official-statements/declaration-of-responsibility.html', external: true },
+      { label: 'Mission Statement', href: '/official-statements/mission-statement.html', external: true },
+    ],
+  },
+];
