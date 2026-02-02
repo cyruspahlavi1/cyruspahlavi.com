@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Office of His Royal Highness Cyrus Pahlavi</title>
+  <meta name="description" content="Official website of His Royal Highness Cyrus Pahlavi. Advancing a peaceful, lawful, and nationally legitimate transition for Iran toward a secular constitutional order.">
+  <meta property="og:title" content="Office of His Royal Highness Cyrus Pahlavi">
+  <meta property="og:description" content="Official website - Advancing peaceful transition for Iran toward secular constitutional order">
+  <meta property="og:image" content="/images/cyrus-pahlavi-official.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --gold: #C9A227;
+      --gold-light: #E0C165;
+      --ink: #0B0C14;
+      --bg: #0C0D15;
+      --bg-elev: #151622;
+      --text: #F3F2EE;
+      --text-muted: #A7A8B2;
+      --border: rgba(255, 255, 255, 0.08);
+      --glow: rgba(201, 162, 39, 0.18);
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top left, rgba(201, 162, 39, 0.08), transparent 55%),
+        radial-gradient(circle at 20% 10%, rgba(255, 255, 255, 0.04), transparent 40%),
+        var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1200px, 100%);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: clamp(70px, 10vw, 110px) 0;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+
+    .section--alt {
+      background: linear-gradient(160deg, rgba(201, 162, 39, 0.05), transparent 55%);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: clamp(36px, 6vw, 60px);
+    }
+
+    .section-title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .section-heading {
+      font-family: 'Fraunces', 'Times New Roman', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Header */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(10, 11, 18, 0.9);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .seal-small {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      background: #fff;
+      padding: 4px;
+      box-shadow: 0 0 20px var(--glow);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .office-name {
+      font-size: 0.75rem;
+      letter-spacing: 1.2px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .royal-name {
+      font-family: 'Fraunces', 'Times New Roman', serif;
+      font-size: 1.1rem;
+      letter-spacing: 1.6px;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .nav {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      position: relative;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width 0.2s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--gold);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 1rem;
+      padding: 8px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+      padding: clamp(60px, 9vw, 120px) 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 20% 20%, rgba(201, 162, 39, 0.2), transparent 50%),
+        radial-gradient(circle at 80% 10%, rgba(255, 255, 255, 0.08), transparent 45%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: clamp(32px, 6vw, 64px);
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(201, 162, 39, 0.12);
+      color: var(--gold);
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-family: 'Fraunces', 'Times New Roman', serif;
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+
+    .hero-title span {
+      color: var(--gold);
+      display: block;
+    }
+
+    .hero-mission {
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      max-width: 560px;
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .cta-btn {
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 2px solid;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta-primary {
+      background: var(--gold);
+      color: var(--ink);
+      border-color: var(--gold);
+      box-shadow: 0 12px 30px rgba(201, 162, 39, 0.25);
+    }
+
+    .cta-secondary {
+      color: var(--gold);
+      border-color: var(--gold);
+      background: transparent;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .portrait-wrap {
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+
+    .portrait-frame {
+      width: min(360px, 90vw);
+      aspect-ratio: 3 / 4;
+      border-radius: 24px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(201, 162, 39, 0.35);
+      background: linear-gradient(160deg, rgba(201, 162, 39, 0.2), rgba(12, 13, 21, 0.9));
+    }
+
+    .portrait-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(1.05) contrast(1.05);
+    }
+
+    .portrait-seal {
+      position: absolute;
+      bottom: -18px;
+      right: -12px;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      background: #fff;
+      padding: 8px;
+      box-shadow: 0 0 28px rgba(201, 162, 39, 0.35);
+    }
+
+    .portrait-caption {
+      margin-top: 18px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    /* Card grids */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 26px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
+    }
+
+    .card:hover {
+      border-color: rgba(201, 162, 39, 0.5);
+      transform: translateY(-4px);
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .card-title {
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .card-text {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .quick-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .quick-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      background: rgba(201, 162, 39, 0.08);
+      border: 1px solid rgba(201, 162, 39, 0.35);
+      border-radius: 12px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+
+    /* Principles */
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .principle {
+      background: rgba(21, 22, 34, 0.85);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      text-align: center;
+    }
+
+    .principle-title {
+      color: var(--gold);
+      font-weight: 600;
+      margin: 10px 0 6px;
+    }
+
+    .principle-desc {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Biography */
+    .bio-content {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    .bio-section {
+      margin-bottom: 42px;
+    }
+
+    .bio-section h3 {
+      font-family: 'Fraunces', 'Times New Roman', serif;
+      color: var(--gold);
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .bio-text {
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 18px;
+      text-align: justify;
+    }
+
+    .highlight-box {
+      background: rgba(21, 22, 34, 0.9);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--gold);
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 18px;
+    }
+
+    .highlight-box h4 {
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    /* Initiatives */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .project-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 20px;
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      text-decoration: none;
+      color: var(--text);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .project-link:hover {
+      border-color: rgba(201, 162, 39, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .project-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: rgba(201, 162, 39, 0.18);
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .project-name {
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .project-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .contact-card {
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      text-align: center;
+    }
+
+    .contact-card h3 {
+      color: var(--gold);
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .contact-card p strong {
+      color: var(--text);
+      font-family: 'Courier New', monospace;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 50px 0 40px;
+      background: rgba(12, 13, 21, 0.95);
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .footer-section h4 {
+      color: var(--gold);
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    .footer-contact {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .footer-contact strong {
+      color: var(--text);
+      font-family: 'Courier New', monospace;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 860px) {
+      .nav {
+        position: fixed;
+        top: 76px;
+        right: 24px;
+        background: rgba(12, 13, 21, 0.98);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px;
+        display: none;
+        min-width: 200px;
+        box-shadow: var(--shadow);
+      }
+
+      .nav.is-open {
+        display: flex;
+      }
+
+      .mobile-menu-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .logo-text {
+        display: none;
+      }
+
+      .cta-btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .portrait-frame {
+        width: min(300px, 85vw);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="/" class="logo">
+          <img src="/images/official-seal.png" alt="Official Seal" class="seal-small">
+          <div class="logo-text">
+            <div class="office-name">OFFICE OF HIS ROYAL HIGHNESS</div>
+            <div class="royal-name">CYRUS PAHLAVI</div>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="#mission" class="nav-link">Mission</a>
+          <a href="#statements" class="nav-link">Statements</a>
+          <a href="#biography" class="nav-link">Biography</a>
+          <a href="#initiatives" class="nav-link">Initiatives</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <button class="mobile-menu-btn" type="button" aria-expanded="false">Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content reveal">
+            <div class="hero-tag">Official Office</div>
+            <h1 class="hero-title">Office of His Royal Highness <span>Cyrus Pahlavi</span></h1>
+            <p class="hero-mission">
+              Advancing a peaceful, lawful, and nationally legitimate transition for Iran toward a secular constitutional order that protects equal citizenship, human dignity, women's full equality, national unity, and peaceful relations with neighbors.
+            </p>
+            <div class="hero-actions">
+              <a href="/statements.html" class="cta-btn cta-primary">Official Statements</a>
+              <a href="#mission" class="cta-btn cta-secondary">Learn More</a>
+            </div>
+          </div>
+          <div class="portrait-wrap reveal">
+            <figure class="portrait-frame">
+              <img src="/images/cyrus-pahlavi.jpg" alt="Portrait of His Royal Highness Cyrus Pahlavi">
+              <img src="/images/official-seal.png" alt="Official Seal" class="portrait-seal">
+            </figure>
+            <figcaption class="portrait-caption">Official portrait of His Royal Highness Cyrus Pahlavi</figcaption>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mission" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-title">Mission</div>
+          <h2 class="section-heading">Our Purpose and Principles</h2>
+          <p class="section-desc">
+            To advance a peaceful, lawful, and nationally legitimate transition for Iran toward a secular constitutional order that protects equal citizenship, human dignity, women's full equality, national unity, and peaceful relations with neighbors.
+          </p>
+        </div>
+
+        <div class="principles-grid">
+          <div class="principle reveal">
+            <div class="principle-icon">⚖️</div>
+            <div class="principle-title">Legality</div>
+            <div class="principle-desc">Advocacy anchored in rule of law, due process, and constitutional constraints on power.</div>
+          </div>
+          <div class="principle reveal">
+            <div class="principle-icon">🕊️</div>
+            <div class="principle-title">Non-violence</div>
+            <div class="principle-desc">Opposition to terrorism and political violence; commitment to peaceful political change.</div>
+          </div>
+          <div class="principle reveal">
+            <div class="principle-icon">🤝</div>
+            <div class="principle-title">Equal Citizenship</div>
+            <div class="principle-desc">One civil law for all Iranians of every faith and none, language, region, and political view.</div>
+          </div>
+          <div class="principle reveal">
+            <div class="principle-icon">🇮🇷</div>
+            <div class="principle-title">National Unity</div>
+            <div class="principle-desc">Iran's territorial integrity is non-negotiable; disputes resolved by courts and ballots.</div>
+          </div>
+          <div class="principle reveal">
+            <div class="principle-icon">🛡️</div>
+            <div class="principle-title">Protection of Civilians</div>
+            <div class="principle-desc">Priority on preventing harm to civilians, prisoners of conscience, journalists, lawyers, and medical personnel.</div>
+          </div>
+          <div class="principle reveal">
+            <div class="principle-icon">🔍</div>
+            <div class="principle-title">Accountability</div>
+            <div class="principle-desc">Documentation, evidence preservation, and support for independent investigation.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="statements" class="section section--alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-title">Official</div>
+          <h2 class="section-heading">Statements and Declarations</h2>
+          <p class="section-desc">
+            Official statements and declarations from the Office of His Royal Highness Cyrus Pahlavi.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <div class="card reveal">
+            <div class="card-icon">📜</div>
+            <h3 class="card-title">Declaration of Responsibility and Intent</h3>
+            <p class="card-text">
+              Comprehensive declaration outlining commitments to Iran's peaceful transition toward constitutional democracy. Reference: HRHCP-2026-02-01-01
+            </p>
+            <div class="quick-links">
+              <a href="/official-statements/HRHCP-2026-02-01-01.pdf" target="_blank" class="quick-link">
+                <span class="quick-link-icon">📄</span>
+                <span class="quick-link-text">Download PDF</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <div class="card-icon">🏛️</div>
+            <h3 class="card-title">Mission and Operating Principles</h3>
+            <p class="card-text">
+              Official mission statement and operating principles of the Office. Framework for advancing peaceful, lawful, and nationally legitimate transition.
+            </p>
+            <div class="quick-links">
+              <a href="/statements.html" class="quick-link">
+                <span class="quick-link-icon">📋</span>
+                <span class="quick-link-text">View Archive</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="biography" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-title">Biography</div>
+          <h2 class="section-heading">Heritage and Legacy</h2>
+          <p class="section-desc">
+            His Royal Highness Cyrus Pahlavi represents a lineage deeply connected to Iran's modern history and the ongoing struggle for constitutional democracy.
+          </p>
+        </div>
+
+        <div class="bio-content">
+          <div class="bio-section reveal">
+            <h3>Family Legacy</h3>
+            <p class="bio-text">
+              His Royal Highness Cyrus Pahlavi is the son of Prince Shahram Pahlavi-Nia and Niloufar Afshar, and the grandson of Her Imperial Highness Princess Ashraf Pahlavi, the twin sister of Mohammad Reza Shah Pahlavi.
+            </p>
+
+            <div class="highlight-box">
+              <h4>Princess Ashraf Pahlavi - "La Panthere Noire"</h4>
+              <p>His grandmother was called "La Panthere Noire" because she was fierce, outspoken, and unafraid of confrontation. In July 1946, as Iran faced one of the early post-war tests of its sovereignty, Princess Ashraf went to Moscow and met with Joseph Stalin at the Kremlin. She did not go as a spectator to history; she went to fight for Iran directly, urgently, and with a patriot's refusal to be intimidated.</p>
+            </div>
+
+            <div class="highlight-box">
+              <h4>Connection to Cyrus the Great</h4>
+              <p>Across centuries and across communities, Cyrus the Great is remembered for restraint after victory, for restoring sanctuaries and returning displaced peoples to rebuild their lives. <strong>This is the Iranian standard His Royal Highness claims:</strong> strength under law; authority disciplined by conscience; faith honored without compulsion; pluralism protected by citizenship.</p>
+            </div>
+          </div>
+
+          <div class="bio-section reveal">
+            <h3>Contemporary Work</h3>
+            <div class="card-grid">
+              <div class="card">
+                <div class="card-icon">🏛️</div>
+                <div class="card-title">Political Advocacy</div>
+                <div class="card-text">Public advocacy focused on secular governance, equal citizenship, women's full equality, national unity, and peaceful foreign policy anchored in non-aggression and law.</div>
+              </div>
+
+              <div class="card">
+                <div class="card-icon">💻</div>
+                <div class="card-title">Technology Initiatives</div>
+                <div class="card-text">Managing partner of Lux Fund, co-founder of Lux Partners Limited, focusing on privacy-preserving technologies and applied cryptography research.</div>
+              </div>
+
+              <div class="card">
+                <div class="card-icon">🎨</div>
+                <div class="card-title">Artistic Expression</div>
+                <div class="card-text">Visual artist exploring themes of exile, identity, and cultural memory. Work featured internationally including Sotheby's auction house.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="initiatives" class="section section--alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-title">Initiatives</div>
+          <h2 class="section-heading">Current Projects</h2>
+          <p class="section-desc">
+            Technology, humanitarian, and cultural initiatives supporting the Iranian people and preserving Persian heritage.
+          </p>
+        </div>
+
+        <div class="projects">
+          <a href="https://pars.network" target="_blank" rel="noopener noreferrer" class="project-link reveal">
+            <div class="project-icon">🌐</div>
+            <div>
+              <div class="project-name">Pars Network</div>
+              <div class="project-desc">Privacy-preserving platform for resilient communications and media infrastructure.</div>
+            </div>
+          </a>
+
+          <a href="https://migaprotocol.xyz" target="_blank" rel="noopener noreferrer" class="project-link reveal">
+            <div class="project-icon">🤝</div>
+            <div>
+              <div class="project-name">MIGA Protocol</div>
+              <div class="project-desc">Humanitarian funding initiative supporting the global Persian community.</div>
+            </div>
+          </a>
+
+          <a href="https://cyruspahlavi.art" target="_blank" rel="noopener noreferrer" class="project-link reveal">
+            <div class="project-icon">🎨</div>
+            <div>
+              <div class="project-name">Art Collection</div>
+              <div class="project-desc">Visual artworks exploring exile, identity, and cultural memory.</div>
+            </div>
+          </a>
+
+          <div class="project-link" style="cursor: default; opacity: 0.7;">
+            <div class="project-icon">💎</div>
+            <div>
+              <div class="project-name">Lux Fund and Lux Partners</div>
+              <div class="project-desc">Privacy and security technologies, cryptography research.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-title">Contact</div>
+          <h2 class="section-heading">Official Channels</h2>
+          <p class="section-desc">
+            All official communications originate only from verified Office channels. Email authentication (SPF/DKIM/DMARC) is in place to prevent impersonation.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card reveal">
+            <div class="contact-icon">📧</div>
+            <h3>Official Correspondence</h3>
+            <p><strong>office@cyruspahlavi.com</strong><br>For official communications and governmental outreach.</p>
+          </div>
+          <div class="contact-card reveal">
+            <div class="contact-icon">📰</div>
+            <h3>Press Inquiries</h3>
+            <p><strong>press@cyruspahlavi.com</strong><br>For media inquiries and interview requests.</p>
+          </div>
+          <div class="contact-card reveal">
+            <div class="contact-icon">🏛️</div>
+            <h3>Government Liaison</h3>
+            <p><strong>gov@cyruspahlavi.com</strong><br>For diplomatic and governmental communications.</p>
+          </div>
+          <div class="contact-card reveal">
+            <div class="contact-icon">🌐</div>
+            <h3>Official Website</h3>
+            <p><strong>cyruspahlavi.com</strong><br>Authoritative source for all official statements and documents.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Office Information</h4>
+          <ul class="footer-links">
+            <li><a href="/statements.html">Official Statements</a></li>
+            <li><a href="/official-documents/HRHCP-2026-02-01-01.pdf" target="_blank">Declaration of Responsibility</a></li>
+            <li><a href="#mission">Mission and Principles</a></li>
+            <li><a href="#biography">Biography</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Initiatives</h4>
+          <ul class="footer-links">
+            <li><a href="https://pars.network" target="_blank" rel="noopener">Pars Network</a></li>
+            <li><a href="https://migaprotocol.xyz" target="_blank" rel="noopener">MIGA Protocol</a></li>
+            <li><a href="https://miga.us.org" target="_blank" rel="noopener">MIGA Foundation</a></li>
+            <li><a href="https://cyruspahlavi.art" target="_blank" rel="noopener">Art Collection</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>External Platforms</h4>
+          <ul class="footer-links">
+            <li><a href="https://lux.art" target="_blank" rel="noopener">Lux.art</a></li>
+            <li><a href="https://www.sothebys.com" target="_blank" rel="noopener">Sotheby's</a></li>
+            <li><a href="https://www.artnet.com/artists/cyrus-pahlavi/" target="_blank" rel="noopener">Artnet</a></li>
+            <li><a href="https://www.imdb.com/name/nm1797299/" target="_blank" rel="noopener">IMDb</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Official Contact</h4>
+          <div class="footer-contact">
+            <strong>office@cyruspahlavi.com</strong><br>
+            Official correspondence<br><br>
+            <strong>press@cyruspahlavi.com</strong><br>
+            Media inquiries<br><br>
+            <strong>gov@cyruspahlavi.com</strong><br>
+            Government liaison
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Office of His Royal Highness Cyrus Pahlavi</p>
+        <p>Email authentication (SPF/DKIM/DMARC) in place to prevent impersonation</p>
+        <p>The definitive public record is maintained at cyruspahlavi.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('is-open');
+      mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', event => {
+        const target = document.querySelector(anchor.getAttribute('href'));
+        if (!target) return;
+        event.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        nav.classList.remove('is-open');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (scrollY >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

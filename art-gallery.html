@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Collection - His Royal Highness Cyrus Pahlavi</title>
+  <meta name="description" content="Artistic works by His Royal Highness Cyrus Pahlavi exploring themes of exile, identity, and cultural memory. Featured internationally including Sotheby's auction house.">
+  <meta property="og:title" content="Art Collection - His Royal Highness Cyrus Pahlavi">
+  <meta property="og:description" content="Visual artworks exploring themes of exile, identity, and cultural memory">
+  <meta property="og:image" content="/images/cyrus-pahlavi.jpg">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --gold: #C9A227;
+      --gold-light: #D4AF37;
+      --gold-dark: #B8941F;
+      --bg: #0A0B10;
+      --bg-elevated: #141520;
+      --bg-card: #1A1B28;
+      --bg-section: #0F1017;
+      --text: #F5F5F8;
+      --text-muted: #A1A1B5;
+      --text-secondary: #D1D1E0;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-light: rgba(255, 255, 255, 0.04);
+      --shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 30px 60px rgba(0, 0, 0, 0.5);
+      --gradient-gold: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    .header {
+      background: rgba(10, 11, 16, 0.95);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(20px);
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .seal-small {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      background: white;
+      padding: 4px;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .office-name {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+    }
+
+    .royal-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 1px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 32px;
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      position: relative;
+      padding: 8px 0;
+    }
+
+    .nav-link:hover {
+      color: var(--gold);
+    }
+
+    .back-to-main {
+      background: var(--gradient-gold);
+      color: var(--bg);
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .back-to-main:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(201, 162, 39, 0.4);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 120px 0 80px;
+      text-align: center;
+      background: radial-gradient(ellipse at top, rgba(26, 27, 40, 0.8) 0%, var(--bg) 50%);
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      margin-bottom: 24px;
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Gallery Grid */
+    .gallery {
+      padding: 80px 0;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 40px;
+      margin-bottom: 80px;
+    }
+
+    .artwork-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+    }
+
+    .artwork-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .artwork-image {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      background: var(--bg-section);
+      overflow: hidden;
+    }
+
+    .artwork-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .artwork-card:hover .artwork-image img {
+      transform: scale(1.05);
+    }
+
+    .artwork-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+    }
+
+    .artwork-card:hover .artwork-overlay {
+      opacity: 1;
+    }
+
+    .view-fullscreen {
+      background: var(--gradient-gold);
+      color: var(--bg);
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .artwork-info {
+      padding: 32px;
+    }
+
+    .artwork-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .artwork-details {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .artwork-description {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .artwork-badges {
+      display: flex;
+      gap: 8px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      background: rgba(201, 162, 39, 0.12);
+      color: var(--gold);
+      padding: 4px 12px;
+      border-radius: 16px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      border: 1px solid rgba(201, 162, 39, 0.2);
+    }
+
+    /* Featured Auction Section */
+    .featured-auction {
+      background: var(--bg-section);
+      padding: 80px 0;
+    }
+
+    .auction-card {
+      background: var(--bg-elevated);
+      border: 2px solid var(--gold);
+      border-radius: 24px;
+      padding: 40px;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .auction-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gradient-gold);
+      color: var(--bg);
+      padding: 8px 20px;
+      border-radius: 24px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .auction-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .auction-details {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    .auction-links {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .auction-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .auction-link:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    /* Modal/Fullscreen View */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 1000;
+      padding: 40px;
+      backdrop-filter: blur(10px);
+    }
+
+    .modal.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-content {
+      max-width: 90vw;
+      max-height: 90vh;
+      position: relative;
+    }
+
+    .modal-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: -50px;
+      right: 0;
+      background: var(--gold);
+      color: var(--bg);
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .modal-close:hover {
+      background: var(--gold-light);
+      transform: rotate(90deg);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .hero {
+        padding: 80px 0 60px;
+      }
+
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .artwork-info {
+        padding: 24px;
+      }
+
+      .auction-card {
+        padding: 24px;
+        margin: 0 16px;
+      }
+
+      .auction-title {
+        font-size: 1.8rem;
+      }
+
+      .auction-links {
+        flex-direction: column;
+      }
+
+      .modal {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-text {
+        display: none;
+      }
+
+      .nav {
+        gap: 16px;
+      }
+
+      .nav-link {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="/" class="logo">
+          <img src="/images/official-seal.png" alt="Official Seal" class="seal-small">
+          <div class="logo-text">
+            <div class="office-name">CYRUS PAHLAVI</div>
+            <div class="royal-name">ART COLLECTION</div>
+          </div>
+        </a>
+
+        <nav class="nav">
+          <a href="/" class="nav-link">Home</a>
+          <a href="https://lux.art" target="_blank" class="nav-link">Lux.art</a>
+          <a href="https://cyruspahlavi.art" target="_blank" class="nav-link">cyruspahlavi.art</a>
+          <a href="/" class="back-to-main">Back to Main Site</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">Art Collection</h1>
+      <p class="hero-subtitle">
+        Visual artworks exploring themes of exile, identity, and cultural memory. 
+        Featured on international platforms including Sotheby's auction house and Artnet.
+      </p>
+    </div>
+  </section>
+
+  <!-- Featured Sotheby's Auction -->
+  <section class="featured-auction">
+    <div class="container">
+      <div class="auction-card">
+        <div class="auction-badge">
+          <span>🏛️</span> Featured at Sotheby's
+        </div>
+        <h2 class="auction-title">Recent Auction Success</h2>
+        <p class="auction-details">
+          Latest artwork successfully featured and sold at Sotheby's prestigious auction house, 
+          marking an important milestone in contemporary Persian artistic expression and cultural preservation.
+        </p>
+        <div class="auction-links">
+          <a href="https://www.sothebys.com" target="_blank" class="auction-link">
+            <span>🔗</span>
+            Sotheby's
+          </a>
+          <a href="https://lux.art" target="_blank" class="auction-link">
+            <span>💎</span>
+            Lux.art Platform
+          </a>
+          <a href="https://www.artnet.com/artists/cyrus-pahlavi/" target="_blank" class="auction-link">
+            <span>🎨</span>
+            Artnet Profile
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery">
+    <div class="container">
+      <div class="gallery-grid">
+        <!-- Artwork 1 -->
+        <div class="artwork-card" onclick="openModal('artwork1')">
+          <div class="artwork-image">
+            <img src="/images/artwork-1.jpg" alt="Exile and Memory" id="artwork1-img">
+            <div class="artwork-overlay">
+              <button class="view-fullscreen">View Fullscreen</button>
+            </div>
+          </div>
+          <div class="artwork-info">
+            <h3 class="artwork-title">Exile and Memory</h3>
+            <div class="artwork-details">
+              Mixed media on canvas • 48" x 36" • 2024
+            </div>
+            <p class="artwork-description">
+              An exploration of displacement and cultural memory, this piece reflects on the experience 
+              of exile and the preservation of identity across generations. The layered composition 
+              speaks to the complexity of maintaining connection to homeland while adapting to new realities.
+            </p>
+            <div class="artwork-badges">
+              <span class="badge">Mixed Media</span>
+              <span class="badge">2024</span>
+              <span class="badge">Featured</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Artwork 2 -->
+        <div class="artwork-card" onclick="openModal('artwork2')">
+          <div class="artwork-image">
+            <img src="/images/artwork-2.jpg" alt="Cultural Continuity" id="artwork2-img">
+            <div class="artwork-overlay">
+              <button class="view-fullscreen">View Fullscreen</button>
+            </div>
+          </div>
+          <div class="artwork-info">
+            <h3 class="artwork-title">Cultural Continuity</h3>
+            <div class="artwork-details">
+              Oil on canvas • 60" x 40" • 2023
+            </div>
+            <p class="artwork-description">
+              This work examines the threads that connect past and future, exploring how cultural 
+              heritage survives and evolves through periods of disruption. The interplay of traditional 
+              and contemporary elements reflects the ongoing dialogue between history and modernity.
+            </p>
+            <div class="artwork-badges">
+              <span class="badge">Oil Painting</span>
+              <span class="badge">2023</span>
+              <span class="badge">Sotheby's</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Artwork 3 -->
+        <div class="artwork-card" onclick="openModal('artwork3')">
+          <div class="artwork-image">
+            <img src="/images/artwork-3.jpg" alt="Digital Persepolis" id="artwork3-img">
+            <div class="artwork-overlay">
+              <button class="view-fullscreen">View Fullscreen</button>
+            </div>
+          </div>
+          <div class="artwork-info">
+            <h3 class="artwork-title">Digital Persepolis</h3>
+            <div class="artwork-details">
+              Digital art • NFT • 2024
+            </div>
+            <p class="artwork-description">
+              A contemporary reimagining of ancient Persian architectural grandeur through digital media. 
+              This piece bridges millennia, presenting Persepolis as both historical monument and 
+              living symbol of Persian civilization's enduring influence.
+            </p>
+            <div class="artwork-badges">
+              <span class="badge">Digital Art</span>
+              <span class="badge">NFT</span>
+              <span class="badge">2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Artwork 4 -->
+        <div class="artwork-card" onclick="openModal('artwork4')">
+          <div class="artwork-image">
+            <img src="/images/artwork-4.jpg" alt="Constitutional Dreams" id="artwork4-img">
+            <div class="artwork-overlay">
+              <button class="view-fullscreen">View Fullscreen</button>
+            </div>
+          </div>
+          <div class="artwork-info">
+            <h3 class="artwork-title">Constitutional Dreams</h3>
+            <div class="artwork-details">
+              Acrylic and gold leaf • 54" x 42" • 2024
+            </div>
+            <p class="artwork-description">
+              An artistic meditation on constitutional governance and democratic ideals. The incorporation 
+              of gold leaf references the value of justice and the rule of law, while the composition 
+              suggests the careful balance required to maintain democratic institutions.
+            </p>
+            <div class="artwork-badges">
+              <span class="badge">Acrylic</span>
+              <span class="badge">Gold Leaf</span>
+              <span class="badge">2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Artwork 5 -->
+        <div class="artwork-card" onclick="openModal('artwork5')">
+          <div class="artwork-image">
+            <img src="/images/artwork-5.jpg" alt="Women's Liberation" id="artwork5-img">
+            <div class="artwork-overlay">
+              <button class="view-fullscreen">View Fullscreen</button>
+            </div>
+          </div>
+          <div class="artwork-info">
+            <h3 class="artwork-title">Women's Liberation</h3>
+            <div class="artwork-details">
+              Mixed media collage • 48" x 48" • 2024
+            </div>
+            <p class="artwork-description">
+              A powerful tribute to Iranian women's courage and resistance. This piece celebrates 
+              the strength of women who have fought for equality and freedom, incorporating elements 
+              of traditional Persian motifs with contemporary symbols of empowerment.
+            </p>
+            <div class="artwork-badges">
+              <span class="badge">Collage</span>
+              <span class="badge">Social Justice</span>
+              <span class="badge">2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Artwork 6 -->
+        <div class="artwork-card" onclick="openModal('artwork6')">
+          <div class="artwork-image">
+            <img src="/images/artwork-6.jpg" alt="Unity in Diversity" id="artwork6-img">
+            <div class="artwork-overlay">
+              <button class="view-fullscreen">View Fullscreen</button>
+            </div>
+          </div>
+          <div class="artwork-info">
+            <h3 class="artwork-title">Unity in Diversity</h3>
+            <div class="artwork-details">
+              Watercolor and ink • 36" x 52" • 2023
+            </div>
+            <p class="artwork-description">
+              This work celebrates Iran's rich ethnic and cultural diversity while emphasizing 
+              the common bonds that unite all Iranians. The flowing watercolor technique represents 
+              the fluid nature of identity and the strength found in unity.
+            </p>
+            <div class="artwork-badges">
+              <span class="badge">Watercolor</span>
+              <span class="badge">2023</span>
+              <span class="badge">Cultural Heritage</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal for fullscreen viewing -->
+  <div class="modal" id="artModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <img class="modal-image" id="modalImage" alt="Artwork fullscreen">
+    </div>
+  </div>
+
+  <script>
+    function openModal(artworkId) {
+      const modal = document.getElementById('artModal');
+      const modalImg = document.getElementById('modalImage');
+      const sourceImg = document.getElementById(artworkId + '-img');
+      
+      modal.classList.add('active');
+      modalImg.src = sourceImg.src;
+      modalImg.alt = sourceImg.alt;
+      
+      // Prevent body scrolling when modal is open
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('artModal');
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modal when clicking outside the image
+    document.getElementById('artModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+
+    // Create placeholder images if they don't exist
+    document.addEventListener('DOMContentLoaded', function() {
+      const images = document.querySelectorAll('.artwork-image img');
+      images.forEach((img, index) => {
+        // Create placeholder if image doesn't load
+        img.onerror = function() {
+          this.src = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect width='800' height='600' fill='%23141520'/%3E%3Ctext x='50%25' y='50%25' font-family='serif' font-size='24' fill='%23C9A227' text-anchor='middle' dominant-baseline='middle'%3EArtwork %23${index + 1}%3C/text%3E%3C/svg%3E`;
+        };
+      });
+    });
+  </script>
+</body>
+</html>
