@@ -2,31 +2,38 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { foundationLinks } from '@/lib/site-data';
+import { Shield, Heart, Users, FileSearch, Lock, Landmark, Palette, HeartHandshake, Cpu } from 'lucide-react';
 
 const values = [
   {
     title: 'Human Rights',
     description: 'Advocacy for the protection of civilians, prisoners of conscience, journalists, and medical personnel.',
+    icon: Shield,
   },
   {
     title: 'Non-violence',
     description: 'Opposition to terrorism and violence; commitment to peaceful resolution and healing.',
+    icon: Heart,
   },
   {
     title: 'Dignity',
     description: 'Upholding human dignity and equal rights for all people regardless of faith, ethnicity, or belief.',
+    icon: Users,
   },
   {
     title: 'Transparency',
     description: 'Documentation, evidence preservation, and support for independent investigation.',
+    icon: FileSearch,
   },
   {
     title: 'Privacy',
     description: 'Privacy-preserving technologies to protect communications and personal freedoms.',
+    icon: Lock,
   },
   {
     title: 'Cultural Memory',
     description: 'Preserving and honoring cultural heritage through art, technology, and civic initiatives.',
+    icon: Landmark,
   },
 ];
 
@@ -35,16 +42,19 @@ const focusAreas = [
     title: 'Artistic Practice',
     description: 'Painting shaped by themes of nature, memory, and the experience of exile—a form of freedom.',
     href: '/works',
+    icon: Palette,
   },
   {
     title: 'Humanitarian Work',
     description: 'Projects like "Rainbow of Beslan" supporting children and families affected by terrorism.',
     href: '/biography',
+    icon: HeartHandshake,
   },
   {
     title: 'Civic Technology',
     description: 'Privacy-preserving platforms and transparent humanitarian funding initiatives.',
     href: '/initiatives-and-partners',
+    icon: Cpu,
   },
 ];
 
@@ -68,7 +78,7 @@ export default function HomePage() {
                 <Link href="/biography">Read the Biography</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link href="/works">View Artworks</Link>
+                <Link href="/works">Selected Works</Link>
               </Button>
             </div>
             <div className="mt-10 flex flex-wrap gap-3">
@@ -108,8 +118,9 @@ export default function HomePage() {
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {values.map((item) => (
               <div key={item.title} className="rounded-2xl border border-white/10 bg-card p-6 shadow-soft">
-                <h3 className="font-serif text-lg text-gold">{item.title}</h3>
-                <p className="mt-3 text-sm text-muted-foreground">{item.description}</p>
+                <item.icon className="h-6 w-6 text-gold" />
+                <h3 className="mt-3 font-serif text-lg text-gold">{item.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{item.description}</p>
               </div>
             ))}
           </div>
@@ -120,7 +131,8 @@ export default function HomePage() {
         <div className="container grid gap-6 lg:grid-cols-3">
           {focusAreas.map((item) => (
             <div key={item.title} className="rounded-2xl border border-white/10 bg-card p-7 shadow-soft">
-              <h3 className="font-serif text-xl text-gold">{item.title}</h3>
+              <item.icon className="h-8 w-8 text-gold" />
+              <h3 className="mt-4 font-serif text-xl text-gold">{item.title}</h3>
               <p className="mt-3 text-sm text-muted-foreground">{item.description}</p>
               <Button asChild variant="ghost" className="mt-6 justify-start px-0">
                 <Link href={item.href}>Learn more →</Link>
