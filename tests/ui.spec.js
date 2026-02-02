@@ -1,4 +1,5 @@
 const path = require('path');
+const { pathToFileURL } = require('url');
 const { test, expect } = require('@playwright/test');
 
 const pages = [
@@ -20,7 +21,8 @@ for (const viewport of viewports) {
     for (const pageMeta of pages) {
       test(`renders ${pageMeta.name} without horizontal overflow`, async ({ page }) => {
         const filePath = path.resolve(__dirname, '..', pageMeta.file);
-        await page.goto(`file://${filePath}`);
+        const fileUrl = pathToFileURL(filePath).href;
+        await page.goto(fileUrl, { waitUntil: 'domcontentloaded' });
         await expect(page.locator(pageMeta.locator)).toBeVisible();
 
         const noOverflow = await page.evaluate(() => {
@@ -33,7 +35,8 @@ for (const viewport of viewports) {
 
     test('portrait is visible on home', async ({ page }) => {
       const filePath = path.resolve(__dirname, '..', 'index.html');
-      await page.goto(`file://${filePath}`);
+      const fileUrl = pathToFileURL(filePath).href;
+      await page.goto(fileUrl, { waitUntil: 'domcontentloaded' });
       await expect(page.locator('.portrait-frame')).toBeVisible();
     });
   });
