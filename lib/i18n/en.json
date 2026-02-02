@@ -1,0 +1,68 @@
+{
+  "site": {
+    "name": "Cyrus Pahlavi"
+  },
+  "nav": {
+    "biography": "Biography",
+    "mission": "Mission",
+    "initiatives": "Initiatives",
+    "search": "Search",
+    "menu": "Menu"
+  },
+  "home": {
+    "tagline": "For Iran. For All Iranians.",
+    "intro": "Prince Cyrus Pahlavi—statesman, artist, poet, philosopher, human rights activist, investor, and technologist—is an advocate for a peaceful, lawful transition in Iran. One that honors all faiths, protects every citizen equally, upholds human dignity, ensures women's full equality, preserves national unity, and fosters peaceful relations with neighbors."
+  },
+  "mission": {
+    "label": "Mission",
+    "title": "Purpose and Operating Principles",
+    "description": "To advance a peaceful, lawful transition for Iran—one that honors all faiths, protects every citizen equally, upholds human dignity, ensures women's full equality, preserves national unity, and fosters peaceful relations with neighbors.",
+    "principles": {
+      "legality": {
+        "title": "Legality",
+        "description": "Advocacy anchored in rule of law, due process, and constitutional constraints on power."
+      },
+      "nonviolence": {
+        "title": "Non-violence",
+        "description": "Opposition to terrorism and political violence; commitment to peaceful political change."
+      },
+      "equalCitizenship": {
+        "title": "Equal Citizenship",
+        "description": "One civil law for all Iranians of every faith and none, language, region, and political view."
+      },
+      "nationalUnity": {
+        "title": "National Unity",
+        "description": "Iran's territorial integrity is non-negotiable; disputes resolved by courts and ballots."
+      },
+      "protectionOfCivilians": {
+        "title": "Protection of Civilians",
+        "description": "Priority on preventing harm to civilians, prisoners of conscience, journalists, lawyers, and medical personnel."
+      },
+      "accountability": {
+        "title": "Accountability",
+        "description": "Documentation, evidence preservation, and support for independent investigation."
+      }
+    }
+  },
+  "footer": {
+    "information": "Information",
+    "statements": "Statements",
+    "strategicPriorities": "Strategic Priorities",
+    "enduringLegacy": "Enduring Legacy",
+    "initiativesPartners": "Initiatives & Partners",
+    "resources": "Resources",
+    "biography": "Biography",
+    "works": "Works",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "contact": "Contact",
+    "officialCorrespondence": "Official Correspondence",
+    "pressInquiries": "Press Inquiries",
+    "governmentLiaison": "Government Liaison",
+    "address": "Address"
+  },
+  "language": {
+    "en": "English",
+    "fa": "فارسی"
+  }
+}

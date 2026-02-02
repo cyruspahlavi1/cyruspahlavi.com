@@ -55,13 +55,13 @@ export default function HomePage() {
         <div className="container grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
             <div className="mb-6">
-              <p className="font-serif text-xl text-gold">Cyrus Pahlavi</p>
+              <p className="font-serif text-xl text-gold">In Service of Iran</p>
             </div>
             <h1 className="font-serif text-3xl leading-tight text-foreground md:text-5xl">
-              A lawful, peaceful transition for Iran toward a secular constitutional order.
+              A peaceful future for Iran, built on unity, dignity, and the rule of law.
             </h1>
             <p className="mt-6 max-w-2xl text-base text-muted-foreground md:text-lg">
-              Protecting equal citizenship, human dignity, women&apos;s full equality, national unity, and peaceful relations with neighbors through non-violent, lawful action.
+              Working toward a free Iran where all people—of every faith, ethnicity, and belief—can live with equal rights, human dignity, and peace.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button asChild size="lg">
@@ -71,11 +71,11 @@ export default function HomePage() {
                 <Link href="/biography">Read the Biography</Link>
               </Button>
             </div>
-            <div className="mt-10 grid gap-6 sm:grid-cols-3">
+            <div className="mt-10 flex flex-wrap gap-3">
               {['8-page declaration', '2026 statements', '6 core principles'].map((item) => (
                 <div
                   key={item}
-                  className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-xs uppercase tracking-[0.2em] text-muted-foreground"
+                  className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-[10px] uppercase tracking-[0.15em] text-muted-foreground sm:px-4 sm:py-3 sm:text-xs sm:tracking-[0.2em]"
                 >
                   {item}
                 </div>
@@ -102,7 +102,7 @@ export default function HomePage() {
             <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Mission</p>
             <h2 className="mt-4 font-serif text-3xl text-foreground">Purpose and Operating Principles</h2>
             <p className="mt-6 text-muted-foreground">
-              To advance a peaceful, lawful, and nationally legitimate transition for Iran toward a secular constitutional order that protects equal citizenship, human dignity, women&apos;s full equality, national unity, and peaceful relations with neighbors.
+              To advance a peaceful, lawful transition for Iran—one that honors all faiths, protects every citizen equally, upholds human dignity, ensures women&apos;s full equality, preserves national unity, and fosters peaceful relations with neighbors.
             </p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">

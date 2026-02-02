@@ -1,7 +1,7 @@
 export const site = {
   title: 'Cyrus Pahlavi',
   description:
-    'A lawful, peaceful transition for Iran toward a secular constitutional order.',
+    'A peaceful future for Iran, built on unity, dignity, and the rule of law.',
 };
 
 export const navItems = [
@@ -23,9 +23,9 @@ export const officialAddress = [
 ];
 
 export const foundationLinks = [
-  { label: 'Parsis Foundation', href: 'https://parsis.foundation' },
-  { label: 'Cyrus.NGO', href: 'https://cyrus.ngo' },
-  { label: 'MIGA Protocol', href: 'https://migaprotocol.xyz' },
+  { label: 'Parsis Foundation', href: 'https://parsis.foundation', external: true },
+  { label: 'Cyrus.NGO', href: 'https://cyrus.ngo', external: true },
+  { label: 'MIGA Protocol', href: 'https://migaprotocol.xyz', external: true },
 ];
 
 export const commandGroups = [

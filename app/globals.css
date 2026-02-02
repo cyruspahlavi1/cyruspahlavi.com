@@ -15,8 +15,22 @@
   --gold-light: 45 74% 60%;
   --gold-dark: 45 54% 40%;
   --radius: 14px;
-  --font-sans: "Optima", "Gill Sans", "Trebuchet MS", sans-serif;
+  --font-sans: var(--font-geist-sans), "Geist", system-ui, sans-serif;
   --font-serif: "Iowan Old Style", "Palatino", "Garamond", "Times New Roman", serif;
+}
+
+.light {
+  --background: 40 20% 98%;
+  --foreground: 225 23% 10%;
+  --card: 40 15% 95%;
+  --card-foreground: 225 23% 10%;
+  --muted: 40 10% 90%;
+  --muted-foreground: 225 15% 40%;
+  --border: 40 10% 85%;
+  --input: 40 10% 85%;
+  --gold: 45 74% 40%;
+  --gold-light: 45 84% 50%;
+  --gold-dark: 45 64% 30%;
 }
 
 * {
@@ -40,6 +54,33 @@ body::before {
   z-index: -1;
 }
 
+.light body::before {
+  background: radial-gradient(circle at 20% 10%, rgba(201, 162, 39, 0.08), transparent 45%),
+    radial-gradient(circle at 80% 20%, rgba(0, 0, 0, 0.03), transparent 40%);
+}
+
+.light header {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Signature logo styling */
+.signature-logo {
+  height: 44px;
+  width: auto;
+  filter: brightness(0) invert(0);
+  transition: filter 0.2s ease;
+}
+
+.light .signature-logo {
+  filter: brightness(0) invert(0);
+}
+
+/* In dark mode, make signature white */
+:root:not(.light) .signature-logo {
+  filter: brightness(0) invert(1);
+}
+
 ::selection {
   background: rgba(201, 162, 39, 0.3);
 }
@@ -47,4 +88,34 @@ body::before {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+  }
 }

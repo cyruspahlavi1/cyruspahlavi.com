@@ -33,7 +33,7 @@ export default function MissionPage() {
           <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Mission</p>
           <h1 className="mt-4 font-serif text-4xl text-gold">Purpose and Operating Principles</h1>
           <p className="mt-4 max-w-3xl text-muted-foreground">
-            To advance a peaceful, lawful, and nationally legitimate transition for Iran toward a secular constitutional order that protects equal citizenship, human dignity, women&apos;s full equality, national unity, and peaceful relations with neighbors.
+            To advance a peaceful, lawful transition for Iran—one that honors all faiths, protects every citizen equally, upholds human dignity, ensures women&apos;s full equality, preserves national unity, and fosters peaceful relations with neighbors.
           </p>
         </div>
       </section>

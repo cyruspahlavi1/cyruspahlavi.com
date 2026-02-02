@@ -2,6 +2,7 @@ const { test, expect } = require('@playwright/test');
 
 const pages = [
   { name: 'home', path: '/', locator: 'h1' },
+  { name: 'mission', path: '/mission', locator: 'h1' },
   { name: 'statements', path: '/statements', locator: 'h1' },
   { name: 'biography', path: '/biography', locator: 'h1' },
   { name: 'strategic-priorities', path: '/strategic-priorities', locator: 'h1' },
@@ -41,8 +42,20 @@ for (const viewport of viewports) {
     }
 
     test('portrait is visible on home', async ({ page }) => {
-      await page.goto('/', { waitUntil: 'domcontentloaded' });
-      await expect(page.locator('img[alt*=\"Portrait\"]')).toBeVisible();
+      await page.goto('/', { waitUntil: 'networkidle' });
+      const portrait = page.locator('img[alt*="Portrait"]');
+      await portrait.scrollIntoViewIfNeeded();
+      await expect(portrait).toBeVisible({ timeout: 10000 });
+    });
+
+    test('footer seal is visible and large', async ({ page }) => {
+      await page.goto('/', { waitUntil: 'networkidle' });
+      const seal = page.locator('footer img[alt="Official Seal"]');
+      await seal.scrollIntoViewIfNeeded();
+      await expect(seal).toBeVisible({ timeout: 10000 });
+      const box = await seal.boundingBox();
+      expect(box.width).toBeGreaterThanOrEqual(100);
+      expect(box.height).toBeGreaterThanOrEqual(100);
     });
   });
 }
