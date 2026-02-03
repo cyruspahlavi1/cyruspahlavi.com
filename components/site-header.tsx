@@ -3,7 +3,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Search, Facebook, Instagram, Linkedin, Twitter, Github } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { HamburgerIcon } from './hamburger-icon';
 import { cn } from '@/lib/utils';
 import { CommandPalette } from './command-palette';
@@ -18,12 +18,6 @@ const navItems = [
   { label: 'News', href: '/news' },
 ];
 
-const socialLinks = [
-  { icon: Twitter, href: 'https://x.com/cyruspahlavi1', label: 'X' },
-  { icon: Github, href: 'https://github.com/cyruspahlavi1', label: 'GitHub' },
-  { icon: Instagram, href: 'https://instagram.com/cyruspahlavi', label: 'Instagram' },
-  { icon: Linkedin, href: 'https://www.linkedin.com/in/cyrus-pahlavi-a741b343/', label: 'LinkedIn' },
-];
 
 export function SiteHeader() {
   const [open, setOpen] = React.useState(false);
@@ -81,24 +75,6 @@ export function SiteHeader() {
 
           {/* Right Side */}
           <div className="hidden xl:flex items-center gap-4">
-            {/* Social Links */}
-            <div className="flex items-center gap-2">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-lg p-2 text-neutral-400 transition-colors hover:bg-white/5 hover:text-gold"
-                  aria-label={social.label}
-                >
-                  <social.icon size={16} />
-                </a>
-              ))}
-            </div>
-
-            <div className="h-6 w-px bg-white/10" />
-
             <LanguageSwitcher />
 
             <button
@@ -143,21 +119,7 @@ export function SiteHeader() {
               ))}
             </nav>
 
-            <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-6">
-              <div className="flex items-center gap-3">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="rounded-lg p-2 text-neutral-400 transition-colors hover:text-gold"
-                    aria-label={social.label}
-                  >
-                    <social.icon size={18} />
-                  </a>
-                ))}
-              </div>
+            <div className="mt-6 flex items-center justify-end border-t border-white/10 pt-6">
               <LanguageSwitcher />
             </div>
           </div>

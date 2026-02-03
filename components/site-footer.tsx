@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Facebook, Instagram, Linkedin, Twitter, Github, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 const navColumns = [
   {
@@ -29,12 +29,6 @@ const navColumns = [
   },
 ];
 
-const socialLinks = [
-  { icon: Twitter, href: 'https://x.com/cyruspahlavi1', label: 'X' },
-  { icon: Instagram, href: 'https://instagram.com/cyruspahlavi', label: 'Instagram' },
-  { icon: Linkedin, href: 'https://www.linkedin.com/in/cyrus-pahlavi-a741b343/', label: 'LinkedIn' },
-  { icon: Github, href: 'https://github.com/cyruspahlavi1', label: 'GitHub' },
-];
 
 export function SiteFooter() {
   return (
@@ -54,21 +48,6 @@ export function SiteFooter() {
             <p className="mt-6 text-sm leading-relaxed text-neutral-500">
               Dedicated to humanitarian service, cultural preservation, and building a more peaceful world.
             </p>
-            {/* Social Links - Mobile & Tablet */}
-            <div className="mt-6 flex items-center gap-3 lg:hidden">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-neutral-400 transition-all hover:border-gold/50 hover:text-gold"
-                  aria-label={social.label}
-                >
-                  <social.icon size={18} />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Navigation Columns */}
@@ -93,25 +72,11 @@ export function SiteFooter() {
               </div>
             ))}
 
-            {/* Social Column - Desktop */}
+            {/* Contact Column - Desktop */}
             <div className="col-span-2 sm:col-span-3 lg:col-span-1 hidden lg:block">
               <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
                 Connect
               </h4>
-              <div className="mt-4 flex items-center gap-3">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-neutral-400 transition-all hover:border-gold/50 hover:text-gold"
-                    aria-label={social.label}
-                  >
-                    <social.icon size={18} />
-                  </a>
-                ))}
-              </div>
               <a
                 href="mailto:office@cyruspahlavi.com"
                 className="mt-4 inline-flex items-center gap-2 text-sm text-neutral-400 transition-colors hover:text-gold"

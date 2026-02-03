@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import { Palette, Globe, Building, GraduationCap, Heart, Briefcase } from 'lucide-react';
+import Link from 'next/link';
+import { Palette, Globe, Building, GraduationCap, Heart, Briefcase, MapPin, Calendar, ArrowRight } from 'lucide-react';
 
 const exhibitions = [
   'Marlborough Gallery, Monaco',
@@ -16,37 +17,25 @@ const initiatives = [
   {
     name: 'Parsis Foundation',
     url: 'https://parsis.foundation',
-    description: 'NGO supporting privacy-preserving communications and public-interest media infrastructure for those facing censorship.',
+    description: 'NGO supporting privacy-preserving communications and public-interest media infrastructure.',
     icon: Building,
+  },
+  {
+    name: 'Parsis Fund',
+    url: 'https://parsis.fund',
+    description: 'Public goods fund investing in technology, education, and humanitarian initiatives.',
+    icon: Globe,
   },
   {
     name: 'Pars Network',
     url: 'https://pars.network',
-    description: 'Privacy-preserving platform providing resilient communications for communities facing information blackouts.',
+    description: 'Privacy-preserving platform for resilient communications.',
     icon: Globe,
-  },
-  {
-    name: 'Pars DAO',
-    url: 'https://pars.vote',
-    description: 'On-chain transparency and accountability initiative publishing verifiable records and civic proposals.',
-    icon: Globe,
-  },
-  {
-    name: 'CYRUS',
-    url: 'https://cyrus.money',
-    description: 'Digital collectible initiative inspired by Cyrus the Great, promoting cultural memory and civic engagement.',
-    icon: Palette,
-  },
-  {
-    name: 'MIGA Protocol',
-    url: 'https://migaprotocol.xyz',
-    description: 'Humanitarian funding initiative supporting communities through transparent, mission-driven assistance.',
-    icon: Heart,
   },
   {
     name: 'Lux Fund',
     url: 'https://lux.fund',
-    description: 'Investment focus on next-generation privacy and security technologies, including applied cryptography.',
+    description: 'Investment in next-generation privacy and security technologies.',
     icon: Briefcase,
   },
 ];
@@ -54,140 +43,213 @@ const initiatives = [
 export default function BiographyPage() {
   return (
     <main>
-      {/* Hero - Dark */}
-      <section className="bg-hero-wash py-20">
+      {/* Hero */}
+      <section className="bg-black py-24">
         <div className="container">
-          <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Biography</p>
-          <h1 className="mt-4 font-serif text-4xl text-gold">Artist, Humanitarian, Technologist</h1>
-          <p className="mt-4 max-w-3xl text-muted-foreground">
-            This biography is intended for public distribution with official correspondence. Primary documentation may be provided to governments and institutions through official channels when required.
-          </p>
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.4em] text-gold">Biography</p>
+            <h1 className="mt-6 font-serif text-4xl leading-tight text-white md:text-5xl lg:text-6xl">
+              A Life Dedicated to Progress
+            </h1>
+            <p className="mt-8 text-lg text-neutral-400">
+              Artist, philanthropist, investor, and technologist—unified by a commitment to human dignity and building systems that serve humanity.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Main Bio - Light Background */}
-      <section className="bg-white py-20">
-        <div className="container grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-          <div className="rounded-3xl border border-neutral-200 bg-neutral-50 p-6 shadow-sm">
-            <Image
-              src="/images/cyrus-pahlavi.jpg"
-              alt="HRH Cyrus Pahlavi"
-              width={520}
-              height={700}
-              className="rounded-2xl object-cover"
-            />
-            <p className="mt-4 text-center text-sm text-neutral-600">HRH Cyrus Pahlavi</p>
-          </div>
-          <div className="space-y-8">
-            <div>
-              <div className="flex items-center gap-3">
-                <GraduationCap className="h-6 w-6 text-amber-700" />
-                <h2 className="font-serif text-2xl text-neutral-900">Early Life</h2>
+      {/* Portrait & Quick Facts */}
+      <section className="border-t border-white/10 bg-neutral-950 py-24">
+        <div className="container">
+          <div className="grid gap-16 lg:grid-cols-[400px_1fr] lg:items-start">
+            {/* Portrait */}
+            <div className="mx-auto w-full max-w-sm lg:mx-0">
+              <div className="overflow-hidden rounded-2xl border border-white/10">
+                <Image
+                  src="/images/cyrus-pahlavi.jpg"
+                  alt="HRH Cyrus Pahlavi"
+                  width={520}
+                  height={700}
+                  className="h-auto w-full object-cover"
+                />
               </div>
-              <p className="mt-4 text-neutral-700">
-                Cyrus Pahlavi is a member of Iran's Royal Family. He was born in 1969. Following the 1979 revolution, he lived with his family in the Seychelles, where isolation and displacement shaped his formative years and first commitment to creative work.
-              </p>
+              <p className="mt-4 text-center text-sm text-neutral-500">HRH Cyrus Pahlavi</p>
             </div>
-            <div>
-              <div className="flex items-center gap-3">
-                <GraduationCap className="h-6 w-6 text-amber-700" />
-                <h2 className="font-serif text-2xl text-neutral-900">Education</h2>
-              </div>
-              <p className="mt-4 text-neutral-700">
-                He completed his secondary education in Switzerland at Institut Le Rosey. He later pursued art and design studies at Parsons School of Design.
-              </p>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-3">
-              {[
-                { label: 'Practice', value: 'Visual Artist', icon: Palette },
-                { label: 'Focus', value: 'Humanitarian Work', icon: Heart },
-                { label: 'Sector', value: 'Privacy Technology', icon: Globe },
-              ].map((item) => (
-                <div key={item.label} className="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
-                  <item.icon className="h-5 w-5 text-amber-700" />
-                  <p className="mt-2 text-xs uppercase tracking-[0.2em] text-neutral-500">{item.label}</p>
-                  <p className="mt-1 text-sm font-semibold text-neutral-900">{item.value}</p>
+
+            {/* Bio Content */}
+            <div className="space-y-10">
+              <div>
+                <div className="flex items-center gap-3">
+                  <Calendar className="h-5 w-5 text-gold" />
+                  <h2 className="font-serif text-2xl text-white">Early Life</h2>
                 </div>
-              ))}
+                <p className="mt-4 text-neutral-400">
+                  Cyrus Pahlavi is a member of Iran's Royal Family. Born in 1969, following the 1979 revolution, he lived with his family in the Seychelles, where isolation and displacement shaped his formative years and first commitment to creative work.
+                </p>
+              </div>
+
+              <div>
+                <div className="flex items-center gap-3">
+                  <GraduationCap className="h-5 w-5 text-gold" />
+                  <h2 className="font-serif text-2xl text-white">Education</h2>
+                </div>
+                <p className="mt-4 text-neutral-400">
+                  He completed his secondary education in Switzerland at Institut Le Rosey, one of the world's most prestigious boarding schools. He later pursued art and design studies at Parsons School of Design in New York.
+                </p>
+              </div>
+
+              <div>
+                <div className="flex items-center gap-3">
+                  <MapPin className="h-5 w-5 text-gold" />
+                  <h2 className="font-serif text-2xl text-white">Residence</h2>
+                </div>
+                <p className="mt-4 text-neutral-400">
+                  Currently based in Switzerland, maintaining connections to the global Persian diaspora and international art, technology, and humanitarian communities.
+                </p>
+              </div>
+
+              {/* Quick Facts */}
+              <div className="grid gap-4 sm:grid-cols-3">
+                {[
+                  { label: 'Practice', value: 'Visual Artist', icon: Palette },
+                  { label: 'Focus', value: 'Humanitarian Work', icon: Heart },
+                  { label: 'Sector', value: 'Privacy Technology', icon: Globe },
+                ].map((item) => (
+                  <div key={item.label} className="rounded-xl border border-white/10 bg-black p-5">
+                    <item.icon className="h-5 w-5 text-gold" />
+                    <p className="mt-3 text-xs uppercase tracking-[0.2em] text-neutral-500">{item.label}</p>
+                    <p className="mt-1 font-semibold text-white">{item.value}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Artistic Practice - Light */}
-      <section className="border-t border-neutral-200 bg-neutral-50 py-20">
-        <div className="container grid gap-10">
-          <div className="rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm">
+      {/* Artistic Practice */}
+      <section className="border-t border-white/10 bg-black py-24">
+        <div className="container">
+          <div className="mx-auto max-w-4xl">
             <div className="flex items-center gap-3">
-              <Palette className="h-6 w-6 text-amber-700" />
-              <h3 className="font-serif text-xl text-neutral-900">Artistic Practice</h3>
+              <Palette className="h-6 w-6 text-gold" />
+              <h2 className="font-serif text-3xl text-white">Artistic Practice</h2>
             </div>
-            <p className="mt-4 text-sm text-neutral-700">
+            <p className="mt-6 text-lg text-neutral-400">
               Working primarily through painting, his practice has been shaped by themes of nature, memory, and the experience of exile. He has described painting as a personal discipline that restores calm and agency, and as a form of freedom—particularly for those living under coercion.
             </p>
-            <p className="mt-4 text-sm text-neutral-700">
-              Beyond the visual arts, he has also participated in film projects as an actor and producer.
+            <p className="mt-4 text-neutral-500">
+              Beyond the visual arts, he has also participated in film projects as an actor and producer, exploring storytelling as a medium for cultural connection.
             </p>
+            <Link href="/works" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-gold hover:underline">
+              View Works & Exhibitions
+              <ArrowRight size={14} />
+            </Link>
           </div>
+        </div>
+      </section>
 
-          <div className="rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm">
-            <div className="flex items-center gap-3">
-              <Globe className="h-6 w-6 text-amber-700" />
-              <h3 className="font-serif text-xl text-neutral-900">Selected Exhibitions & Presentations</h3>
-            </div>
-            <ul className="mt-6 grid gap-2 text-sm text-neutral-700 md:grid-cols-2">
-              {exhibitions.map((ex) => (
-                <li key={ex} className="flex items-start gap-2">
-                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-amber-600" />
-                  {ex}
-                </li>
-              ))}
-            </ul>
+      {/* Exhibitions */}
+      <section className="border-t border-white/10 bg-neutral-950 py-24">
+        <div className="container">
+          <div className="mb-12">
+            <h2 className="font-serif text-3xl text-white">Selected Exhibitions</h2>
+            <p className="mt-4 text-neutral-500">Works exhibited and collected internationally</p>
           </div>
-
-          <div className="rounded-2xl border-2 border-amber-200 bg-amber-50 p-8">
-            <div className="flex items-center gap-3">
-              <Heart className="h-6 w-6 text-amber-700" />
-              <h3 className="font-serif text-xl text-neutral-900">Humanitarian & Civic Work</h3>
-            </div>
-            <p className="mt-4 text-sm text-neutral-700">
-              He has supported humanitarian projects that combine creative practice with direct civic benefit. One such initiative, <strong className="text-neutral-900">"Rainbow of Beslan,"</strong> involved art workshops with children and families affected by the Beslan school attack, created as a tribute to those who were killed and to those who survived.
-            </p>
-            <p className="mt-4 text-sm text-neutral-700">
-              The project reflects a continuing focus on protecting children, supporting healing, and honoring victims of terrorism.
-            </p>
+          <div className="grid gap-4 md:grid-cols-2">
+            {exhibitions.map((ex) => (
+              <div key={ex} className="flex items-start gap-4 rounded-xl border border-white/10 bg-black p-5">
+                <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-gold" />
+                <span className="text-neutral-300">{ex}</span>
+              </div>
+            ))}
           </div>
+        </div>
+      </section>
 
-          <div className="rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm">
-            <div className="flex items-center gap-3">
-              <Building className="h-6 w-6 text-amber-700" />
-              <h3 className="font-serif text-xl text-neutral-900">Civic & Technology Initiatives</h3>
-            </div>
-            <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {initiatives.map((init) => (
-                <a
-                  key={init.name}
-                  href={init.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-xl border border-neutral-200 bg-neutral-50 p-4 transition hover:border-amber-400 hover:bg-amber-50"
-                >
-                  <init.icon className="h-5 w-5 text-amber-700" />
-                  <h4 className="mt-2 font-semibold text-neutral-900">{init.name}</h4>
-                  <p className="mt-2 text-xs text-neutral-600">{init.description}</p>
-                </a>
-              ))}
+      {/* Humanitarian Work */}
+      <section className="border-t border-gold/20 bg-black py-24">
+        <div className="container">
+          <div className="mx-auto max-w-4xl">
+            <div className="rounded-2xl border border-gold/30 bg-gradient-to-b from-gold/5 to-transparent p-10">
+              <div className="flex items-center gap-3">
+                <Heart className="h-6 w-6 text-gold" />
+                <h2 className="font-serif text-3xl text-white">Humanitarian & Civic Work</h2>
+              </div>
+              <p className="mt-6 text-lg text-neutral-300">
+                He has supported humanitarian projects that combine creative practice with direct civic benefit. One such initiative, <strong className="text-white">"Rainbow of Beslan,"</strong> involved art workshops with children and families affected by the Beslan school attack, created as a tribute to those who were killed and to those who survived.
+              </p>
+              <p className="mt-4 text-neutral-400">
+                The project reflects a continuing focus on protecting children, supporting healing, and honoring victims of terrorism.
+              </p>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm">
+      {/* Initiatives */}
+      <section className="border-t border-white/10 bg-neutral-950 py-24">
+        <div className="container">
+          <div className="mb-12">
             <div className="flex items-center gap-3">
-              <Briefcase className="h-6 w-6 text-amber-700" />
-              <h3 className="font-serif text-xl text-neutral-900">Professional Background</h3>
+              <Building className="h-6 w-6 text-gold" />
+              <h2 className="font-serif text-3xl text-white">Civic & Technology Initiatives</h2>
             </div>
-            <p className="mt-4 text-sm text-neutral-700">
-              HRH Cyrus Pahlavi is a managing partner of Lux Fund (lux.fund) and a co-founder and president of Lux Partners. His work has focused on next-generation privacy and security technologies, including privacy-preserving computation and applied cryptography (including research and development in fully homomorphic encryption).
+            <p className="mt-4 text-neutral-500">
+              Organizations and projects supporting humanitarian work and privacy-preserving technology
             </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            {initiatives.map((init) => (
+              <a
+                key={init.name}
+                href={init.url}
+                target="_blank"
+                rel="noreferrer"
+                className="group rounded-xl border border-white/10 bg-black p-6 transition-all hover:border-gold/50"
+              >
+                <init.icon className="h-6 w-6 text-gold" />
+                <h3 className="mt-4 font-serif text-xl text-white">{init.name}</h3>
+                <p className="mt-2 text-sm text-neutral-500">{init.description}</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-gold">
+                  Visit
+                  <ArrowRight size={12} className="transition-transform group-hover:translate-x-1" />
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Professional Background */}
+      <section className="border-t border-white/10 bg-black py-24">
+        <div className="container">
+          <div className="mx-auto max-w-4xl">
+            <div className="flex items-center gap-3">
+              <Briefcase className="h-6 w-6 text-gold" />
+              <h2 className="font-serif text-3xl text-white">Professional Background</h2>
+            </div>
+            <p className="mt-6 text-lg text-neutral-400">
+              HRH Cyrus Pahlavi is Chief Investment Officer of the Parsis Fund, a managing partner of Lux Fund, and a co-founder and president of Lux Partners.
+            </p>
+            <p className="mt-4 text-neutral-500">
+              His work has focused on next-generation privacy and security technologies, including privacy-preserving computation and applied cryptography (including research and development in fully homomorphic encryption).
+            </p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Link
+                href="/works"
+                className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-gold/90"
+              >
+                View Works
+                <ArrowRight size={16} />
+              </Link>
+              <Link
+                href="/mission"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/5"
+              >
+                Read Mission
+              </Link>
+            </div>
           </div>
         </div>
       </section>
