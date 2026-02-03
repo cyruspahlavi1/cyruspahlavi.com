@@ -20,7 +20,7 @@ const socialLinks = [
   { icon: Twitter, href: 'https://x.com/cyruspahlavi1', label: 'X' },
   { icon: Facebook, href: 'https://facebook.com/cyruspahlavi', label: 'Facebook' },
   { icon: Instagram, href: 'https://instagram.com/cyruspahlavi', label: 'Instagram' },
-  { icon: Linkedin, href: 'https://linkedin.com/in/cyruspahlavi', label: 'LinkedIn' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/cyrus-pahlavi-a741b343/', label: 'LinkedIn' },
   { icon: Github, href: 'https://github.com/cyruspahlavi1', label: 'GitHub' },
 ];
 
