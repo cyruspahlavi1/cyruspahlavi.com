@@ -74,28 +74,28 @@ export function SiteHeader() {
           </nav>
 
           {/* Right Side */}
-          <div className="hidden xl:flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <LanguageSwitcher />
 
             <button
               type="button"
               onClick={() => setPaletteOpen(true)}
-              className="rounded-lg p-2 text-neutral-400 transition-colors hover:bg-white/5 hover:text-gold"
+              className="hidden xl:flex rounded-lg p-2 text-neutral-400 transition-colors hover:bg-white/5 hover:text-gold"
               aria-label="Search"
             >
               <Search size={18} />
             </button>
-          </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            type="button"
-            className="inline-flex items-center justify-center p-2 text-neutral-400 xl:hidden"
-            aria-label="Toggle menu"
-            onClick={() => setOpen((prev) => !prev)}
-          >
-            <HamburgerIcon open={open} />
-          </button>
+            {/* Mobile Menu Button */}
+            <button
+              type="button"
+              className="inline-flex items-center justify-center p-2 text-neutral-400 xl:hidden"
+              aria-label="Toggle menu"
+              onClick={() => setOpen((prev) => !prev)}
+            >
+              <HamburgerIcon open={open} />
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -119,9 +119,6 @@ export function SiteHeader() {
               ))}
             </nav>
 
-            <div className="mt-6 flex items-center justify-end border-t border-white/10 pt-6">
-              <LanguageSwitcher />
-            </div>
           </div>
         </div>
       </header>
