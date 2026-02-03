@@ -8,20 +8,21 @@ import { HamburgerIcon } from './hamburger-icon';
 import { cn } from '@/lib/utils';
 import { CommandPalette } from './command-palette';
 import { LanguageSwitcher } from './language-switcher';
-
-const navItems = [
-  { label: 'Biography', href: '/biography' },
-  { label: 'Mission', href: '/mission' },
-  { label: 'Works', href: '/works' },
-  { label: 'Family', href: '/family' },
-  { label: 'Initiatives', href: '/initiatives-and-partners' },
-  { label: 'News', href: '/news' },
-];
-
+import { useI18n } from '@/lib/i18n/context';
 
 export function SiteHeader() {
   const [open, setOpen] = React.useState(false);
   const [paletteOpen, setPaletteOpen] = React.useState(false);
+  const { t, isRTL } = useI18n();
+
+  const navItems = [
+    { label: t.nav.biography, href: '/biography' },
+    { label: t.nav.mission, href: '/mission' },
+    { label: t.nav.works, href: '/works' },
+    { label: t.nav.family, href: '/family' },
+    { label: t.nav.initiatives, href: '/initiatives-and-partners' },
+    { label: t.nav.news, href: '/news' },
+  ];
 
   React.useEffect(() => {
     const handler = () => setOpen(false);
@@ -47,12 +48,12 @@ export function SiteHeader() {
   return (
     <>
       <header className="sticky top-0 z-50 border-b border-white/10 bg-black/95 backdrop-blur-xl">
-        <div className="container flex items-center justify-between gap-6 py-4">
+        <div className={cn("container flex items-center justify-between gap-6 py-4", isRTL && "flex-row-reverse")}>
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
               src="/cyrus-signature.png"
-              alt="Cyrus Pahlavi"
+              alt={t.site.name}
               width={140}
               height={38}
               className="signature-logo"
@@ -61,7 +62,7 @@ export function SiteHeader() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden xl:flex items-center gap-8">
+          <nav className={cn("hidden xl:flex items-center gap-8", isRTL && "flex-row-reverse")}>
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -74,14 +75,14 @@ export function SiteHeader() {
           </nav>
 
           {/* Right Side */}
-          <div className="flex items-center gap-3">
+          <div className={cn("flex items-center gap-3", isRTL && "flex-row-reverse")}>
             <LanguageSwitcher />
 
             <button
               type="button"
               onClick={() => setPaletteOpen(true)}
               className="hidden xl:flex rounded-lg p-2 text-neutral-400 transition-colors hover:bg-white/5 hover:text-gold"
-              aria-label="Search"
+              aria-label={t.nav.search}
             >
               <Search size={18} />
             </button>
@@ -90,7 +91,7 @@ export function SiteHeader() {
             <button
               type="button"
               className="inline-flex items-center justify-center p-2 text-neutral-400 xl:hidden"
-              aria-label="Toggle menu"
+              aria-label={t.nav.menu}
               onClick={() => setOpen((prev) => !prev)}
             >
               <HamburgerIcon open={open} />
@@ -106,19 +107,21 @@ export function SiteHeader() {
           )}
         >
           <div className="container py-6">
-            <nav className="flex flex-col gap-1">
+            <nav className={cn("flex flex-col gap-1", isRTL && "items-end")}>
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="rounded-lg px-4 py-3 text-sm font-medium text-neutral-300 transition-colors hover:bg-white/5 hover:text-gold"
+                  className={cn(
+                    "rounded-lg px-4 py-3 text-sm font-medium text-neutral-300 transition-colors hover:bg-white/5 hover:text-gold",
+                    isRTL && "text-right"
+                  )}
                   onClick={() => setOpen(false)}
                 >
                   {item.label}
                 </Link>
               ))}
             </nav>
-
           </div>
         </div>
       </header>

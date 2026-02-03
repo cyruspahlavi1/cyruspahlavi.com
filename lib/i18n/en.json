@@ -5,61 +5,67 @@
   "nav": {
     "biography": "Biography",
     "mission": "Mission",
+    "works": "Works",
+    "family": "Family",
     "initiatives": "Initiatives",
+    "news": "News",
     "search": "Search",
     "menu": "Menu"
   },
+  "hero": {
+    "title": "His Royal Highness",
+    "name": "Cyrus Pahlavi",
+    "tagline": "Serving and Empowering All Members of Society",
+    "description": "As a leader dedicated to progress, HRH Cyrus Pahlavi believes in the power of all to contribute to building a more peaceful and prosperous world."
+  },
   "home": {
     "tagline": "For Iran. For All Iranians.",
-    "intro": "Prince Cyrus Pahlavi—statesman, artist, poet, philosopher, human rights activist, investor, and technologist—is an advocate for a peaceful, lawful transition in Iran. One that honors all faiths, protects every citizen equally, upholds human dignity, ensures women's full equality, preserves national unity, and fosters peaceful relations with neighbors."
+    "intro": "Prince Cyrus Pahlavi—statesman, artist, poet, philosopher, human rights activist, investor, and technologist—is an advocate for a peaceful, lawful transition in Iran.",
+    "quote": "We have achieved significant accomplishments over the years, and with God's blessing, we are heading towards a future that is brighter, more hopeful, and more prosperous.",
+    "legacyLabel": "A Continued Legacy of Transformation",
+    "legacyTitle": "Leadership shaped by the values of previous generations",
+    "legacyText1": "HRH Cyrus Pahlavi firmly believes that a true leader has the courage to be open with his people and care for others as family, extending from deep-rooted values of hospitality and community.",
+    "legacyText2": "The values passed on by previous generations are a guiding light for the present and future. His Royal Highness continues to draw inspiration from a commitment to leading by example and a people-centred legacy.",
+    "exploreLegacy": "Explore the Legacy",
+    "valuesLabel": "Honouring the Values of Our Ancestors",
+    "valuesTitle": "Traditional values as a guiding light",
+    "valuesDescription": "Traditional values such as community, generosity, and inclusivity are a profound source of pride and belonging. HRH Cyrus Pahlavi has made it a priority to ensure that youth remain connected to the culture and values of their ancestors.",
+    "community": "Community",
+    "communityDesc": "Nurturing bonds that unite people across generations and borders",
+    "generosity": "Generosity",
+    "generosityDesc": "Extending support and resources to those in need around the world",
+    "inclusivity": "Inclusivity",
+    "inclusivityDesc": "Welcoming all who share values of peaceful coexistence and mutual respect",
+    "latestNews": "Latest",
+    "news": "News",
+    "viewAll": "View All",
+    "readMore": "Read More"
   },
-  "mission": {
-    "label": "Mission",
-    "title": "Purpose and Operating Principles",
-    "description": "To advance a peaceful, lawful transition for Iran—one that honors all faiths, protects every citizen equally, upholds human dignity, ensures women's full equality, preserves national unity, and fosters peaceful relations with neighbors.",
-    "principles": {
-      "legality": {
-        "title": "Legality",
-        "description": "Advocacy anchored in rule of law, due process, and constitutional constraints on power."
-      },
-      "nonviolence": {
-        "title": "Non-violence",
-        "description": "Opposition to terrorism and political violence; commitment to peaceful political change."
-      },
-      "equalCitizenship": {
-        "title": "Equal Citizenship",
-        "description": "One civil law for all Iranians of every faith and none, language, region, and political view."
-      },
-      "nationalUnity": {
-        "title": "National Unity",
-        "description": "Iran's territorial integrity is non-negotiable; disputes resolved by courts and ballots."
-      },
-      "protectionOfCivilians": {
-        "title": "Protection of Civilians",
-        "description": "Priority on preventing harm to civilians, prisoners of conscience, journalists, lawyers, and medical personnel."
-      },
-      "accountability": {
-        "title": "Accountability",
-        "description": "Documentation, evidence preservation, and support for independent investigation."
-      }
-    }
+  "sections": {
+    "biography": "Biography",
+    "biographyDesc": "A life dedicated to progress and service",
+    "mission": "Mission",
+    "missionDesc": "Principles guiding humanitarian and civic work",
+    "works": "Works",
+    "worksDesc": "Art, exhibitions, and creative practice"
   },
   "footer": {
-    "information": "Information",
-    "statements": "Statements",
-    "strategicPriorities": "Strategic Priorities",
-    "enduringLegacy": "Enduring Legacy",
-    "initiativesPartners": "Initiatives & Partners",
-    "resources": "Resources",
+    "about": "About",
+    "work": "Work",
+    "legal": "Legal",
+    "connect": "Connect",
     "biography": "Biography",
+    "mission": "Mission",
+    "family": "Family",
     "works": "Works",
-    "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service",
+    "initiatives": "Initiatives",
+    "news": "News",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
     "contact": "Contact",
-    "officialCorrespondence": "Official Correspondence",
-    "pressInquiries": "Press Inquiries",
-    "governmentLiaison": "Government Liaison",
-    "address": "Address"
+    "copyright": "All rights reserved.",
+    "memberOf": "Member of the House of Pahlavi",
+    "tagline": "Dedicated to humanitarian service, cultural preservation, and building a more peaceful world."
   },
   "language": {
     "en": "English",
