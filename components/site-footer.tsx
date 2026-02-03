@@ -2,9 +2,16 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Mail } from 'lucide-react';
+import { Mail, Instagram, Twitter, Youtube, Linkedin } from 'lucide-react';
 import { useI18n } from '@/lib/i18n/context';
 import { cn } from '@/lib/utils';
+
+const socialLinks = [
+  { icon: Instagram, href: 'https://instagram.com/cyruspahlavi', label: 'Instagram' },
+  { icon: Twitter, href: 'https://x.com/cyruspahlavi', label: 'X (Twitter)' },
+  { icon: Youtube, href: 'https://youtube.com/@cyruspahlavi', label: 'YouTube' },
+  { icon: Linkedin, href: 'https://linkedin.com/in/cyruspahlavi', label: 'LinkedIn' },
+];
 
 export function SiteFooter() {
   const { t, isRTL } = useI18n();
@@ -63,7 +70,7 @@ export function SiteFooter() {
 
           {/* Navigation Columns */}
           <div className={cn(
-            "grid grid-cols-2 gap-8 sm:grid-cols-3 md:gap-12",
+            "grid grid-cols-2 gap-8 sm:grid-cols-4 md:gap-12",
             isRTL && "lg:order-1"
           )}>
             {navColumns.map((column) => (
@@ -86,9 +93,9 @@ export function SiteFooter() {
               </div>
             ))}
 
-            {/* Contact Column - Desktop */}
+            {/* Connect Column */}
             <div className={cn(
-              "col-span-2 sm:col-span-3 lg:col-span-1 hidden lg:block",
+              "col-span-2 sm:col-span-1",
               isRTL && "text-right"
             )}>
               <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
@@ -104,6 +111,27 @@ export function SiteFooter() {
                 <Mail size={14} />
                 office@cyruspahlavi.com
               </a>
+              {/* Social Links */}
+              <div className={cn(
+                "mt-6 flex items-center gap-4",
+                isRTL && "flex-row-reverse justify-end"
+              )}>
+                {socialLinks.map((social) => {
+                  const Icon = social.icon;
+                  return (
+                    <a
+                      key={social.label}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-neutral-500 transition-colors hover:text-gold"
+                      aria-label={social.label}
+                    >
+                      <Icon size={18} />
+                    </a>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
