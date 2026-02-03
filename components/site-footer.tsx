@@ -4,10 +4,11 @@ import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 
 const navLinks = [
   { label: 'Biography', href: '/biography' },
-  { label: 'Strategic Priorities', href: '/strategic-priorities' },
-  { label: 'Enduring Legacy', href: '/enduring-legacy' },
-  { label: 'Initiatives & Patronages', href: '/initiatives-and-partners' },
-  { label: 'News & Media', href: '/news' },
+  { label: 'Mission', href: '/mission' },
+  { label: 'Works', href: '/works' },
+  { label: 'Family', href: '/family' },
+  { label: 'Initiatives', href: '/initiatives-and-partners' },
+  { label: 'News', href: '/news' },
 ];
 
 const legalLinks = [

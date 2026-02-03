@@ -5,18 +5,18 @@ import { ArrowRight, Quote } from 'lucide-react';
 const sectionLinks = [
   {
     title: 'Biography',
-    description: 'A life dedicated to progress',
+    description: 'A life dedicated to progress and service',
     href: '/biography',
   },
   {
-    title: 'Strategic Priorities',
-    description: 'A commitment to stability, development, and growth',
-    href: '/strategic-priorities',
+    title: 'Mission',
+    description: 'Principles guiding humanitarian and civic work',
+    href: '/mission',
   },
   {
-    title: 'Enduring Legacy',
-    description: 'A leader who grew with his people',
-    href: '/enduring-legacy',
+    title: 'Works',
+    description: 'Art, exhibitions, and creative practice',
+    href: '/works',
   },
 ];
 

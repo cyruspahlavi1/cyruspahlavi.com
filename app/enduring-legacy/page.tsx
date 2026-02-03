@@ -9,7 +9,7 @@ export default function EnduringLegacyPage() {
         <div className="container">
           <div className="mx-auto max-w-4xl text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.4em] text-gold">
-              Enduring Legacy
+              Legacy
             </p>
             <h1 className="mt-6 font-serif text-4xl leading-tight text-white md:text-5xl lg:text-6xl">
               Leadership shaped by the legacy of previous generations
