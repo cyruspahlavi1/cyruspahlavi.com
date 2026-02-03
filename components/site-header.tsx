@@ -90,7 +90,7 @@ export function SiteHeader() {
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-lg border border-white/10 bg-white/5 p-3 text-neutral-400 xl:hidden"
+            className="inline-flex items-center justify-center p-2 text-neutral-400 xl:hidden"
             aria-label="Toggle menu"
             onClick={() => setOpen((prev) => !prev)}
           >
