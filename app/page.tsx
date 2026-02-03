@@ -45,28 +45,28 @@ export default function HomePage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center bg-black">
+      <section className="relative h-[calc(100vh-73px)] flex items-center bg-black overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/50 to-black" />
-        <div className="container relative z-10 py-24">
-          <div className="grid gap-16 lg:grid-cols-[1fr_1fr] lg:items-center">
+        <div className="container relative z-10 py-8 md:py-12 lg:py-16">
+          <div className="grid gap-8 lg:gap-12 lg:grid-cols-[1fr_1fr] lg:items-center">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.4em] text-gold">
                 His Royal Highness
               </p>
-              <h1 className="mt-6 font-serif text-5xl leading-[1.1] text-white md:text-6xl lg:text-7xl">
+              <h1 className="mt-4 md:mt-6 font-serif text-4xl leading-[1.1] text-white md:text-5xl lg:text-6xl xl:text-7xl">
                 Cyrus Pahlavi
               </h1>
-              <div className="mt-8 h-px w-24 bg-gold" />
-              <p className="mt-8 text-xl uppercase tracking-[0.2em] text-neutral-400">
+              <div className="mt-6 md:mt-8 h-px w-24 bg-gold" />
+              <p className="mt-6 md:mt-8 text-base md:text-lg lg:text-xl uppercase tracking-[0.15em] md:tracking-[0.2em] text-neutral-400">
                 Serving and Empowering All Members of Society
               </p>
-              <p className="mt-8 max-w-lg text-lg leading-relaxed text-neutral-400">
-                As a leader dedicated to progress, HRH Cyrus Pahlavi believes in the power of all to contribute to building a more peaceful and prosperous world. In championing boldness and determination, he leads with the conviction that uplifting communities is a precious investment in the future.
+              <p className="mt-6 md:mt-8 max-w-lg text-base md:text-lg leading-relaxed text-neutral-400 hidden sm:block">
+                As a leader dedicated to progress, HRH Cyrus Pahlavi believes in the power of all to contribute to building a more peaceful and prosperous world.
               </p>
             </div>
             <div className="relative flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-lg">
-                <div className="absolute -inset-4 rounded-2xl border border-gold/20" />
+              <div className="relative w-full max-w-[200px] sm:max-w-[240px] md:max-w-[280px] lg:max-w-[320px] xl:max-w-[380px]">
+                <div className="absolute -inset-3 md:-inset-4 rounded-2xl border border-gold/20" />
                 <div className="overflow-hidden rounded-xl">
                   <Image
                     src="/images/cyrus-pahlavi.jpg"
