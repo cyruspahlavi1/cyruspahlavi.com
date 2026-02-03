@@ -3,7 +3,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Search, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Search, Facebook, Instagram, Linkedin, Twitter, Github } from 'lucide-react';
 import { HamburgerIcon } from './hamburger-icon';
 import { cn } from '@/lib/utils';
 import { CommandPalette } from './command-palette';
@@ -19,10 +19,10 @@ const navItems = [
 ];
 
 const socialLinks = [
-  { icon: Facebook, href: 'https://facebook.com/cyruspahlavi', label: 'Facebook' },
+  { icon: Twitter, href: 'https://x.com/cyruspahlavi1', label: 'X' },
+  { icon: Github, href: 'https://github.com/cyruspahlavi1', label: 'GitHub' },
   { icon: Instagram, href: 'https://instagram.com/cyruspahlavi', label: 'Instagram' },
   { icon: Linkedin, href: 'https://linkedin.com/in/cyruspahlavi', label: 'LinkedIn' },
-  { icon: Twitter, href: 'https://x.com/cyruspahlavi', label: 'X' },
 ];
 
 export function SiteHeader() {

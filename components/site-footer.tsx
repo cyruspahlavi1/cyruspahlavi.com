@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Twitter, Github } from 'lucide-react';
 
 const navLinks = [
   { label: 'Biography', href: '/biography' },
@@ -17,10 +17,11 @@ const legalLinks = [
 ];
 
 const socialLinks = [
-  { icon: Twitter, href: 'https://x.com/cyruspahlavi', label: 'X' },
+  { icon: Twitter, href: 'https://x.com/cyruspahlavi1', label: 'X' },
   { icon: Facebook, href: 'https://facebook.com/cyruspahlavi', label: 'Facebook' },
   { icon: Instagram, href: 'https://instagram.com/cyruspahlavi', label: 'Instagram' },
   { icon: Linkedin, href: 'https://linkedin.com/in/cyruspahlavi', label: 'LinkedIn' },
+  { icon: Github, href: 'https://github.com/cyruspahlavi1', label: 'GitHub' },
 ];
 
 export function SiteFooter() {
