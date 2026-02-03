@@ -1,6 +1,7 @@
 {
   "site": {
-    "name": "Cyrus Pahlavi"
+    "name": "Cyrus Pahlavi",
+    "hrhName": "HRH Cyrus Pahlavi"
   },
   "nav": {
     "biography": "Biography",
@@ -26,6 +27,7 @@
     "legacyTitle": "Leadership shaped by the values of previous generations",
     "legacyText1": "HRH Cyrus Pahlavi firmly believes that a true leader has the courage to be open with his people and care for others as family, extending from deep-rooted values of hospitality and community.",
     "legacyText2": "The values passed on by previous generations are a guiding light for the present and future. His Royal Highness continues to draw inspiration from a commitment to leading by example and a people-centred legacy.",
+    "legacyQuote": "Our responsibility to the nation and our past and future generations is to preserve what is precious with all the strength, effort and determination that God has bestowed upon us.",
     "exploreLegacy": "Explore the Legacy",
     "valuesLabel": "Honouring the Values of Our Ancestors",
     "valuesTitle": "Traditional values as a guiding light",
@@ -48,6 +50,257 @@
     "missionDesc": "Principles guiding humanitarian and civic work",
     "works": "Works",
     "worksDesc": "Art, exhibitions, and creative practice"
+  },
+  "biography": {
+    "title": "Biography",
+    "headline": "A Life Dedicated to Progress",
+    "subtitle": "Artist, philanthropist, investor, and technologist—unified by a commitment to human dignity and building systems that serve humanity.",
+    "earlyLife": "Early Life",
+    "earlyLifeText": "Cyrus Pahlavi is a member of Iran's Royal Family. Born in 1969, following the 1979 revolution, he lived with his family in the Seychelles, where isolation and displacement shaped his formative years and first commitment to creative work.",
+    "education": "Education",
+    "educationText": "He completed his secondary education in Switzerland at Institut Le Rosey, one of the world's most prestigious boarding schools. He later pursued art and design studies at Parsons School of Design in New York.",
+    "residence": "Residence",
+    "residenceText": "Currently based in Switzerland, maintaining connections to the global Persian diaspora and international art, technology, and humanitarian communities.",
+    "practice": "Practice",
+    "visualArtist": "Visual Artist",
+    "focus": "Focus",
+    "humanitarianWork": "Humanitarian Work",
+    "sector": "Sector",
+    "privacyTechnology": "Privacy Technology",
+    "artisticPractice": "Artistic Practice",
+    "artisticPracticeText1": "Working primarily through painting, his practice has been shaped by themes of nature, memory, and the experience of exile. He has described painting as a personal discipline that restores calm and agency, and as a form of freedom—particularly for those living under coercion.",
+    "artisticPracticeText2": "Beyond the visual arts, he has also participated in film projects as an actor and producer, exploring storytelling as a medium for cultural connection.",
+    "viewWorksExhibitions": "View Works & Exhibitions",
+    "selectedExhibitions": "Selected Exhibitions",
+    "exhibitionsSubtitle": "Works exhibited and collected internationally",
+    "humanitarianCivicWork": "Humanitarian & Civic Work",
+    "humanitarianText1": "He has supported humanitarian projects that combine creative practice with direct civic benefit. One such initiative, \"Rainbow of Beslan,\" involved art workshops with children and families affected by the Beslan school attack, created as a tribute to those who were killed and to those who survived.",
+    "humanitarianText2": "The project reflects a continuing focus on protecting children, supporting healing, and honoring victims of terrorism.",
+    "civicTechInitiatives": "Civic & Technology Initiatives",
+    "civicTechSubtitle": "Organizations and projects supporting humanitarian work and privacy-preserving technology",
+    "professionalBackground": "Professional Background",
+    "professionalText1": "HRH Cyrus Pahlavi is Chief Investment Officer of the Parsis Fund, a managing partner of Lux Fund, and a co-founder and president of Lux Partners.",
+    "professionalText2": "His work has focused on next-generation privacy and security technologies, including privacy-preserving computation and applied cryptography (including research and development in fully homomorphic encryption).",
+    "viewWorks": "View Works",
+    "readMission": "Read Mission",
+    "visit": "Visit",
+    "initiatives": {
+      "parsisFoundation": "Parsis Foundation",
+      "parsisFoundationDesc": "NGO supporting privacy-preserving communications and public-interest media infrastructure.",
+      "parsisFund": "Parsis Fund",
+      "parsisFundDesc": "Public goods fund investing in technology, education, and humanitarian initiatives.",
+      "parsNetwork": "Pars Network",
+      "parsNetworkDesc": "Privacy-preserving platform for resilient communications.",
+      "luxFund": "Lux Fund",
+      "luxFundDesc": "Investment in next-generation privacy and security technologies."
+    }
+  },
+  "mission": {
+    "title": "Mission",
+    "headline": "Improving quality of life for humanity and envisioning a better world for all",
+    "subtitle": "The philosophy and beliefs that underpin HRH Cyrus Pahlavi's leadership are a guiding light for the present and future. From investing in education and accelerating economic diversification to advancing human fraternity and environmental sustainability, these priorities reflect a lifelong commitment to serving people and contributing to global stability.",
+    "priorities": {
+      "sustainability": {
+        "title": "Championing Sustainability to Protect Our Planet",
+        "description": "HRH Cyrus Pahlavi believes that in a rapidly shifting world, it is our duty to think generations ahead and to have the courage to take bold steps. Addressing complex challenges such as climate change, water scarcity, and environmental degradation requires innovative partnerships and pragmatic solutions.",
+        "quote": "Sustainability is a fundamental component of our approach and endeavours to promote climate action, foster international cooperation, and seek practical solutions to the challenges facing our planet."
+      },
+      "coexistence": {
+        "title": "Strengthening Peaceful Coexistence for a Stable Future",
+        "description": "Diversity built our communities, and HRH Cyrus Pahlavi's unwavering commitment to inclusivity will continue to shape the future. Nurturing constructive relationships within and beyond borders is paramount to ensuring growth and stability. We stand shoulder to shoulder with those seeking to build a better world and celebrate what unites us in the spirit of tolerance, peace, and stability.",
+        "quote": "We extend the hand of friendship to all who share our values of peaceful coexistence and mutual respect to achieve progress and prosperity."
+      },
+      "education": {
+        "title": "Advancing Education as the Foundation of Development",
+        "description": "Supporting and empowering all members of society is essential when building a globally connected and thriving community, and that empowerment begins with a quality education and opportunities for all. HRH invests in the leaders of tomorrow with a focus on high-quality education and initiatives that underpin strong traditions, character, and resilience.",
+        "quote": "We are blessed with many resources, especially our highly skilled human capital—people come first, because for a community to prosper, so too must its people."
+      },
+      "cooperation": {
+        "title": "Reinforcing International Cooperation to Foster Enduring Peace",
+        "description": "In pursuit of the shared goals of international peace, stability, and development, HRH Cyrus Pahlavi believes in the importance of building and nurturing constructive partnerships with other nations to help create a more harmonious and sustainable world.",
+        "quote": "We continue to build bridges of partnership and cooperation, serve as a facilitator of diplomatic dialogue, and actively support international efforts aimed at promoting peace and prosperity."
+      },
+      "prosperity": {
+        "title": "Driving Economic Prosperity and Resilience",
+        "description": "Consistent with the longstanding ambition to develop an increasingly resilient, dynamic, and knowledge-based economy, HRH continues to invest in people and knowledge as the most powerful drivers of economic development and diversification. This includes partnering with nations and stakeholders around the world to facilitate trade and investment, promote sustainable growth, and develop infrastructure that enables individuals and economies to thrive.",
+        "quote": "Further diversifying our economy is a key strategic focus of our future plans. It is therefore necessary to accelerate economic development efforts to continue building a leading global presence."
+      },
+      "identity": {
+        "title": "Affirming Identity and Shared Belonging",
+        "description": "Emerging from humble beginnings, rapid transformation was the result of the grit, hard work, and determination of our ancestors to build a better future for all. In championing present and open leadership, HRH believes that future progress relies on our collective vision and commitment, and that every individual can uniquely contribute towards writing the next chapter.",
+        "quote": "We are fortunate to have people who have proven their spirit and determination to overcome the toughest challenges. Our pride in our people is infinite."
+      }
+    }
+  },
+  "works": {
+    "title": "Works",
+    "headline": "Art, Technology & Innovation",
+    "subtitle": "A polymath's journey across visual arts, technology, investment, and philosophy—unified by a commitment to human dignity, cultural preservation, and building systems that serve humanity.",
+    "keyAchievements": "Key Achievements",
+    "selectedExhibitions": "Selected Exhibitions",
+    "exhibitionsSubtitle": "Works exhibited and collected internationally",
+    "philosophyQuote": "Art, technology, and philosophy are not separate domains—they are different expressions of the same drive to understand our world, preserve what matters, and build something lasting for those who come after us.",
+    "disciplines": {
+      "visualArts": {
+        "title": "Visual Arts",
+        "description": "Paintings and visual works exploring themes of exile, identity, nature, and cultural memory. Exhibited internationally from Monaco to Dubai, with works held in private collections and featured at major auction houses.",
+        "achievements": [
+          "Solo exhibitions in Geneva, Monaco, and Dubai",
+          "Works auctioned at Sotheby's",
+          "Featured in Artnet and international art publications",
+          "Paintings exploring Persian heritage and modern identity"
+        ]
+      },
+      "technology": {
+        "title": "Technology & Innovation",
+        "description": "Pioneer in privacy-preserving technologies, decentralized systems, and applied cryptography. Building infrastructure that protects individual freedoms and enables secure communication for civil society.",
+        "achievements": [
+          "Founder of privacy technology initiatives",
+          "Applied cryptography and zero-knowledge systems",
+          "Decentralized infrastructure for human rights organizations",
+          "Secure communication platforms for journalists and activists"
+        ]
+      },
+      "investment": {
+        "title": "Investment & Finance",
+        "description": "Strategic investments in technology, infrastructure, and enterprises that create lasting value. Focus on privacy technology, sustainable development, and human capital.",
+        "achievements": [
+          "Chief Investment Officer, Parsis Fund",
+          "Managing Partner, Lux Fund",
+          "Focus on privacy-preserving computation",
+          "ESG-integrated investment approach"
+        ]
+      },
+      "writing": {
+        "title": "Writing & Philosophy",
+        "description": "Author and commentator on topics spanning technology ethics, cultural preservation, and the intersection of ancient wisdom with modern challenges.",
+        "achievements": [
+          "Essays on privacy and human rights",
+          "Commentary on technology ethics",
+          "Writings on Persian cultural heritage",
+          "Philosophy of decentralization and freedom"
+        ]
+      },
+      "screen": {
+        "title": "Screen & Performance",
+        "description": "Film and acting work exploring storytelling as a medium for cultural connection and human understanding.",
+        "achievements": [
+          "Screen credits in film and documentary",
+          "Voice work and narration",
+          "Cultural documentary participation"
+        ]
+      },
+      "sculpture": {
+        "title": "Sculpture & Design",
+        "description": "Three-dimensional works and design objects that bridge traditional craftsmanship with contemporary aesthetics.",
+        "achievements": [
+          "Sculptural works in private collections",
+          "Collaborative design projects",
+          "Objects exploring Persian motifs"
+        ]
+      }
+    },
+    "exhibitions": {
+      "privateExhibition": "Private Exhibition",
+      "artDubai": "Art Dubai",
+      "groupExhibition": "Group Exhibition",
+      "sothebysAuction": "Sotheby's Auction",
+      "privateCollection": "Private Collection"
+    }
+  },
+  "family": {
+    "title": "The House of Pahlavi",
+    "headline": "Family & Heritage",
+    "subtitle": "The Pahlavi dynasty represents a century of dedication to Iran's modernization, cultural preservation, and service to the Persian people. Today, this legacy continues through humanitarian work and advocacy for human dignity worldwide.",
+    "royalFamily": "The Royal Family",
+    "dedicatedToService": "Dedicated to Service",
+    "familyQuote": "The legacy of our family is not measured in years of reign, but in the lives we touched and the bridges we built between peoples and cultures.",
+    "centuryOfProgress": "A Century of Progress",
+    "centurySubtitle": "Key moments in the Pahlavi dynasty's commitment to Iran's advancement",
+    "enduringValues": "Enduring Values",
+    "valuesSubtitle": "The values that have guided the Pahlavi family for a century continue to inspire our work today.",
+    "service": "Service",
+    "serviceDesc": "Dedication to the wellbeing and prosperity of all people",
+    "dignity": "Dignity",
+    "dignityDesc": "Upholding human dignity and equal rights for all",
+    "unity": "Unity",
+    "unityDesc": "Building bridges between peoples and cultures worldwide",
+    "continuingLegacy": "Continuing the Legacy",
+    "continuingLegacyText": "Learn more about HRH Cyrus Pahlavi's work in humanitarian causes, cultural preservation, and global development.",
+    "ourMission": "Our Mission",
+    "currentInitiatives": "Current Initiatives",
+    "members": {
+      "rezaShah": {
+        "name": "Reza Shah Pahlavi",
+        "title": "Founder of the Pahlavi Dynasty",
+        "years": "1878–1944",
+        "relation": "Great-Grandfather",
+        "description": "Founded modern Iran in 1925, unifying the nation and beginning an era of unprecedented modernization. Established the foundations of the modern Iranian state."
+      },
+      "mohammadReza": {
+        "name": "Mohammad Reza Shah Pahlavi",
+        "title": "Shah of Iran",
+        "years": "1919–1980",
+        "relation": "Great-Uncle",
+        "description": "The last Shah of Iran, who ruled from 1941 until 1979. Modernized Iran's infrastructure, education system, and economy. Founder of the White Revolution reforms."
+      },
+      "crownPrince": {
+        "name": "Crown Prince Reza Pahlavi",
+        "title": "Crown Prince of Iran",
+        "years": "Born 1960",
+        "relation": "Cousin",
+        "description": "Eldest son of the late Shah. Advocate for secular democracy and human rights in Iran. Continues the family's commitment to serving the Iranian people."
+      },
+      "farah": {
+        "name": "Empress Farah Pahlavi",
+        "title": "Shahbanou of Iran",
+        "years": "Born 1938",
+        "relation": "Extended Family",
+        "description": "Queen Consort of Iran from 1959 to 1979. Champion of arts, culture, and education. Continues humanitarian work and advocacy for Iranian cultural heritage."
+      }
+    },
+    "milestones": {
+      "founding": {
+        "year": "1925",
+        "title": "Founding of the Pahlavi Dynasty",
+        "description": "Reza Shah Pahlavi established modern Iran, unifying the nation and beginning an era of modernization."
+      },
+      "whiteRevolution": {
+        "year": "1963",
+        "title": "The White Revolution",
+        "description": "Land reform, women's suffrage, and literacy programs transformed Iranian society."
+      },
+      "celebration": {
+        "year": "1971",
+        "title": "2,500 Year Celebration",
+        "description": "International celebration of Persian civilization at Persepolis, honoring 25 centuries of monarchy."
+      },
+      "present": {
+        "year": "Present",
+        "title": "Continued Service",
+        "description": "The Pahlavi family continues its commitment to humanitarian causes, cultural preservation, and advocacy for human rights."
+      }
+    }
+  },
+  "news": {
+    "title": "News & Media",
+    "headline": "Latest News",
+    "subtitle": "Updates on initiatives, events, and developments",
+    "readMore": "Read More",
+    "categories": {
+      "humanitarian": "Humanitarian",
+      "culture": "Culture",
+      "technology": "Technology",
+      "education": "Education",
+      "address": "Address"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "headline": "Official Channels",
+    "subtitle": "All official communications originate only from verified channels. Email authentication (SPF/DKIM/DMARC) is in place to prevent impersonation.",
+    "officialWebsite": "Official Website",
+    "address": "Address"
   },
   "footer": {
     "about": "About",

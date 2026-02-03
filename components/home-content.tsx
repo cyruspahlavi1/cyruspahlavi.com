@@ -151,7 +151,7 @@ export function HomeContent() {
             <div className={cn("rounded-xl border border-white/10 bg-black p-10", isRTL && "lg:order-1 text-right")}>
               <Quote className={cn("h-8 w-8 text-gold/40", isRTL && "ml-auto")} />
               <p className="mt-6 font-serif text-xl italic leading-relaxed text-white">
-                &ldquo;Our responsibility to the nation and our past and future generations is to preserve what is precious with all the strength, effort and determination that God has bestowed upon us.&rdquo;
+                &ldquo;{t.home.legacyQuote}&rdquo;
               </p>
               <p className="mt-6 text-sm font-semibold uppercase tracking-wider text-gold">
                 {t.site.name}
