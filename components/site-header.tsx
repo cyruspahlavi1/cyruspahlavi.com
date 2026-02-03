@@ -3,19 +3,29 @@
 import * as React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Search } from 'lucide-react';
+import { Search, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 import { HamburgerIcon } from './hamburger-icon';
 import { cn } from '@/lib/utils';
 import { CommandPalette } from './command-palette';
-import { SiteMenuPanel } from './site-menu-panel';
 import { LanguageSwitcher } from './language-switcher';
-import { ThemeToggle } from './theme-toggle';
-import { useI18n } from '@/lib/i18n/context';
+
+const navItems = [
+  { label: 'Biography', href: '/biography' },
+  { label: 'Strategic Priorities', href: '/strategic-priorities' },
+  { label: 'Enduring Legacy', href: '/enduring-legacy' },
+  { label: 'Initiatives & Patronages', href: '/initiatives-and-partners' },
+  { label: 'News & Media', href: '/news' },
+];
+
+const socialLinks = [
+  { icon: Facebook, href: 'https://facebook.com/cyruspahlavi', label: 'Facebook' },
+  { icon: Instagram, href: 'https://instagram.com/cyruspahlavi', label: 'Instagram' },
+  { icon: Linkedin, href: 'https://linkedin.com/in/cyruspahlavi', label: 'LinkedIn' },
+  { icon: Twitter, href: 'https://x.com/cyruspahlavi', label: 'X' },
+];
 
 export function SiteHeader() {
-  const { t, isRTL } = useI18n();
   const [open, setOpen] = React.useState(false);
-  const [menuOpen, setMenuOpen] = React.useState(false);
   const [paletteOpen, setPaletteOpen] = React.useState(false);
 
   React.useEffect(() => {
@@ -32,7 +42,7 @@ export function SiteHeader() {
       }
       if (event.key === 'Escape') {
         setPaletteOpen(false);
-        setMenuOpen(false);
+        setOpen(false);
       }
     };
     document.addEventListener('keydown', handleKeyDown);
@@ -41,58 +51,69 @@ export function SiteHeader() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-black/95 backdrop-blur-xl">
         <div className="container flex items-center justify-between gap-6 py-4">
+          {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
               src="/cyrus-signature.png"
               alt="Cyrus Pahlavi"
-              width={160}
-              height={44}
+              width={140}
+              height={38}
               className="signature-logo"
               priority
             />
           </Link>
 
-          <nav className="hidden xl:flex items-center gap-6 text-sm font-semibold text-muted-foreground">
-            <Link href="/biography" className="relative transition-colors hover:text-gold">
-              {t.nav.biography}
-            </Link>
-            <Link href="/mission" className="relative transition-colors hover:text-gold">
-              {t.nav.mission}
-            </Link>
-            <Link href="/initiatives-and-partners" className="relative transition-colors hover:text-gold">
-              {t.nav.initiatives}
-            </Link>
+          {/* Desktop Nav */}
+          <nav className="hidden xl:flex items-center gap-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-sm font-medium text-neutral-300 transition-colors hover:text-gold"
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
 
-          <div className="hidden xl:flex items-center gap-3">
+          {/* Right Side */}
+          <div className="hidden xl:flex items-center gap-4">
+            {/* Social Links */}
+            <div className="flex items-center gap-2">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-lg p-2 text-neutral-400 transition-colors hover:bg-white/5 hover:text-gold"
+                  aria-label={social.label}
+                >
+                  <social.icon size={16} />
+                </a>
+              ))}
+            </div>
+
+            <div className="h-6 w-px bg-white/10" />
+
             <LanguageSwitcher />
-            <ThemeToggle />
+
             <button
               type="button"
               onClick={() => setPaletteOpen(true)}
-              className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs uppercase tracking-[0.2em] text-muted-foreground"
+              className="rounded-lg p-2 text-neutral-400 transition-colors hover:bg-white/5 hover:text-gold"
+              aria-label="Search"
             >
-              <Search size={14} />
-              {t.nav.search}
-              <span className="rounded border border-white/10 px-1.5 py-0.5 text-[10px] text-muted-foreground">⌘K</span>
+              <Search size={18} />
             </button>
-            <div className="relative">
-              <button
-                type="button"
-                onClick={() => setMenuOpen((prev) => !prev)}
-                className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs uppercase tracking-[0.2em] text-muted-foreground"
-              >
-                {t.nav.menu}
-              </button>
-              <SiteMenuPanel open={menuOpen} onClose={() => setMenuOpen(false)} />
-            </div>
           </div>
 
+          {/* Mobile Menu Button */}
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-lg border border-white/10 bg-white/5 p-3 text-muted-foreground xl:hidden"
+            className="inline-flex items-center justify-center rounded-lg border border-white/10 bg-white/5 p-3 text-neutral-400 xl:hidden"
             aria-label="Toggle menu"
             onClick={() => setOpen((prev) => !prev)}
           >
@@ -100,34 +121,44 @@ export function SiteHeader() {
           </button>
         </div>
 
+        {/* Mobile Menu */}
         <div
           className={cn(
-            'xl:hidden border-t border-white/10 bg-black/90 backdrop-blur-xl transition-all',
-            open ? 'max-h-[540px] opacity-100' : 'max-h-0 opacity-0'
+            'xl:hidden border-t border-white/10 bg-black/95 backdrop-blur-xl transition-all overflow-hidden',
+            open ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
           )}
         >
-          <div className="container flex flex-col gap-4 py-6 text-sm font-semibold text-muted-foreground">
-            <Link href="/biography" className="transition-colors hover:text-gold" onClick={() => setOpen(false)}>
-              {t.nav.biography}
-            </Link>
-            <Link href="/mission" className="transition-colors hover:text-gold" onClick={() => setOpen(false)}>
-              {t.nav.mission}
-            </Link>
-            <Link href="/initiatives-and-partners" className="transition-colors hover:text-gold" onClick={() => setOpen(false)}>
-              {t.nav.initiatives}
-            </Link>
-            <div className="flex items-center gap-3 pt-2">
+          <div className="container py-6">
+            <nav className="flex flex-col gap-1">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="rounded-lg px-4 py-3 text-sm font-medium text-neutral-300 transition-colors hover:bg-white/5 hover:text-gold"
+                  onClick={() => setOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+
+            <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-6">
+              <div className="flex items-center gap-3">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-lg p-2 text-neutral-400 transition-colors hover:text-gold"
+                    aria-label={social.label}
+                  >
+                    <social.icon size={18} />
+                  </a>
+                ))}
+              </div>
               <LanguageSwitcher />
-              <ThemeToggle />
             </div>
-            <button
-              type="button"
-              className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground"
-              onClick={() => setPaletteOpen(true)}
-            >
-              <Search size={14} />
-              {t.nav.search} (⌘K)
-            </button>
           </div>
         </div>
       </header>

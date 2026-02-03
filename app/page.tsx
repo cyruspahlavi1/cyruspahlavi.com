@@ -1,189 +1,238 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { foundationLinks } from '@/lib/site-data';
-import { Shield, Heart, Users, FileSearch, Lock, Landmark, Palette, HeartHandshake, Cpu } from 'lucide-react';
+import { ArrowRight, Quote } from 'lucide-react';
 
-const values = [
+const sectionLinks = [
   {
-    title: 'Human Rights',
-    description: 'Advocacy for the protection of civilians, prisoners of conscience, journalists, and medical personnel.',
-    icon: Shield,
+    title: 'Biography',
+    description: 'A life dedicated to progress',
+    href: '/biography',
   },
   {
-    title: 'Non-violence',
-    description: 'Opposition to terrorism and violence; commitment to peaceful resolution and healing.',
-    icon: Heart,
+    title: 'Strategic Priorities',
+    description: 'A commitment to stability, development, and growth',
+    href: '/strategic-priorities',
   },
   {
-    title: 'Dignity',
-    description: 'Upholding human dignity and equal rights for all people regardless of faith, ethnicity, or belief.',
-    icon: Users,
-  },
-  {
-    title: 'Transparency',
-    description: 'Documentation, evidence preservation, and support for independent investigation.',
-    icon: FileSearch,
-  },
-  {
-    title: 'Privacy',
-    description: 'Privacy-preserving technologies to protect communications and personal freedoms.',
-    icon: Lock,
-  },
-  {
-    title: 'Cultural Memory',
-    description: 'Preserving and honoring cultural heritage through art, technology, and civic initiatives.',
-    icon: Landmark,
+    title: 'Enduring Legacy',
+    description: 'A leader who grew with his people',
+    href: '/enduring-legacy',
   },
 ];
 
-const focusAreas = [
+const latestNews = [
   {
-    title: 'Artistic Practice',
-    description: 'Painting shaped by themes of nature, memory, and the experience of exile—a form of freedom.',
-    href: '/works',
-    icon: Palette,
+    date: '2 February 2026',
+    title: 'Foundation launches humanitarian initiative supporting communities across three continents',
+    excerpt: 'A new humanitarian program bringing education, healthcare, and sustainable development to underserved communities in Europe, the Middle East, and Central Asia.',
+    href: '/news/humanitarian-initiative',
   },
   {
-    title: 'Humanitarian Work',
-    description: 'Projects like "Rainbow of Beslan" supporting children and families affected by terrorism.',
-    href: '/biography',
-    icon: HeartHandshake,
+    date: '28 January 2026',
+    title: 'Art exhibition celebrates 25 years of creative practice',
+    excerpt: 'A retrospective exhibition opens in Geneva, showcasing works that explore themes of memory, hope, and the human experience.',
+    href: '/news/art-exhibition',
   },
   {
-    title: 'Civic Technology',
-    description: 'Privacy-preserving platforms and transparent humanitarian funding initiatives.',
-    href: '/initiatives-and-partners',
-    icon: Cpu,
+    date: '15 January 2026',
+    title: 'Technology partnership brings secure communications to civil society',
+    excerpt: 'New collaboration brings privacy-preserving tools to organizations working to protect human dignity in challenging environments.',
+    href: '/news/technology-partnership',
   },
 ];
 
 export default function HomePage() {
   return (
     <main>
-      <section className="relative overflow-hidden bg-hero-wash py-20 md:py-28">
-        <div className="container grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-          <div>
-            <div className="mb-6">
-              <p className="font-serif text-xl text-gold">For Iran. For All Iranians.</p>
+      {/* Hero Section */}
+      <section className="relative min-h-[90vh] flex items-center bg-black">
+        <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/50 to-black" />
+        <div className="container relative z-10 py-24">
+          <div className="grid gap-16 lg:grid-cols-[1fr_1fr] lg:items-center">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.4em] text-gold">
+                His Royal Highness
+              </p>
+              <h1 className="mt-6 font-serif text-5xl leading-[1.1] text-white md:text-6xl lg:text-7xl">
+                Cyrus Pahlavi
+              </h1>
+              <div className="mt-8 h-px w-24 bg-gold" />
+              <p className="mt-8 text-xl uppercase tracking-[0.2em] text-neutral-400">
+                Serving and Empowering All Members of Society
+              </p>
+              <p className="mt-8 max-w-lg text-lg leading-relaxed text-neutral-400">
+                As a leader dedicated to progress, HRH Cyrus Pahlavi believes in the power of all to contribute to building a more peaceful and prosperous world. In championing boldness and determination, he leads with the conviction that uplifting communities is a precious investment in the future.
+              </p>
             </div>
-            <h1 className="font-serif text-3xl leading-tight text-foreground md:text-5xl">
-              Artist, humanitarian, and technologist working for human dignity and world peace.
-            </h1>
-            <p className="mt-6 max-w-2xl text-base text-muted-foreground md:text-lg">
-              HRH Cyrus Pahlavi combines creative practice with direct civic benefit—from art workshops with victims of terrorism to privacy-preserving technology for communities facing censorship.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Button asChild size="lg">
-                <Link href="/biography">Read the Biography</Link>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link href="/works">Selected Works</Link>
-              </Button>
-            </div>
-            <div className="mt-10 flex flex-wrap gap-3">
-              {['Visual Artist', 'Human Rights Advocate', 'Privacy Technologist'].map((item) => (
-                <div
-                  key={item}
-                  className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-[10px] uppercase tracking-[0.15em] text-muted-foreground sm:px-4 sm:py-3 sm:text-xs sm:tracking-[0.2em]"
-                >
-                  {item}
+            <div className="relative flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-lg">
+                <div className="absolute -inset-4 rounded-2xl border border-gold/20" />
+                <div className="overflow-hidden rounded-xl">
+                  <Image
+                    src="/images/cyrus-pahlavi.jpg"
+                    alt="Portrait of HRH Cyrus Pahlavi"
+                    width={600}
+                    height={800}
+                    className="h-full w-full object-cover"
+                    priority
+                  />
                 </div>
-              ))}
-            </div>
-          </div>
-          <div className="relative">
-            <div className="mx-auto w-full max-w-sm overflow-hidden rounded-3xl border border-gold/40 bg-card shadow-soft">
-              <Image
-                src="/images/cyrus-pahlavi.jpg"
-                alt="Portrait of HRH Cyrus Pahlavi"
-                width={540}
-                height={720}
-                className="h-full w-full object-cover"
-              />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20">
+      {/* Quote Section */}
+      <section className="border-y border-gold/20 bg-neutral-950 py-20">
         <div className="container">
-          <div className="max-w-3xl">
-            <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Values</p>
-            <h2 className="mt-4 font-serif text-3xl text-foreground">Guiding Principles</h2>
-            <p className="mt-6 text-muted-foreground">
-              Committed to protecting human dignity, honoring victims of terrorism, and building technology that preserves privacy and freedom for communities around the world.
-            </p>
+          <div className="mx-auto max-w-4xl text-center">
+            <Quote className="mx-auto h-12 w-12 text-gold/40" />
+            <blockquote className="mt-8 font-serif text-2xl italic leading-relaxed text-white md:text-3xl lg:text-4xl">
+              &ldquo;We have achieved significant accomplishments over the years, and with God&apos;s blessing, we are heading towards a future that is brighter, more hopeful, and more prosperous.&rdquo;
+            </blockquote>
+            <cite className="mt-8 block text-sm font-semibold uppercase tracking-[0.3em] text-gold">
+              HRH Cyrus Pahlavi
+            </cite>
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {values.map((item) => (
-              <div key={item.title} className="rounded-2xl border border-white/10 bg-card p-6 shadow-soft">
-                <item.icon className="h-6 w-6 text-gold" />
-                <h3 className="mt-3 font-serif text-lg text-gold">{item.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{item.description}</p>
-              </div>
+        </div>
+      </section>
+
+      {/* Section Links */}
+      <section className="bg-black py-24">
+        <div className="container">
+          <div className="grid gap-8 md:grid-cols-3">
+            {sectionLinks.map((section) => (
+              <Link
+                key={section.href}
+                href={section.href}
+                className="group relative overflow-hidden rounded-xl border border-white/10 bg-neutral-950 p-10 transition-all duration-300 hover:border-gold/40"
+              >
+                <div className="absolute inset-0 bg-gradient-to-b from-gold/5 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+                <h3 className="relative font-serif text-2xl text-white">{section.title}</h3>
+                <p className="relative mt-4 text-neutral-500">{section.description}</p>
+                <div className="relative mt-8 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-gold">
+                  <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="border-t border-white/10 bg-black/50 py-20">
-        <div className="container grid gap-6 lg:grid-cols-3">
-          {focusAreas.map((item) => (
-            <div key={item.title} className="rounded-2xl border border-white/10 bg-card p-7 shadow-soft">
-              <item.icon className="h-8 w-8 text-gold" />
-              <h3 className="mt-4 font-serif text-xl text-gold">{item.title}</h3>
-              <p className="mt-3 text-sm text-muted-foreground">{item.description}</p>
-              <Button asChild variant="ghost" className="mt-6 justify-start px-0">
-                <Link href={item.href}>Learn more →</Link>
-              </Button>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="container grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
-          <div className="rounded-3xl border border-gold/40 bg-card p-8 shadow-soft">
-            <h3 className="font-serif text-2xl text-gold">Rainbow of Beslan</h3>
-            <p className="mt-4 text-sm text-muted-foreground">
-              Art workshops with children and families affected by the Beslan school attack—a tribute to those who were killed and those who survived. This project reflects a continuing focus on protecting children, supporting healing, and honoring victims of terrorism.
-            </p>
-            <Button asChild variant="outline" className="mt-6">
-              <Link href="/biography">Learn More</Link>
-            </Button>
-          </div>
-          <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-black/80 to-black/30 p-8 shadow-soft">
-            <h3 className="font-serif text-2xl text-gold">Works & Cultural Legacy</h3>
-            <p className="mt-4 text-sm text-muted-foreground">
-              Visual art shaped by themes of nature, memory, and the experience of exile. Exhibited internationally from Monaco to Dubai.
-            </p>
-            <Button asChild variant="outline" className="mt-6">
-              <Link href="/works">Explore Works</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-t border-white/10 py-20">
+      {/* Legacy Section */}
+      <section className="border-t border-white/10 bg-neutral-950 py-24">
         <div className="container">
-          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
             <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Foundations & Initiatives</p>
-              <h2 className="mt-3 font-serif text-3xl text-gold">Linked Organizations</h2>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
+                A Continued Legacy of Transformation
+              </p>
+              <h2 className="mt-6 font-serif text-4xl leading-tight text-white">
+                Leadership shaped by the values of previous generations
+              </h2>
+              <p className="mt-8 text-lg text-neutral-400">
+                HRH Cyrus Pahlavi firmly believes that a true leader has the courage to be open with his people and care for others as family, extending from deep-rooted values of hospitality and community.
+              </p>
+              <p className="mt-6 text-neutral-500">
+                The values passed on by previous generations are a guiding light for the present and future. His Royal Highness continues to draw inspiration from a commitment to leading by example and a people-centred legacy.
+              </p>
+              <Link
+                href="/enduring-legacy"
+                className="mt-10 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-gold hover:underline"
+              >
+                Explore the Legacy
+                <ArrowRight size={14} />
+              </Link>
+            </div>
+            <div className="rounded-xl border border-white/10 bg-black p-10">
+              <Quote className="h-8 w-8 text-gold/40" />
+              <p className="mt-6 font-serif text-xl italic leading-relaxed text-white">
+                &ldquo;Our responsibility to the nation and our past and future generations is to preserve what is precious with all the strength, effort and determination that God has bestowed upon us.&rdquo;
+              </p>
+              <p className="mt-6 text-sm font-semibold uppercase tracking-wider text-gold">
+                HRH Cyrus Pahlavi
+              </p>
             </div>
           </div>
-          <div className="mt-10 grid gap-4 md:grid-cols-3 lg:grid-cols-5">
-            {foundationLinks.map((item) => (
-              <a
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="border-t border-white/10 bg-black py-24">
+        <div className="container">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
+              Honouring the Values of Our Ancestors
+            </p>
+            <h2 className="mt-6 font-serif text-4xl text-white">
+              Traditional values as a guiding light
+            </h2>
+            <p className="mt-8 text-lg text-neutral-400">
+              Traditional values such as community, generosity, and inclusivity are a profound source of pride and belonging. HRH Cyrus Pahlavi has made it a priority to ensure that youth remain connected to the culture and values of their ancestors.
+            </p>
+          </div>
+          <div className="mt-16 grid gap-6 md:grid-cols-3">
+            <div className="rounded-xl border border-white/10 bg-neutral-950 p-8 text-center">
+              <h4 className="font-serif text-xl text-gold">Community</h4>
+              <p className="mt-4 text-sm text-neutral-500">
+                Nurturing bonds that unite people across generations and borders
+              </p>
+            </div>
+            <div className="rounded-xl border border-white/10 bg-neutral-950 p-8 text-center">
+              <h4 className="font-serif text-xl text-gold">Generosity</h4>
+              <p className="mt-4 text-sm text-neutral-500">
+                Extending support and resources to those in need around the world
+              </p>
+            </div>
+            <div className="rounded-xl border border-white/10 bg-neutral-950 p-8 text-center">
+              <h4 className="font-serif text-xl text-gold">Inclusivity</h4>
+              <p className="mt-4 text-sm text-neutral-500">
+                Welcoming all who share values of peaceful coexistence and mutual respect
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest News */}
+      <section className="border-t border-white/10 bg-neutral-950 py-24">
+        <div className="container">
+          <div className="mb-16 flex items-end justify-between">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">Latest</p>
+              <h2 className="mt-4 font-serif text-4xl text-white">News</h2>
+            </div>
+            <Link
+              href="/news"
+              className="hidden text-sm font-semibold uppercase tracking-wider text-gold hover:underline sm:block"
+            >
+              View All →
+            </Link>
+          </div>
+          <div className="grid gap-8 lg:grid-cols-3">
+            {latestNews.map((item, index) => (
+              <article
                 key={item.href}
-                href={item.href}
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-2xl border border-white/10 bg-card p-6 text-sm font-semibold text-foreground transition hover:border-gold/60"
+                className={`rounded-xl border border-white/10 bg-black p-8 transition-colors hover:border-gold/40 ${index === 0 ? 'lg:col-span-2 lg:row-span-2' : ''}`}
               >
-                {item.label} →
-              </a>
+                <time className="text-xs font-semibold uppercase tracking-wider text-gold">
+                  {item.date}
+                </time>
+                <h3 className={`mt-4 font-serif leading-snug text-white ${index === 0 ? 'text-2xl' : 'text-lg'}`}>
+                  {item.title}
+                </h3>
+                <p className={`mt-4 text-neutral-500 ${index === 0 ? 'text-base' : 'text-sm line-clamp-3'}`}>
+                  {item.excerpt}
+                </p>
+                <Link
+                  href={item.href}
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-gold hover:underline"
+                >
+                  Read More
+                  <ArrowRight size={12} />
+                </Link>
+              </article>
             ))}
           </div>
         </div>

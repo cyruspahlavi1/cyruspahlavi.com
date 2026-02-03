@@ -1,65 +1,78 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { contactEmails, officialAddress } from '@/lib/site-data';
+import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+
+const navLinks = [
+  { label: 'Biography', href: '/biography' },
+  { label: 'Strategic Priorities', href: '/strategic-priorities' },
+  { label: 'Enduring Legacy', href: '/enduring-legacy' },
+  { label: 'Initiatives & Patronages', href: '/initiatives-and-partners' },
+  { label: 'News & Media', href: '/news' },
+];
+
+const legalLinks = [
+  { label: 'Privacy Policy', href: '/privacy' },
+  { label: 'Terms of Use', href: '/terms' },
+];
+
+const socialLinks = [
+  { icon: Twitter, href: 'https://x.com/cyruspahlavi', label: 'X' },
+  { icon: Facebook, href: 'https://facebook.com/cyruspahlavi', label: 'Facebook' },
+  { icon: Instagram, href: 'https://instagram.com/cyruspahlavi', label: 'Instagram' },
+  { icon: Linkedin, href: 'https://linkedin.com/in/cyruspahlavi', label: 'LinkedIn' },
+];
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-white/10 bg-gradient-to-b from-black/80 to-black py-16">
-      <div className="container">
-        <div className="grid gap-12 lg:grid-cols-[200px_1fr]">
-          <div className="flex items-start justify-center lg:justify-start">
-            <Image
-              src="/images/official-seal.png"
-              alt="Official Seal"
-              width={200}
-              height={200}
-              className="h-auto w-full max-w-[200px] object-contain opacity-90"
-            />
-          </div>
-
-          <div className="grid gap-10 sm:grid-cols-3">
-            <div>
-              <h3 className="font-serif text-lg text-gold">Information</h3>
-              <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
-                <li><Link href="/statements" className="hover:text-gold">Statements</Link></li>
-                <li><Link href="/strategic-priorities" className="hover:text-gold">Strategic Priorities</Link></li>
-                <li><Link href="/enduring-legacy" className="hover:text-gold">Enduring Legacy</Link></li>
-                <li><Link href="/initiatives-and-partners" className="hover:text-gold">Initiatives &amp; Partners</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-serif text-lg text-gold">Resources</h3>
-              <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
-                <li><Link href="/biography" className="hover:text-gold">Biography</Link></li>
-                <li><Link href="/works" className="hover:text-gold">Works</Link></li>
-                <li><Link href="/privacy" className="hover:text-gold">Privacy Policy</Link></li>
-                <li><Link href="/terms" className="hover:text-gold">Terms of Service</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-serif text-lg text-gold">Contact</h3>
-              <div className="mt-4 space-y-3 text-sm text-muted-foreground">
-                {contactEmails.map((item) => (
-                  <p key={item.value}>
-                    <span className="font-semibold text-foreground">{item.value}</span>
-                    <br />
-                    {item.label}
-                  </p>
-                ))}
-                <p>
-                  <span className="font-semibold text-foreground">Address</span>
-                  <br />
-                  {officialAddress.map((line) => (
-                    <span key={line} className="block">{line}</span>
-                  ))}
-                </p>
-              </div>
-            </div>
-          </div>
+    <footer className="border-t border-white/10 bg-black">
+      {/* Main Footer */}
+      <div className="container py-16">
+        <div className="flex flex-wrap items-center justify-center gap-8 text-sm">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-neutral-400 transition-colors hover:text-gold"
+            >
+              {link.label}
+            </Link>
+          ))}
         </div>
+      </div>
 
-        <div className="mt-12 border-t border-white/10 pt-6 text-center text-xs text-muted-foreground">
-          <p>&copy; 2026 Cyrus Pahlavi</p>
+      {/* Bottom Bar */}
+      <div className="border-t border-white/10">
+        <div className="container flex flex-col items-center justify-between gap-6 py-8 md:flex-row">
+          <p className="text-sm text-neutral-500">
+            &copy; {new Date().getFullYear()} Cyrus Pahlavi
+          </p>
+
+          <div className="flex items-center gap-6">
+            {legalLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm text-neutral-500 transition-colors hover:text-gold"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-4">
+            {socialLinks.map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noreferrer"
+                className="text-neutral-500 transition-colors hover:text-gold"
+                aria-label={social.label}
+              >
+                <social.icon size={18} />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </footer>
