@@ -216,22 +216,22 @@ export function HomeContent() {
           <div className="grid gap-8 lg:grid-cols-3">
             {[
               {
-                date: '2 February 2026',
-                title: 'Foundation launches humanitarian initiative supporting communities across three continents',
-                excerpt: 'A new humanitarian program bringing education, healthcare, and sustainable development to underserved communities.',
-                href: '/news/humanitarian-initiative',
+                date: '1 February 2026',
+                title: 'HRH Cyrus Pahlavi Appointed Founding Chairman of MIGA DAO',
+                excerpt: 'New decentralized autonomous organization launches to coordinate transparent humanitarian funding for the global Persian community.',
+                href: '/news/miga-dao-founding-chairman',
               },
               {
-                date: '28 January 2026',
-                title: 'Art exhibition celebrates 25 years of creative practice',
-                excerpt: 'A retrospective exhibition opens in Geneva, showcasing works that explore themes of memory, hope, and the human experience.',
-                href: '/news/art-exhibition',
+                date: '22 January 2026',
+                title: 'HRH Cyrus Pahlavi Attends World Economic Forum in Davos',
+                excerpt: 'Discussions focused on privacy technology, humanitarian innovation, and the future of decentralized systems.',
+                href: '/news/davos-2026',
               },
               {
                 date: '15 January 2026',
-                title: 'Technology partnership brings secure communications to civil society',
-                excerpt: 'New collaboration brings privacy-preserving tools to organizations working to protect human dignity.',
-                href: '/news/technology-partnership',
+                title: 'Pars Network Launches Privacy-Preserving Communications Infrastructure',
+                excerpt: 'New platform provides resilient, censorship-resistant communications for Iranians and civil society organizations worldwide.',
+                href: '/news/pars-network-launch',
               },
             ].map((item, index) => (
               <article

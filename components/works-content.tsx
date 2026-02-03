@@ -42,7 +42,9 @@ const disciplineConfig: DisciplineConfig[] = [
   {
     key: 'writing',
     icon: BookOpen,
-    links: [],
+    links: [
+      { label: 'Essays & Commentary', href: '/statements' },
+    ],
   },
   {
     key: 'screen',
@@ -54,7 +56,9 @@ const disciplineConfig: DisciplineConfig[] = [
   {
     key: 'sculpture',
     icon: PenTool,
-    links: [],
+    links: [
+      { label: 'CyrusPahlavi.art', href: 'https://cyruspahlavi.art' },
+    ],
   },
 ];
 

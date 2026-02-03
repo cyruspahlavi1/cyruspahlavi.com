@@ -48,6 +48,7 @@ export function InitiativesContent() {
       titleFa: 'صندوق لاکس و شرکای لاکس',
       descriptionEn: 'Privacy and security technologies, cryptography research, and privacy-preserving computation.',
       descriptionFa: 'فناوری‌های حریم خصوصی و امنیت، تحقیقات رمزنگاری و محاسبات حفظ‌کننده حریم خصوصی.',
+      href: 'https://lux.fund',
     },
   ];
 
