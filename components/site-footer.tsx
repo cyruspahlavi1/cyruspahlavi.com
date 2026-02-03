@@ -1,24 +1,36 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Facebook, Instagram, Linkedin, Twitter, Github } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Twitter, Github, Mail } from 'lucide-react';
 
-const navLinks = [
-  { label: 'Biography', href: '/biography' },
-  { label: 'Mission', href: '/mission' },
-  { label: 'Works', href: '/works' },
-  { label: 'Family', href: '/family' },
-  { label: 'Initiatives', href: '/initiatives-and-partners' },
-  { label: 'News', href: '/news' },
-];
-
-const legalLinks = [
-  { label: 'Privacy Policy', href: '/privacy' },
-  { label: 'Terms of Use', href: '/terms' },
+const navColumns = [
+  {
+    title: 'About',
+    links: [
+      { label: 'Biography', href: '/biography' },
+      { label: 'Mission', href: '/mission' },
+      { label: 'Family', href: '/family' },
+    ],
+  },
+  {
+    title: 'Work',
+    links: [
+      { label: 'Works', href: '/works' },
+      { label: 'Initiatives', href: '/initiatives-and-partners' },
+      { label: 'News', href: '/news' },
+    ],
+  },
+  {
+    title: 'Legal',
+    links: [
+      { label: 'Privacy Policy', href: '/privacy' },
+      { label: 'Terms of Use', href: '/terms' },
+      { label: 'Contact', href: '/contact' },
+    ],
+  },
 ];
 
 const socialLinks = [
   { icon: Twitter, href: 'https://x.com/cyruspahlavi1', label: 'X' },
-  { icon: Facebook, href: 'https://facebook.com/cyruspahlavi', label: 'Facebook' },
   { icon: Instagram, href: 'https://instagram.com/cyruspahlavi', label: 'Instagram' },
   { icon: Linkedin, href: 'https://www.linkedin.com/in/cyrus-pahlavi-a741b343/', label: 'LinkedIn' },
   { icon: Github, href: 'https://github.com/cyruspahlavi1', label: 'GitHub' },
@@ -26,68 +38,99 @@ const socialLinks = [
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-white/10 bg-black">
+    <footer className="border-t border-white/10 bg-gradient-to-b from-neutral-950 to-black">
       {/* Main Footer */}
-      <div className="container py-16">
-        <div className="grid gap-12 lg:grid-cols-[200px_1fr]">
-          {/* Seal */}
-          <div className="flex justify-center lg:justify-start">
+      <div className="container py-16 md:py-20">
+        <div className="grid gap-12 md:gap-16 lg:grid-cols-[240px_1fr]">
+          {/* Seal & Brand */}
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <Image
               src="/images/official-seal.png"
               alt="Official Seal"
-              width={160}
-              height={160}
-              className="h-auto w-40 opacity-80"
+              width={180}
+              height={180}
+              className="h-auto w-36 md:w-44 opacity-90"
             />
-          </div>
-
-          {/* Navigation & Info */}
-          <div className="flex flex-col justify-between gap-8">
-            <div className="flex flex-wrap items-center justify-center gap-8 text-sm lg:justify-start">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-neutral-400 transition-colors hover:text-gold"
+            <p className="mt-6 text-sm leading-relaxed text-neutral-500">
+              Dedicated to humanitarian service, cultural preservation, and building a more peaceful world.
+            </p>
+            {/* Social Links - Mobile & Tablet */}
+            <div className="mt-6 flex items-center gap-3 lg:hidden">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-neutral-400 transition-all hover:border-gold/50 hover:text-gold"
+                  aria-label={social.label}
                 >
-                  {link.label}
-                </Link>
+                  <social.icon size={18} />
+                </a>
               ))}
             </div>
+          </div>
 
-            <div className="flex flex-col items-center gap-6 lg:flex-row lg:justify-between">
-              <p className="text-sm text-neutral-500">
-                &copy; {new Date().getFullYear()} Cyrus Pahlavi
-              </p>
-
-              <div className="flex items-center gap-6">
-                {legalLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="text-sm text-neutral-500 transition-colors hover:text-gold"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+          {/* Navigation Columns */}
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:gap-12">
+            {navColumns.map((column) => (
+              <div key={column.title}>
+                <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+                  {column.title}
+                </h4>
+                <ul className="mt-4 space-y-3">
+                  {column.links.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="text-sm text-neutral-400 transition-colors hover:text-white"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </div>
+            ))}
 
-              <div className="flex items-center gap-4">
+            {/* Social Column - Desktop */}
+            <div className="col-span-2 sm:col-span-3 lg:col-span-1 hidden lg:block">
+              <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+                Connect
+              </h4>
+              <div className="mt-4 flex items-center gap-3">
                 {socialLinks.map((social) => (
                   <a
                     key={social.label}
                     href={social.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-neutral-500 transition-colors hover:text-gold"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-neutral-400 transition-all hover:border-gold/50 hover:text-gold"
                     aria-label={social.label}
                   >
                     <social.icon size={18} />
                   </a>
                 ))}
               </div>
+              <a
+                href="mailto:office@cyruspahlavi.com"
+                className="mt-4 inline-flex items-center gap-2 text-sm text-neutral-400 transition-colors hover:text-gold"
+              >
+                <Mail size={14} />
+                office@cyruspahlavi.com
+              </a>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-white/5">
+        <div className="container flex flex-col items-center justify-between gap-4 py-6 text-xs text-neutral-600 md:flex-row">
+          <p>&copy; {new Date().getFullYear()} HRH Cyrus Pahlavi. All rights reserved.</p>
+          <p className="text-center md:text-right">
+            Member of the House of Pahlavi
+          </p>
         </div>
       </div>
     </footer>
