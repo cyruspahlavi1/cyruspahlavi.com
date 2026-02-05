@@ -20,6 +20,8 @@ export const site = {
   title: 'Cyrus Pahlavi',
   description:
     'Artist, humanitarian, and technologist. Painting, civic initiatives, and privacy-preserving technology.',
+  url: 'https://cyruspahlavi.com',
+  image: '/images/official-seal.png',
 };
 
 export const navItems = [
